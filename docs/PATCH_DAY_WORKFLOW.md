@@ -40,13 +40,13 @@ python scripts/scan_patch_surface_strings.py
 ```
 
 See [`STEAM_PATCH_DIFF.md`](STEAM_PATCH_DIFF.md) for depot manifest GIDs, exe surface diff, and crosswalk joins.
-2. Do **not** overwrite baseline mirrors in `<local-data>/ARK_LiveData/saves/` — copy to a dated folder first:
+3. Do **not** overwrite baseline mirrors in `<local-data>/ARK_LiveData/saves/` — copy to a dated folder first:
 
 ```text
 <local-data>/ARK_LiveData/saves/patch_YYYYMMDD/
 ```
 
-3. Update `patch_survival.baseline_game_build` only when intentionally re-baselining a verified capsule.
+4. Update `patch_survival.baseline_game_build` only when intentionally re-baselining a verified capsule.
 
 ---
 
