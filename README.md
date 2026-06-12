@@ -58,6 +58,8 @@ Validated in `live-data/bundles/session_20260611_center_combat_destruction_v1.js
 
 ## Local bulk data (not in git)
 
+**Raw paks are never committed** — no `.pak`, `.ucas`, or `.utoc` files belong in this repository. Only derived indexes, CSVs, JSON catalogs, and small MxCheatUI table extracts.
+
 Keep on `S:` and regenerate indexes as needed:
 
 - `S:\ARK_ThreatSurface\` — full IoStore mirror, meat string scan, retoc extracts

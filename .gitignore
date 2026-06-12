@@ -1,17 +1,28 @@
 # Local-only / regenerated on S:
 live-data/saves/
+*.ark
+*.arkbak
+*.arkprofile
 live-data/config/
 live-data/bundles/_extract/
 live-data/logs/
 live-data/mirrors/
 
+# NEVER commit raw game/mod archives (stay on S: only)
+*.pak
+*.ucas
+*.utoc
+*.pakchunk*
+**/*.pak
+**/*.ucas
+**/*.utoc
+
 # Threat surface bulk (stay on S:)
 threat-surface/mirror/
 threat-surface/extracted/
 threat-surface/tools/
-*.ucas
-*.utoc
-*.pak
+**/*ShooterGame-Windows*
+**/*pakchunk*
 
 # OS / editor
 .DS_Store
