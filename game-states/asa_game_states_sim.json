@@ -1,0 +1,448 @@
+{
+  "schema_version": 1,
+  "purpose": "browser_game_state_simulation",
+  "source": "asa_creature_item_player.json",
+  "summary": {
+    "enum_types": 265,
+    "enum_values": 1760,
+    "flat_records": 843,
+    "creature_enum_types": 46,
+    "item_enum_types": 178,
+    "player_enum_types": 65
+  },
+  "persistence_layers": [
+    {
+      "id": "memory",
+      "label": "In-memory GameState",
+      "client_trusted": true,
+      "disk_observable": false,
+      "note": "Live replication, projectiles, inventory \u2014 not captured by this monitor."
+    },
+    {
+      "id": "save_ark",
+      "label": "Main save (.ark)",
+      "client_trusted": true,
+      "disk_observable": true,
+      "note": "Class refs and /Game/ paths \u2014 primary crosswalk join."
+    },
+    {
+      "id": "arkbak",
+      "label": "Rolling backup (.arkbak)",
+      "client_trusted": true,
+      "disk_observable": true,
+      "note": "Slot rotation captures combat/session deltas."
+    },
+    {
+      "id": "tribe_log",
+      "label": "Tribe log",
+      "client_trusted": true,
+      "disk_observable": true,
+      "note": "RichColor kill/tame/destroy lines \u2014 milestone correlation."
+    },
+    {
+      "id": "primal_console",
+      "label": "PrimalConsole history",
+      "client_trusted": true,
+      "disk_observable": true,
+      "note": "EnableCheats, giveitem, debug commands."
+    }
+  ],
+  "key_enums": {
+    "ENetModeBP": {
+      "values": [
+        "Client",
+        "DedicatedServer",
+        "ListenServer",
+        "Standalone",
+        "Type"
+      ],
+      "sources": [
+        "ArkAscended.exe"
+      ],
+      "categories": [],
+      "blurb": "How the session runs (SP uses Standalone)."
+    },
+    "EPrimalItemType": {
+      "values": [
+        "Ammo",
+        "Artifact",
+        "Equipment",
+        "MAX",
+        "MiscConsumable",
+        "Resource",
+        "Skin",
+        "Structure",
+        "Type",
+        "Weapon",
+        "WeaponAttachment"
+      ],
+      "sources": [
+        "ArkAscended.exe"
+      ],
+      "categories": [
+        "item"
+      ],
+      "blurb": "Item classification inside PrimalItem actors."
+    },
+    "ECheatActorType": {
+      "values": [
+        "Dino",
+        "MAX",
+        "Pawns",
+        "Player",
+        "Structure",
+        "Tame",
+        "Type",
+        "Wild"
+      ],
+      "sources": [
+        "ArkAscended.exe"
+      ],
+      "categories": [
+        "creature",
+        "player"
+      ],
+      "blurb": "Cheat/target filters for dinos, tames, players, structures."
+    },
+    "EPrimalMilestoneType": {
+      "values": [
+        "ClaimWildBaby",
+        "CompleteMission",
+        "Construct",
+        "Craft",
+        "GainXP",
+        "Harvest",
+        "HarvestActor",
+        "HarvestFromSpeciesR",
+        "Headshot",
+        "Imprint",
+        "Kill",
+        "KillAsThrall",
+        "KillBoss",
+        "Loot",
+        "LootItem",
+        "MAX",
+        "Other",
+        "ReinforceItem",
+        "Tame",
+        "Travel",
+        "WeaponDamage"
+      ],
+      "sources": [
+        "ArkAscended.exe"
+      ],
+      "categories": [
+        "creature",
+        "item"
+      ],
+      "blurb": "Progression and tribe-log milestone families."
+    },
+    "EActorListsBP": {
+      "values": [
+        "AL_ACTIVE_WILD_NONWATER_DINOS",
+        "AL_ACTIVE_WILD_WATER_DINOS",
+        "AL_AMBIENTSOUNDS",
+        "AL_BEDS",
+        "AL_BIOMEZONEVOLUMES",
+        "AL_BLOCKINGVOLUMES",
+        "AL_CLIENTSIDEDESTRUCTABLEACTORS",
+        "AL_CONNECTEDSHOOTERCHARACTERS",
+        "AL_CUSTOMACTORLISTS",
+        "AL_DAYCYCLEAMBIENTSOUNDS",
+        "AL_DIRECTIONAL_LIGHTS",
+        "AL_EXPLORERNOTECHESTS",
+        "AL_FLOATINGHUD",
+        "AL_FORCEDHUD",
+        "AL_MISSIONS",
+        "AL_MISSION_DISPATCHERS",
+        "AL_MISSION_DISPATCHER_POINTS",
+        "AL_NPC",
+        "AL_NPCZONEMANAGERS",
+        "AL_NPCZONEMANAGERS_LEVELSTREAM",
+        "AL_NPC_ACTIVE",
+        "AL_NPC_DEAD",
+        "AL_PERFORMANCETHROTTLEDTICKS",
+        "AL_PLAYERCONTROLLERS",
+        "AL_PLAYERS",
+        "AL_PLAYERSTATES",
+        "AL_PLAYER_STARTS",
+        "AL_POSSESSED_THRALLS",
+        "AL_REALTIMETHROTTLEDTICKS",
+        "AL_STRUCTUREPREVENTIONVOLUMES",
+        "AL_STRUCTURESCLIENT",
+        "AL_STRUCTURESTHATSHOULDINTERACTWITHVOLUMETRICDISPATCHERS",
+        "AL_SUPPLYCRATEVOLUMES",
+        "AL_TAGGED",
+        "AL_TAMED_DINOS",
+        "AL_TELEPORTERS",
+        "AL_THROTTLEDTICKS",
+        "AL_TILEVOLUMES",
+        "AL_TRANSPONDERS",
+        "AL_UNDERMESH_VOLUMES",
+        "AL_UNSTASISEDACTORS",
+        "MAX",
+        "Type"
+      ],
+      "sources": [
+        "ArkAscended.exe"
+      ],
+      "categories": [
+        "creature",
+        "player"
+      ],
+      "blurb": "Actor list buckets the game uses for wild/tamed/player tracking."
+    }
+  },
+  "scenarios": [
+    {
+      "id": "craft_tek_rifle_sp",
+      "title": "Craft Tek Rifle (Singleplayer)",
+      "summary": "Player crafts a weapon; item type and class ref land in the save.",
+      "entity_class_ref": "PrimalItem_TekRifle_C",
+      "net_mode": "Standalone",
+      "steps": [
+        {
+          "layer": "session",
+          "title": "Session mode",
+          "detail": "Singleplayer runs ENetModeBP::Standalone \u2014 client-trusted, no dedicated server.",
+          "hooks": [
+            "ENetModeBP:Standalone"
+          ]
+        },
+        {
+          "layer": "input",
+          "title": "Craft action",
+          "detail": "Player completes fabricator craft.",
+          "hooks": [
+            "EPrimalMilestoneType:Craft"
+          ]
+        },
+        {
+          "layer": "gamestate",
+          "title": "Item typed in memory",
+          "detail": "Game assigns EPrimalItemType::Weapon to the PrimalItem instance.",
+          "hooks": [
+            "EPrimalItemType:Weapon"
+          ]
+        },
+        {
+          "layer": "instance",
+          "title": "Blueprint instance",
+          "detail": "Inventory holds PrimalItem_TekRifle_C with UE soft path to Tek Rifle blueprint.",
+          "hooks": [
+            "class_ref:PrimalItem_TekRifle_C"
+          ]
+        },
+        {
+          "layer": "disk",
+          "title": "Save persistence",
+          "detail": "Exit save mirrors class ref and /Game/ path \u2014 observable on disk only.",
+          "hooks": [
+            "persistence:save_ark",
+            "evidence:in_session_save"
+          ]
+        },
+        {
+          "layer": "assessment",
+          "title": "Trust note",
+          "detail": "Monitor sees disk evidence; does not read live AShooterGameState memory.",
+          "hooks": [
+            "monitor:disk_only"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tek_rifle_combat",
+      "title": "Tek Rifle structure destruction",
+      "summary": "Weapon damage milestone + tribe log kill/destroy events.",
+      "entity_class_ref": "PrimalItem_TekRifle_C",
+      "net_mode": "Standalone",
+      "steps": [
+        {
+          "layer": "session",
+          "title": "Combat loadout",
+          "detail": "Player wields Tek Rifle (ammo: PrimalItemAmmo_GrapplingHook_C in same session).",
+          "hooks": [
+            "EPrimalItemType:Weapon",
+            "EPrimalItemType:Ammo"
+          ]
+        },
+        {
+          "layer": "input",
+          "title": "Fire / damage",
+          "detail": "Projectiles apply damage to structures and dinos.",
+          "hooks": [
+            "EPrimalMilestoneType:WeaponDamage",
+            "EPrimalMilestoneType:Kill"
+          ]
+        },
+        {
+          "layer": "gamestate",
+          "title": "Actor classification",
+          "detail": "Targets resolve through ECheatActorType (Structure, Dino, Tame).",
+          "hooks": [
+            "ECheatActorType:Structure",
+            "ECheatActorType:Dino",
+            "ECheatActorType:Tame"
+          ]
+        },
+        {
+          "layer": "disk",
+          "title": "Save delta",
+          "detail": "Main save grows; rolling .arkbak captures intermediate states.",
+          "hooks": [
+            "persistence:save_ark",
+            "persistence:arkbak"
+          ]
+        },
+        {
+          "layer": "tribe_log",
+          "title": "Tribe log (RichColor)",
+          "detail": "Destroyed/killed lines written to tribe log \u2014 separate persistence layer.",
+          "hooks": [
+            "persistence:tribe_log",
+            "EPrimalMilestoneType:Kill"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tame_oasisaur",
+      "title": "Tame Oasisaur",
+      "summary": "Creature actor type + tame milestone; tribe log upload/download.",
+      "entity_class_ref": "Oasisaur_Character_BP_C",
+      "net_mode": "Standalone",
+      "steps": [
+        {
+          "layer": "input",
+          "title": "Tame completion",
+          "detail": "Taming bar completes on wild creature.",
+          "hooks": [
+            "EPrimalMilestoneType:Tame"
+          ]
+        },
+        {
+          "layer": "gamestate",
+          "title": "Actor becomes tame",
+          "detail": "Creature actor classified as ECheatActorType::Tame.",
+          "hooks": [
+            "ECheatActorType:Tame",
+            "ECheatActorType:Dino"
+          ]
+        },
+        {
+          "layer": "instance",
+          "title": "Character blueprint",
+          "detail": "DinoCharacter with Oasisaur_Character_BP_C class ref.",
+          "hooks": [
+            "class_ref:Oasisaur_Character_BP_C"
+          ]
+        },
+        {
+          "layer": "tribe_log",
+          "title": "Tribe log entry",
+          "detail": "Tamed a \u2026 line appears in tribe log delta.",
+          "hooks": [
+            "persistence:tribe_log",
+            "EPrimalMilestoneType:Tame"
+          ]
+        },
+        {
+          "layer": "disk",
+          "title": "Save + log",
+          "detail": "Creature state in save; tribe log in separate Saved file.",
+          "hooks": [
+            "persistence:save_ark"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "admin_giveitem",
+      "title": "Admin giveitem (cheat path)",
+      "summary": "Console cheat bypasses craft; still persists as PrimalItem class ref.",
+      "entity_class_ref": "PrimalItem_TekRifle_C",
+      "net_mode": "Standalone",
+      "steps": [
+        {
+          "layer": "input",
+          "title": "EnableCheats + giveitem",
+          "detail": "UShooterCheatManager accepts blueprint soft path from console.",
+          "hooks": [
+            "surface:UShooterCheatManager",
+            "surface:PrimalConsole"
+          ]
+        },
+        {
+          "layer": "gamestate",
+          "title": "Item spawned to inventory",
+          "detail": "Same EPrimalItemType::Weapon typing as crafted item.",
+          "hooks": [
+            "EPrimalItemType:Weapon"
+          ]
+        },
+        {
+          "layer": "instance",
+          "title": "Class ref on disk",
+          "detail": "PrimalItem_TekRifle_C appears in save strings after exit.",
+          "hooks": [
+            "class_ref:PrimalItem_TekRifle_C"
+          ]
+        },
+        {
+          "layer": "assessment",
+          "title": "Why this matters",
+          "detail": "Client-trusted inventory persistence \u2014 same disk signal as legit craft.",
+          "hooks": [
+            "trust:client_inventory"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spawn_creature_cheat",
+      "title": "SpawnExactDino (cheat path)",
+      "summary": "Spawn creature by blueprint; actor lists and cheat actor type apply.",
+      "entity_class_ref": "Dodo_Character_BP_C",
+      "net_mode": "Standalone",
+      "steps": [
+        {
+          "layer": "input",
+          "title": "SpawnExactDino",
+          "detail": "Cheat manager instantiates Character_BP from soft path.",
+          "hooks": [
+            "surface:UShooterCheatManager"
+          ]
+        },
+        {
+          "layer": "gamestate",
+          "title": "Actor list registration",
+          "detail": "Spawned dino enters AL_TAMED_DINOS or wild lists per state.",
+          "hooks": [
+            "EActorListsBP:AL_TAMED_DINOS",
+            "ECheatActorType:Dino"
+          ]
+        },
+        {
+          "layer": "instance",
+          "title": "Character class",
+          "detail": "Dodo_Character_BP_C (example) written to world save blob.",
+          "hooks": [
+            "class_ref:Dodo_Character_BP_C"
+          ]
+        },
+        {
+          "layer": "disk",
+          "title": "World persistence",
+          "detail": "Dino entities persist in .ark; monitor can mirror on change.",
+          "hooks": [
+            "persistence:save_ark",
+            "monitor:disk_only"
+          ]
+        }
+      ]
+    }
+  ],
+  "enum_catalog_size": 265
+}

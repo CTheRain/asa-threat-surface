@@ -3,341 +3,480 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ASA Threat Surface — Game Lookup</title>
-  <meta name="description" content="Browse ARK Survival Ascended items, creatures, blueprints, and cheat commands from the asa-threat-surface research catalog." />
+  <title>ASA Threat Surface — Lookup &amp; State Simulator</title>
+  <meta name="description" content="Browse ARK Survival Ascended items, creatures, and simulate how game-state enums connect to disk evidence." />
   <style>
     :root {
-      --bg: #0c1218;
-      --panel: #141d27;
-      --panel-2: #1a2633;
-      --text: #e8eef4;
-      --muted: #8fa3b8;
-      --accent: #3ecf8e;
-      --accent-2: #f0a500;
-      --border: #243444;
-      --danger: #ff6b6b;
-      --mono: "Cascadia Mono", "Consolas", monospace;
+      --bg: #0c1218; --panel: #141d27; --panel-2: #1a2633; --text: #e8eef4;
+      --muted: #8fa3b8; --accent: #3ecf8e; --accent-2: #f0a500; --border: #243444;
+      --purple: #c9a0ff; --blue: #7ec8ff;
+      --mono: "Cascadia Mono", Consolas, monospace;
       --sans: "Segoe UI", system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: var(--sans);
-      background: radial-gradient(1200px 600px at 10% -10%, #1a2e3d 0%, var(--bg) 55%);
-      color: var(--text);
-      min-height: 100vh;
+    body { margin: 0; font-family: var(--sans); background: radial-gradient(1200px 600px at 10% -10%, #1a2e3d 0%, var(--bg) 55%); color: var(--text); min-height: 100vh; }
+    header { padding: 1.5rem 1.25rem 0.5rem; max-width: 1200px; margin: 0 auto; }
+    h1 { margin: 0 0 0.35rem; font-size: 1.75rem; }
+    .subtitle { color: var(--muted); max-width: 72ch; line-height: 1.5; margin: 0; font-size: 0.95rem; }
+    .tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+    .tab {
+      border: 1px solid var(--border); background: var(--panel); color: var(--muted);
+      border-radius: 10px; padding: 0.5rem 0.9rem; cursor: pointer; font-size: 0.88rem;
     }
-    header {
-      padding: 2rem 1.25rem 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    h1 { margin: 0 0 0.35rem; font-size: 1.75rem; letter-spacing: -0.02em; }
-    .subtitle { color: var(--muted); max-width: 70ch; line-height: 1.5; margin: 0; }
-    .stats {
-      display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem;
-    }
-    .stat {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 0.6rem 0.9rem;
-      font-size: 0.85rem;
-    }
+    .tab.active { border-color: var(--accent); color: var(--accent); background: #143228; }
+    .stats { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.85rem; }
+    .stat { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 0.5rem 0.8rem; font-size: 0.82rem; }
     .stat strong { color: var(--accent); }
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.25rem 2rem;
-      display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 1rem;
+    main { max-width: 1200px; margin: 0 auto; padding: 1rem 1.25rem 2rem; }
+    .view { display: none; }
+    .view.active { display: block; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 360px; gap: 1rem; }
+    @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
+    .toolbar, .panel {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 0.85rem;
     }
-    @media (max-width: 900px) {
-      main { grid-template-columns: 1fr; }
-      aside { order: -1; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; margin-bottom: 1rem; }
+    input[type="search"], select {
+      background: var(--panel-2); border: 1px solid var(--border); color: var(--text);
+      border-radius: 8px; padding: 0.6rem 0.8rem; font-size: 0.92rem;
     }
-    .toolbar {
-      grid-column: 1 / -1;
-      display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 0.85rem;
-    }
-    input[type="search"] {
-      flex: 1 1 220px;
-      background: var(--panel-2);
-      border: 1px solid var(--border);
-      color: var(--text);
-      border-radius: 8px;
-      padding: 0.65rem 0.85rem;
-      font-size: 1rem;
-    }
-    .chip {
-      border: 1px solid var(--border);
-      background: var(--panel-2);
-      color: var(--muted);
-      border-radius: 999px;
-      padding: 0.35rem 0.75rem;
-      cursor: pointer;
-      font-size: 0.82rem;
+    input[type="search"] { flex: 1 1 200px; }
+    .chip, .btn {
+      border: 1px solid var(--border); background: var(--panel-2); color: var(--muted);
+      border-radius: 999px; padding: 0.35rem 0.75rem; cursor: pointer; font-size: 0.8rem;
     }
     .chip.active { border-color: var(--accent); color: var(--accent); background: #143228; }
-    .btn {
-      border: 1px solid var(--border);
-      background: var(--panel-2);
-      color: var(--text);
-      border-radius: 8px;
-      padding: 0.45rem 0.75rem;
-      cursor: pointer;
-      font-size: 0.85rem;
-    }
+    .btn { border-radius: 8px; color: var(--text); }
     .btn.primary { background: #1c4a35; border-color: var(--accent); color: var(--accent); }
-    .results {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      min-height: 420px;
-      overflow: auto;
-      max-height: 70vh;
-    }
-    .row {
-      padding: 0.85rem 1rem;
-      border-bottom: 1px solid var(--border);
-      cursor: pointer;
-      transition: background 0.15s;
-    }
+    .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+    .results { min-height: 380px; max-height: 68vh; overflow: auto; }
+    .row { padding: 0.8rem 1rem; border-bottom: 1px solid var(--border); cursor: pointer; }
     .row:hover, .row.selected { background: var(--panel-2); }
-    .row h3 { margin: 0 0 0.25rem; font-size: 1rem; }
-    .meta { color: var(--muted); font-size: 0.8rem; }
-    .badges { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.45rem; }
-    .badge {
-      font-size: 0.72rem;
-      border-radius: 6px;
-      padding: 0.15rem 0.45rem;
-      border: 1px solid var(--border);
-      color: var(--muted);
-    }
-    .badge.item { color: #7ec8ff; border-color: #2a4f6d; }
-    .badge.creature { color: #c9a0ff; border-color: #4a3568; }
-    .badge.flag { color: var(--accent-2); border-color: #6a4f12; }
-    aside {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1rem;
-      position: sticky;
-      top: 1rem;
-      max-height: 80vh;
-      overflow: auto;
-    }
-    aside h2 { margin: 0 0 0.75rem; font-size: 1.1rem; }
-    .detail-empty { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
-    .kv { margin: 0.55rem 0; font-size: 0.85rem; }
-    .kv label { display: block; color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.15rem; }
+    .row h3 { margin: 0 0 0.2rem; font-size: 0.98rem; }
+    .meta { color: var(--muted); font-size: 0.78rem; }
+    .badges { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.4rem; }
+    .badge { font-size: 0.7rem; border-radius: 6px; padding: 0.12rem 0.4rem; border: 1px solid var(--border); color: var(--muted); }
+    .badge.item { color: var(--blue); } .badge.creature { color: var(--purple); }
+    .badge.flag { color: var(--accent-2); }
+    aside h2, .panel h2 { margin: 0 0 0.6rem; font-size: 1.05rem; }
+    .kv { margin: 0.5rem 0; font-size: 0.84rem; }
+    .kv label { display: block; color: var(--muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.12rem; }
     .kv code, .kv pre {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      background: var(--panel-2);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 0.45rem 0.5rem;
-      display: block;
-      white-space: pre-wrap;
-      word-break: break-word;
+      font-family: var(--mono); font-size: 0.76rem; background: var(--panel-2);
+      border: 1px solid var(--border); border-radius: 6px; padding: 0.4rem 0.5rem;
+      display: block; white-space: pre-wrap; word-break: break-word;
     }
-    footer {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.25rem 2rem;
-      color: var(--muted);
-      font-size: 0.82rem;
+    .pipeline { display: flex; flex-direction: column; gap: 0.55rem; margin-top: 0.5rem; }
+    .step {
+      border: 1px solid var(--border); border-radius: 10px; padding: 0.65rem 0.8rem;
+      background: var(--panel-2); opacity: 0.55; transition: 0.2s;
     }
+    .step.active { opacity: 1; border-color: var(--accent); box-shadow: 0 0 0 1px #1c4a35; }
+    .step.done { opacity: 0.85; border-color: #2d5a48; }
+    .step .layer { font-size: 0.68rem; color: var(--accent-2); text-transform: uppercase; letter-spacing: 0.06em; }
+    .step h4 { margin: 0.2rem 0; font-size: 0.92rem; }
+    .step p { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.8rem; line-height: 1.45; }
+    .hooks { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-top: 0.35rem; }
+    .hook { font-family: var(--mono); font-size: 0.68rem; background: #0f1a24; border: 1px solid var(--border); border-radius: 4px; padding: 0.1rem 0.35rem; color: var(--blue); }
+    .enum-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.45rem; max-height: 220px; overflow: auto; }
+    .enum-val {
+      border: 1px solid var(--border); border-radius: 8px; padding: 0.4rem 0.55rem;
+      font-size: 0.78rem; cursor: pointer; background: var(--panel-2);
+    }
+    .enum-val:hover, .enum-val.active { border-color: var(--accent); color: var(--accent); }
+    .status { color: var(--muted); font-size: 0.8rem; margin-left: auto; }
+    footer { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem 2rem; color: var(--muted); font-size: 0.82rem; }
     footer a { color: var(--accent); }
-    .status { color: var(--muted); font-size: 0.82rem; margin-left: auto; }
+    .sim-controls { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.75rem; }
+    .layer-legend { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+    .legend-item { font-size: 0.72rem; color: var(--muted); border: 1px dashed var(--border); border-radius: 6px; padding: 0.2rem 0.45rem; }
   </style>
 </head>
 <body>
   <header>
-    <h1>ASA Threat Surface — Game Lookup</h1>
+    <h1>ASA Threat Surface</h1>
     <p class="subtitle">
-      Search items and creatures from the MxCheatUI crosswalk: blueprint paths, class refs,
-      giveitem/spawn commands, and session-verified flags. Research catalog — no raw game paks.
+      Browse the item/creature catalog and step through how game-state enums connect to
+      disk persistence — a read-only simulation of the Maker Lab assessment flow.
     </p>
+    <div class="tabs">
+      <button class="tab active" data-view="catalog">Catalog</button>
+      <button class="tab" data-view="simulator">State Simulator</button>
+      <button class="tab" data-view="enums">Enum Explorer</button>
+    </div>
     <div class="stats" id="stats"></div>
   </header>
 
   <main>
-    <div class="toolbar">
-      <input type="search" id="q" placeholder="Search: Tek Rifle, Oasisaur, Grappling Hook…" autocomplete="off" />
-      <button class="chip active" data-filter="all">All</button>
-      <button class="chip" data-filter="item">Items</button>
-      <button class="chip" data-filter="creature">Creatures</button>
-      <button class="chip" data-filter="session">Session verified</button>
-      <button class="chip" data-filter="combat">Combat session</button>
-      <button class="chip" data-filter="tek">Tek</button>
-      <button class="btn primary" id="loadFull">Load full catalog (2.5k)</button>
-      <span class="status" id="status">Loading featured set…</span>
-    </div>
+    <!-- CATALOG -->
+    <section id="view-catalog" class="view active">
+      <div class="toolbar">
+        <input type="search" id="q" placeholder="Search: Tek Rifle, Oasisaur…" autocomplete="off" />
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="item">Items</button>
+        <button class="chip" data-filter="creature">Creatures</button>
+        <button class="chip" data-filter="session">Session verified</button>
+        <button class="chip" data-filter="combat">Combat</button>
+        <button class="chip" data-filter="tek">Tek</button>
+        <button class="btn primary" id="loadFull">Full catalog (2.5k)</button>
+        <span class="status" id="status">Loading…</span>
+      </div>
+      <div class="grid-2">
+        <div class="panel results" id="results"></div>
+        <aside class="panel" id="detail">
+          <h2>Details</h2>
+          <p class="meta">Select an entry for blueprints, cheats, and state hooks.</p>
+        </aside>
+      </div>
+    </section>
 
-    <section class="results" id="results" aria-label="Search results"></section>
+    <!-- SIMULATOR -->
+    <section id="view-simulator" class="view">
+      <div class="panel">
+        <h2>Game state flow simulator</h2>
+        <p class="meta" style="margin-bottom:0.75rem">
+          Step through how an in-game action maps to enums and disk evidence. This mirrors the
+          live SP monitor doctrine: client-trusted paths observed on disk, not live memory.
+        </p>
+        <div class="layer-legend" id="layerLegend"></div>
+        <div class="sim-controls">
+          <select id="scenarioPick" style="min-width:260px"></select>
+          <button class="btn" id="simReset">Reset</button>
+          <button class="btn" id="simPrev">← Prev</button>
+          <button class="btn primary" id="simNext">Next →</button>
+          <button class="btn primary" id="simRun">▶ Run all</button>
+        </div>
+        <div class="grid-2">
+          <div class="pipeline" id="pipeline"></div>
+          <aside>
+            <h2>Step detail</h2>
+            <div id="simDetail" class="meta">Pick a scenario and press Next to walk the flow.</div>
+            <div id="simEntity" style="margin-top:1rem"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
 
-    <aside id="detail">
-      <h2>Details</h2>
-      <p class="detail-empty">Select an entry to view blueprint paths, cheat commands, and game-state hooks.</p>
-    </aside>
+    <!-- ENUM EXPLORER -->
+    <section id="view-enums" class="view">
+      <div class="grid-2">
+        <div class="panel">
+          <h2>Enum families</h2>
+          <p class="meta">From <code>asa_creature_item_player.json</code> — click a value to find catalog matches.</p>
+          <select id="enumFamily" style="width:100%;margin:0.6rem 0"></select>
+          <p class="meta" id="enumBlurb"></p>
+          <div class="enum-grid" id="enumValues"></div>
+        </div>
+        <aside class="panel">
+          <h2>Linked catalog entries</h2>
+          <div id="enumMatches" class="results" style="min-height:300px"></div>
+        </aside>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>
-      Data from <a href="https://github.com/CTheRain/asa-threat-surface">asa-threat-surface</a>.
-      Client-trust research for ARK Survival Ascended — not affiliated with Studio Wildcard.
-    </p>
+    <p>Data from <a href="https://github.com/CTheRain/asa-threat-surface">asa-threat-surface</a>. No raw paks. Not affiliated with Studio Wildcard.</p>
   </footer>
 
   <script>
     const QUICK_URL = "live-data/bundles/asa_game_lookup_quick_v1.json";
     const FULL_URL = "live-data/bundles/asa_game_lookup_v1.min.json";
+    const SIM_URL = "game-states/asa_game_states_sim.json";
 
     let entities = [];
     let filter = "all";
     let selectedId = null;
+    let simPack = null;
+    let simIndex = 0;
+    let simTimer = null;
+    let selectedEnum = null;
 
-    const $ = (sel) => document.querySelector(sel);
-    const resultsEl = $("#results");
-    const detailEl = $("#detail");
-    const statusEl = $("#status");
+    const $ = (s) => document.querySelector(s);
+    const $$ = (s) => document.querySelectorAll(s);
 
+    function esc(s) {
+      return String(s ?? "")
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
     function normalize(s) {
       return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
     }
 
-    function entityListFromPack(pack) {
-      return Object.values(pack.entities || {});
-    }
+    // --- Tabs ---
+    $$(".tab").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        $$(".tab").forEach((t) => t.classList.remove("active"));
+        $$(".view").forEach((v) => v.classList.remove("active"));
+        tab.classList.add("active");
+        $("#view-" + tab.dataset.view).classList.add("active");
+      });
+    });
 
+    // --- Catalog ---
     async function loadPack(url, label) {
-      statusEl.textContent = `Loading ${label}…`;
+      $("#status").textContent = `Loading ${label}…`;
       const res = await fetch(url);
       if (!res.ok) throw new Error(`${url} -> ${res.status}`);
       const pack = await res.json();
-      entities = entityListFromPack(pack);
-      statusEl.textContent = `${entities.length} entries (${label})`;
-      renderStats(pack.counts || { entities: entities.length });
-      render();
+      entities = Object.values(pack.entities || {});
+      $("#status").textContent = `${entities.length} entries (${label})`;
+      renderStats();
+      renderCatalog();
     }
 
-    function renderStats(counts) {
+    function renderStats() {
       const items = entities.filter((e) => e.kind === "item").length;
       const creatures = entities.filter((e) => e.kind === "creature").length;
       const session = entities.filter((e) => e.in_session_save).length;
+      const enumCount = simPack ? Object.keys(simPack.key_enums || {}).length : "…";
       $("#stats").innerHTML = `
-        <div class="stat"><strong>${entities.length}</strong> catalog entries</div>
+        <div class="stat"><strong>${entities.length}</strong> catalog</div>
         <div class="stat"><strong>${items}</strong> items</div>
         <div class="stat"><strong>${creatures}</strong> creatures</div>
         <div class="stat"><strong>${session}</strong> session-verified</div>
+        <div class="stat"><strong>${enumCount}</strong> key enum families</div>
       `;
     }
 
     function matchesFilter(e) {
-      if (filter === "item") return e.kind === "item";
-      if (filter === "creature") return e.kind === "creature";
-      if (filter === "session") return e.in_session_save;
-      if (filter === "combat") return e.session_combat;
-      if (filter === "tek") return (e.tags || []).some((t) => t.includes("tek"));
-      return true;
+      const map = { item: () => e.kind === "item", creature: () => e.kind === "creature",
+        session: () => e.in_session_save, combat: () => e.session_combat,
+        tek: () => (e.tags || []).some((t) => t.includes("tek")) };
+      return map[filter] ? map[filter]() : true;
     }
 
     function matchesQuery(e, q) {
       if (!q) return true;
-      const hay = normalize([
-        e.display_name, e.class_ref, e.blueprint_stem, e.asset_path,
-        e.pack, e.category, e.item_type, e.actor_type, (e.tags || []).join(" ")
-      ].join(" "));
-      const terms = q.split(/\s+/).filter(Boolean);
-      return terms.every((t) => hay.includes(normalize(t)));
+      const hay = normalize([e.display_name, e.class_ref, e.blueprint_stem, e.asset_path, e.item_type, e.actor_type, (e.tags || []).join(" ")].join(" "));
+      return q.split(/\s+/).filter(Boolean).every((t) => hay.includes(normalize(t)));
     }
 
-    function render() {
+    function renderCatalog() {
       const q = $("#q").value.trim();
       const filtered = entities.filter((e) => matchesFilter(e) && matchesQuery(e, q));
-      if (!filtered.length) {
-        resultsEl.innerHTML = `<div class="row"><p class="meta">No matches. Try another term or load the full catalog.</p></div>`;
-        return;
-      }
-      const max = 200;
-      const slice = filtered.slice(0, max);
-      resultsEl.innerHTML = slice.map((e) => {
+      const el = $("#results");
+      if (!filtered.length) { el.innerHTML = `<div class="row meta">No matches.</div>`; return; }
+      const max = 200, slice = filtered.slice(0, max);
+      el.innerHTML = slice.map((e) => {
         const flags = [];
-        if (e.in_session_save) flags.push("session save");
+        if (e.in_session_save) flags.push("save");
         if (e.session_combat) flags.push("combat");
-        if (e.tribe_log_hit) flags.push("tribe log");
         const sel = e.class_ref === selectedId ? " selected" : "";
-        return `
-          <article class="row${sel}" data-id="${e.class_ref}">
-            <h3>${esc(e.display_name)}</h3>
-            <div class="meta">${esc(e.class_ref)} · ${esc(e.pack || "unknown pack")}</div>
-            <div class="badges">
-              <span class="badge ${e.kind}">${e.kind}</span>
-              ${e.item_type ? `<span class="badge">${esc(e.item_type)}</span>` : ""}
-              ${e.actor_type ? `<span class="badge">${esc(e.actor_type)}</span>` : ""}
-              ${flags.map((f) => `<span class="badge flag">${f}</span>`).join("")}
-            </div>
-          </article>`;
-      }).join("") + (filtered.length > max ? `<div class="row meta">Showing ${max} of ${filtered.length} matches — refine search.</div>` : "");
-
-      resultsEl.querySelectorAll(".row[data-id]").forEach((row) => {
+        return `<article class="row${sel}" data-id="${esc(e.class_ref)}">
+          <h3>${esc(e.display_name)}</h3>
+          <div class="meta">${esc(e.class_ref)}</div>
+          <div class="badges">
+            <span class="badge ${e.kind}">${e.kind}</span>
+            ${e.item_type ? `<span class="badge">${esc(e.item_type)}</span>` : ""}
+            ${flags.map((f) => `<span class="badge flag">${f}</span>`).join("")}
+          </div></article>`;
+      }).join("") + (filtered.length > max ? `<div class="row meta">+${filtered.length - max} more — refine search</div>` : "");
+      el.querySelectorAll(".row[data-id]").forEach((row) => {
         row.addEventListener("click", () => showDetail(row.dataset.id));
       });
+    }
+
+    function parseHooks(str) {
+      return (str || "").split(";").map((s) => s.trim()).filter(Boolean);
     }
 
     function showDetail(classRef) {
       selectedId = classRef;
       const e = entities.find((x) => x.class_ref === classRef);
       if (!e) return;
-      render();
-      detailEl.innerHTML = `
+      renderCatalog();
+      const hooks = parseHooks(e.enum_hooks);
+      $("#detail").innerHTML = `
         <h2>${esc(e.display_name)}</h2>
         <div class="kv"><label>Class ref</label><code>${esc(e.class_ref)}</code></div>
-        <div class="kv"><label>Asset path</label><code>${esc(e.asset_path)}</code></div>
-        <div class="kv"><label>Blueprint (UE)</label><code>${esc(e.blueprint_ue)}</code></div>
+        <div class="kv"><label>Blueprint</label><code>${esc(e.blueprint_ue)}</code></div>
         ${e.giveitem ? `<div class="kv"><label>Give item</label><pre>${esc(e.giveitem)}</pre></div>` : ""}
         ${e.spawn_dino ? `<div class="kv"><label>Spawn dino</label><pre>${esc(e.spawn_dino)}</pre></div>` : ""}
-        ${e.enum_hooks ? `<div class="kv"><label>Game-state hooks</label><code>${esc(e.enum_hooks)}</code></div>` : ""}
-        <div class="kv"><label>Tags</label><code>${esc((e.tags || []).join("; "))}</code></div>
+        <div class="kv"><label>State hooks</label><code>${esc(e.enum_hooks || "—")}</code></div>
+        <p class="meta" style="margin-top:0.75rem">
+          <button class="btn primary" id="simFromEntity">Simulate state flow →</button>
+        </p>
       `;
+      $("#simFromEntity")?.addEventListener("click", () => {
+        $$(".tab").forEach((t) => t.classList.remove("active"));
+        $$(".view").forEach((v) => v.classList.remove("active"));
+        $(`.tab[data-view="simulator"]`).classList.add("active");
+        $("#view-simulator").classList.add("active");
+        pickScenarioForEntity(e);
+      });
     }
 
-    function esc(s) {
-      return String(s)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;");
+    // --- Simulator ---
+    async function loadSim() {
+      const res = await fetch(SIM_URL);
+      if (!res.ok) throw new Error(SIM_URL);
+      simPack = await res.json();
+      $("#layerLegend").innerHTML = (simPack.persistence_layers || []).map((l) =>
+        `<span class="legend-item">${esc(l.label)}${l.disk_observable ? " ✓ disk" : " · memory"}</span>`
+      ).join("");
+      const pick = $("#scenarioPick");
+      pick.innerHTML = simPack.scenarios.map((s) =>
+        `<option value="${esc(s.id)}">${esc(s.title)}</option>`
+      ).join("");
+      pick.addEventListener("change", () => { simIndex = 0; renderPipeline(); });
+      renderStats();
+      renderPipeline();
+      initEnumExplorer();
     }
 
-    document.querySelectorAll(".chip[data-filter]").forEach((chip) => {
+    function currentScenario() {
+      const id = $("#scenarioPick").value;
+      return simPack.scenarios.find((s) => s.id === id);
+    }
+
+    function renderPipeline() {
+      const sc = currentScenario();
+      if (!sc) return;
+      const pipe = $("#pipeline");
+      pipe.innerHTML = sc.steps.map((step, i) => {
+        const cls = i < simIndex ? "step done" : i === simIndex ? "step active" : "step";
+        const hooks = (step.hooks || []).map((h) => `<span class="hook">${esc(h)}</span>`).join("");
+        return `<div class="${cls}" data-step="${i}">
+          <div class="layer">${esc(step.layer)}</div>
+          <h4>${esc(step.title)}</h4>
+          <p>${esc(step.detail)}</p>
+          <div class="hooks">${hooks}</div>
+        </div>`;
+      }).join("");
+
+      const step = sc.steps[simIndex];
+      $("#simDetail").innerHTML = step ? `
+        <div class="kv"><label>Scenario</label><code>${esc(sc.title)}</code></div>
+        <div class="kv"><label>Summary</label><code>${esc(sc.summary)}</code></div>
+        <div class="kv"><label>Net mode</label><code>${esc(sc.net_mode)}</code></div>
+        <p style="line-height:1.5;color:var(--text)">${esc(step.detail)}</p>
+      ` : `<span class="meta">Flow complete. Disk layers are what the live monitor captures.</span>`;
+
+      const ent = entities.find((e) => e.class_ref === sc.entity_class_ref);
+      $("#simEntity").innerHTML = ent ? `
+        <h2 style="font-size:0.95rem">Linked catalog entry</h2>
+        <div class="kv"><label>${esc(ent.display_name)}</label><code>${esc(ent.class_ref)}</code></div>
+        <button class="btn" onclick="showDetail('${esc(ent.class_ref)}');document.querySelector('.tab[data-view=catalog]').click()">View in catalog</button>
+      ` : `<p class="meta">Load full catalog to link <code>${esc(sc.entity_class_ref)}</code></p>`;
+    }
+
+    function pickScenarioForEntity(e) {
+      const hookStr = e.enum_hooks || "";
+      let best = simPack.scenarios[0];
+      let bestScore = 0;
+      for (const sc of simPack.scenarios) {
+        let score = sc.entity_class_ref === e.class_ref ? 5 : 0;
+        for (const step of sc.steps) {
+          for (const h of step.hooks || []) {
+            if (hookStr.includes(h.split(":").pop())) score += 1;
+          }
+        }
+        if (score > bestScore) { bestScore = score; best = sc; }
+      }
+      $("#scenarioPick").value = best.id;
+      simIndex = 0;
+      renderPipeline();
+    }
+
+    $("#simReset").addEventListener("click", () => { clearInterval(simTimer); simIndex = 0; renderPipeline(); });
+    $("#simPrev").addEventListener("click", () => { simIndex = Math.max(0, simIndex - 1); renderPipeline(); });
+    $("#simNext").addEventListener("click", () => {
+      const sc = currentScenario();
+      if (simIndex < sc.steps.length) simIndex++;
+      renderPipeline();
+    });
+    $("#simRun").addEventListener("click", () => {
+      clearInterval(simTimer);
+      simIndex = 0;
+      renderPipeline();
+      simTimer = setInterval(() => {
+        const sc = currentScenario();
+        if (simIndex >= sc.steps.length) { clearInterval(simTimer); return; }
+        simIndex++;
+        renderPipeline();
+      }, 900);
+    });
+
+    // --- Enum explorer ---
+    function initEnumExplorer() {
+      const fam = $("#enumFamily");
+      fam.innerHTML = Object.keys(simPack.key_enums).map((k) =>
+        `<option value="${esc(k)}">${esc(k)}</option>`
+      ).join("");
+      fam.addEventListener("change", () => { selectedEnum = null; renderEnumValues(); });
+      renderEnumValues();
+    }
+
+    function renderEnumValues() {
+      const name = $("#enumFamily").value;
+      const data = simPack.key_enums[name];
+      $("#enumBlurb").textContent = data?.blurb || "";
+      const grid = $("#enumValues");
+      grid.innerHTML = (data?.values || []).filter((v) => !["MAX", "Type"].includes(v)).map((v) => {
+        const key = `${name}:${v}`;
+        const active = selectedEnum === key ? " active" : "";
+        return `<div class="enum-val${active}" data-key="${esc(key)}">${esc(v)}</div>`;
+      }).join("");
+      grid.querySelectorAll(".enum-val").forEach((el) => {
+        el.addEventListener("click", () => {
+          selectedEnum = el.dataset.key;
+          renderEnumValues();
+          renderEnumMatches();
+        });
+      });
+      renderEnumMatches();
+    }
+
+    function renderEnumMatches() {
+      const el = $("#enumMatches");
+      if (!selectedEnum) {
+        el.innerHTML = `<div class="row meta">Select an enum value to see catalog rows whose hooks match.</div>`;
+        return;
+      }
+      const [fam, val] = selectedEnum.split(":");
+      const needle = `${fam}:${val}`;
+      const matches = entities.filter((e) => (e.enum_hooks || "").includes(needle));
+      if (!matches.length) {
+        el.innerHTML = `<div class="row meta">No matches in loaded catalog for <code>${esc(needle)}</code>. Try Full catalog.</div>`;
+        return;
+      }
+      el.innerHTML = matches.slice(0, 40).map((e) =>
+        `<article class="row" data-id="${esc(e.class_ref)}">
+          <h3>${esc(e.display_name)}</h3>
+          <div class="meta">${esc(e.class_ref)} · ${esc(e.kind)}</div>
+        </article>`
+      ).join("");
+      el.querySelectorAll(".row[data-id]").forEach((row) => {
+        row.addEventListener("click", () => {
+          showDetail(row.dataset.id);
+          $$(".tab").forEach((t) => t.classList.remove("active"));
+          $$(".view").forEach((v) => v.classList.remove("active"));
+          $(`.tab[data-view="catalog"]`).classList.add("active");
+          $("#view-catalog").classList.add("active");
+        });
+      });
+    }
+
+    // --- Wire catalog ---
+    $$(".chip[data-filter]").forEach((chip) => {
       chip.addEventListener("click", () => {
-        document.querySelectorAll(".chip[data-filter]").forEach((c) => c.classList.remove("active"));
+        $$(".chip[data-filter]").forEach((c) => c.classList.remove("active"));
         chip.classList.add("active");
         filter = chip.dataset.filter;
-        render();
+        renderCatalog();
       });
     });
-
-    $("#q").addEventListener("input", render);
+    $("#q").addEventListener("input", renderCatalog);
     $("#loadFull").addEventListener("click", async () => {
-      try {
-        await loadPack(FULL_URL, "full catalog");
-      } catch (err) {
-        statusEl.textContent = `Failed to load full catalog: ${err.message}`;
-      }
+      try { await loadPack(FULL_URL, "full"); } catch (e) { $("#status").textContent = e.message; }
     });
 
-    loadPack(QUICK_URL, "featured").catch((err) => {
-      statusEl.textContent = `Load error: ${err.message}`;
-      resultsEl.innerHTML = `<div class="row"><p class="meta">Could not load data. Open from GitHub Pages or a local web server.</p></div>`;
+    Promise.all([
+      loadPack(QUICK_URL, "featured"),
+      loadSim(),
+    ]).catch((e) => {
+      $("#status").textContent = `Load error: ${e.message}`;
     });
   </script>
 </body>

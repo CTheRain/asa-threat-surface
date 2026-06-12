@@ -72,7 +72,15 @@ After enabling GitHub Pages (Settings → Pages → Deploy from branch `main` / 
 
 **https://ctherain.github.io/asa-threat-surface/**
 
-The `index.html` viewer searches items/creatures, blueprint paths, and cheat command templates.
+The `index.html` viewer has three tabs:
+
+| Tab | What it does |
+|-----|----------------|
+| **Catalog** | Search items/creatures, blueprint paths, cheat templates (quick or full 2.5k pack) |
+| **State Simulator** | Step through scenarios (craft, combat, tame, cheats) — enums → disk persistence layers |
+| **Enum Explorer** | Pick `EPrimalItemType`, `ECheatActorType`, `EActorListsBP`, etc. → linked catalog rows |
+
+Simulation data: `game-states/asa_game_states_sim.json` (rebuild with `python scripts/build_game_states_sim.py`).
 
 ## License
 
