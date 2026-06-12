@@ -1,0 +1,530 @@
+{
+  "bundle_id": "session_20260611_center_combat_destruction_v1",
+  "schema_version": 1,
+  "generated_at_utc": "2026-06-12T02:14:24.464966+00:00",
+  "program": "ASA Threat Surface / Maker Lab live SP validation",
+  "session": {
+    "date_local": "2026-06-11",
+    "map": "TheCenter_WP",
+    "mode": "singleplayer",
+    "character": "CTheRain",
+    "tribe": "Slaanesh / Wow All Horizontal",
+    "activity_summary": "Rep craft (grapples, element, Tek Rifle) then sustained Tek Rifle destruction of structures and dinos",
+    "wall_clock_window_local": "21:56:11 - 22:12:07",
+    "monitor_session_started_utc": "2026-06-12T01:50:55.197682+00:00",
+    "monitor_stopped": true,
+    "monitor_pid_stopped": 8904
+  },
+  "persistence_layers": {
+    "main_save": {
+      "live_path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\ARK Survival Ascended\\ShooterGame\\Saved\\SavedArksLocal\\TheCenter_WP\\TheCenter_WP.ark",
+      "size_bytes_start": 12869632,
+      "size_bytes_end": 14204928,
+      "delta_bytes": 1335296
+    },
+    "rolling_arkbak": {
+      "cap": 20,
+      "live_count": 20,
+      "slots_present": [
+        "0000",
+        "0001",
+        "0002",
+        "0003",
+        "0004",
+        "0005",
+        "0006",
+        "0007",
+        "0008",
+        "0009",
+        "0010",
+        "0011",
+        "0012",
+        "0013",
+        "0014",
+        "0015",
+        "0016",
+        "0017",
+        "0018",
+        "0019"
+      ],
+      "session_slots_created": [
+        "0002",
+        "0003",
+        "0004",
+        "0005",
+        "0006",
+        "0007",
+        "0008",
+        "0009",
+        "0010",
+        "0011",
+        "0012",
+        "0013",
+        "0014",
+        "0015",
+        "0016",
+        "0017",
+        "0018",
+        "0019"
+      ],
+      "user_deleted_one_for_cap": true,
+      "deleted_slot_note": "First mirrored _0016 (20260611_221029) superseded by live _0016 at 22:11:47; user manually deleted one backup when hitting 20-slot cap",
+      "live_inventory": [
+        {
+          "slot": "0000",
+          "name": "TheCenter_WP_0000.arkbak",
+          "size_bytes": 1859584,
+          "mtime_local": "2025-06-14T11:02:17.494244"
+        },
+        {
+          "slot": "0001",
+          "name": "TheCenter_WP_0001.arkbak",
+          "size_bytes": 12828672,
+          "mtime_local": "2026-06-10T16:02:57.679338"
+        },
+        {
+          "slot": "0002",
+          "name": "TheCenter_WP_0002.arkbak",
+          "size_bytes": 12730368,
+          "mtime_local": "2026-06-11T22:03:25.839228"
+        },
+        {
+          "slot": "0003",
+          "name": "TheCenter_WP_0003.arkbak",
+          "size_bytes": 12894208,
+          "mtime_local": "2026-06-11T22:04:09.055689"
+        },
+        {
+          "slot": "0004",
+          "name": "TheCenter_WP_0004.arkbak",
+          "size_bytes": 12910592,
+          "mtime_local": "2026-06-11T22:04:15.163690"
+        },
+        {
+          "slot": "0005",
+          "name": "TheCenter_WP_0005.arkbak",
+          "size_bytes": 12730368,
+          "mtime_local": "2026-06-11T22:05:37.401587"
+        },
+        {
+          "slot": "0006",
+          "name": "TheCenter_WP_0006.arkbak",
+          "size_bytes": 12804096,
+          "mtime_local": "2026-06-11T22:06:10.520356"
+        },
+        {
+          "slot": "0007",
+          "name": "TheCenter_WP_0007.arkbak",
+          "size_bytes": 12795904,
+          "mtime_local": "2026-06-11T22:06:20.625589"
+        },
+        {
+          "slot": "0008",
+          "name": "TheCenter_WP_0008.arkbak",
+          "size_bytes": 12779520,
+          "mtime_local": "2026-06-11T22:06:39.890977"
+        },
+        {
+          "slot": "0009",
+          "name": "TheCenter_WP_0009.arkbak",
+          "size_bytes": 12804096,
+          "mtime_local": "2026-06-11T22:06:47.981293"
+        },
+        {
+          "slot": "0010",
+          "name": "TheCenter_WP_0010.arkbak",
+          "size_bytes": 12918784,
+          "mtime_local": "2026-06-11T22:07:06.227595"
+        },
+        {
+          "slot": "0011",
+          "name": "TheCenter_WP_0011.arkbak",
+          "size_bytes": 12918784,
+          "mtime_local": "2026-06-11T22:07:16.332796"
+        },
+        {
+          "slot": "0012",
+          "name": "TheCenter_WP_0012.arkbak",
+          "size_bytes": 12918784,
+          "mtime_local": "2026-06-11T22:07:37.539660"
+        },
+        {
+          "slot": "0013",
+          "name": "TheCenter_WP_0013.arkbak",
+          "size_bytes": 12943360,
+          "mtime_local": "2026-06-11T22:07:57.741937"
+        },
+        {
+          "slot": "0014",
+          "name": "TheCenter_WP_0014.arkbak",
+          "size_bytes": 12926976,
+          "mtime_local": "2026-06-11T22:08:12.932133"
+        },
+        {
+          "slot": "0015",
+          "name": "TheCenter_WP_0015.arkbak",
+          "size_bytes": 12926976,
+          "mtime_local": "2026-06-11T22:08:21.126823"
+        },
+        {
+          "slot": "0016",
+          "name": "TheCenter_WP_0016.arkbak",
+          "size_bytes": 12402688,
+          "mtime_local": "2026-06-11T22:11:47.988875"
+        },
+        {
+          "slot": "0017",
+          "name": "TheCenter_WP_0017.arkbak",
+          "size_bytes": 12607488,
+          "mtime_local": "2026-06-11T22:10:45.482482"
+        },
+        {
+          "slot": "0018",
+          "name": "TheCenter_WP_0018.arkbak",
+          "size_bytes": 12402688,
+          "mtime_local": "2026-06-11T22:11:03.654274"
+        },
+        {
+          "slot": "0019",
+          "name": "TheCenter_WP_0019.arkbak",
+          "size_bytes": 12402688,
+          "mtime_local": "2026-06-11T22:11:32.815115"
+        }
+      ]
+    },
+    "anticorruption_backup": {
+      "name": "TheCenter_WP_AntiCorruptionBackup.bak",
+      "size_bytes": 12869632,
+      "mtime_local": "2026-06-11T21:56:10",
+      "lagged_late_destruction": true
+    },
+    "profile": {
+      "size_bytes_start_est": 2402978,
+      "size_bytes_end": 2404339,
+      "mid_session_spike_bytes": 2417661
+    }
+  },
+  "anchors": {
+    "session_open": {
+      "mirror": "20260611_215612__TheCenter_WP.ark",
+      "size_bytes": 12869632,
+      "role": "post_load_baseline"
+    },
+    "pre_destruction": {
+      "mirror": "20260611_220144__TheCenter_WP.ark",
+      "size_bytes": 12910592,
+      "role": "pre_sustained_destruction"
+    },
+    "post_combat_mid": {
+      "mirror": "20260611_220417__TheCenter_WP.ark",
+      "size_bytes": 12935168,
+      "role": "first_rolling_backup_window"
+    },
+    "peak_churn": {
+      "mirror": "20260611_221108__TheCenter_WP.ark",
+      "size_bytes": 14221312,
+      "role": "late_destruction_peak"
+    },
+    "session_exit": {
+      "mirror": "20260611_221210__TheCenter_WP.ark",
+      "size_bytes": 14204928,
+      "role": "final_exit_save",
+      "sha256": "331EDFAE51E1473B1CA1C850278094C33DB81F386510BAA99941FADF256705AB"
+    },
+    "profile_exit": {
+      "mirror": "20260611_221210__PlayerLocalData.arkprofile",
+      "size_bytes": 2404339,
+      "sha256": "48BF855F936BE4D4E88D69850E42A833AC5E0E7B7D8201070A9F42B3DA840970"
+    }
+  },
+  "mirrored_arkbak_session": [
+    {
+      "mirror": "20260611_215056__TheCenter_WP_0000.arkbak",
+      "size_bytes": 1859584,
+      "sha256": "2D401709C556F2A97841FE57229C1DD5D305B0FEE743F156F77A4BF266274985"
+    },
+    {
+      "mirror": "20260611_215056__TheCenter_WP_0001.arkbak",
+      "size_bytes": 12828672,
+      "sha256": "8858156BF8632A0E543E6069E4E18A2811402CF1191A73EF1DA3EC62C1C9175F"
+    },
+    {
+      "mirror": "20260611_220331__TheCenter_WP_0002.arkbak",
+      "size_bytes": 12730368,
+      "sha256": "4E6AA9EA14FB64BCEB9801EDC9D60F2D91446CCDE2173A7F1E9DCAF13864E9B8"
+    },
+    {
+      "mirror": "20260611_220411__TheCenter_WP_0003.arkbak",
+      "size_bytes": 12894208,
+      "sha256": "1E46769560C6C73B48024FFC314F904747357A03D7FAF244D4035E8FDFD873BC"
+    },
+    {
+      "mirror": "20260611_220417__TheCenter_WP_0004.arkbak",
+      "size_bytes": 12910592,
+      "sha256": "5483C2C11A4B284FB22C18988237A1EE8AC930DF73D51EF8AF8EA3FAD5126D5F"
+    },
+    {
+      "mirror": "20260611_220540__TheCenter_WP_0005.arkbak",
+      "size_bytes": 12730368,
+      "sha256": "BEA5D011B2C3BECA035B7107988BE278E9BD30C558EC4E65FCCC5C0B4E2F651C"
+    },
+    {
+      "mirror": "20260611_220614__TheCenter_WP_0006.arkbak",
+      "size_bytes": 12804096,
+      "sha256": "7D42367404BB8D451E6766D62A38C5DADA871138A05816C98D8E495BB8F1FC56"
+    },
+    {
+      "mirror": "20260611_220624__TheCenter_WP_0007.arkbak",
+      "size_bytes": 12795904,
+      "sha256": "2C4BE763898831980D43932B1323C59444CC44D2DFD796F2BA88C54178C976F1"
+    },
+    {
+      "mirror": "20260611_220643__TheCenter_WP_0008.arkbak",
+      "size_bytes": 12779520,
+      "sha256": "DB8F3E149AA37163D40E3FB0FF6A93338BEC646EB591266888CF0276B1C7381B"
+    },
+    {
+      "mirror": "20260611_220649__TheCenter_WP_0009.arkbak",
+      "size_bytes": 12804096,
+      "sha256": "CE16FA638DED28DB5AFCC6DF4DF6B3864DFB08E4A1EEFC5051FA2DA3A04F9164"
+    },
+    {
+      "mirror": "20260611_220711__TheCenter_WP_0010.arkbak",
+      "size_bytes": 12918784,
+      "sha256": "7F73E8AAAF13DA495CF66AF5D92F53EFBF68148399DFAC1665462424F49EC041"
+    },
+    {
+      "mirror": "20260611_220717__TheCenter_WP_0011.arkbak",
+      "size_bytes": 12918784,
+      "sha256": "AC187EDE1A733B7C75E6A279768C48C14303EB805DE3BA8D054DE3253C9CD2DC"
+    },
+    {
+      "mirror": "20260611_220739__TheCenter_WP_0012.arkbak",
+      "size_bytes": 12918784,
+      "sha256": "784EA7C7C0D589EF7A324F7FD7C07937F93A0EB52F2639CB0A22BAF1B9FB7994"
+    },
+    {
+      "mirror": "20260611_220758__TheCenter_WP_0013.arkbak",
+      "size_bytes": 12943360,
+      "sha256": "7D3985382D35C49133ECA96EB767664DD68D125CD608836CA7712372F4F06E22"
+    },
+    {
+      "mirror": "20260611_220830__TheCenter_WP_0014.arkbak",
+      "size_bytes": 12926976,
+      "sha256": "6F4335A2BCA161D8A1271E5C6F12896BA7078ACBE73E5AA25769B66490273386"
+    },
+    {
+      "mirror": "20260611_220830__TheCenter_WP_0015.arkbak",
+      "size_bytes": 12926976,
+      "sha256": "295393F5CEE0B519A3E6403B8A4A8A40C4F3C22F78165A57053FC2D4EAF57539"
+    },
+    {
+      "mirror": "20260611_221029__TheCenter_WP_0016.arkbak",
+      "size_bytes": 12935168,
+      "sha256": "CCDE52DC490226B64FBCAE66F3E667B8A7CE47058A07F416A00272E439B8547C"
+    },
+    {
+      "mirror": "20260611_221047__TheCenter_WP_0017.arkbak",
+      "size_bytes": 12607488,
+      "sha256": "5FB2555075F278C8601A42C6BE21A2A01ABDBE1F0C63819E3DF939245396394E"
+    },
+    {
+      "mirror": "20260611_221109__TheCenter_WP_0018.arkbak",
+      "size_bytes": 12402688,
+      "sha256": "E9F7A570DB6F3E0EA68E8A6D2A9BFC16D73B060785E78E15EC7DB1FE598552F9"
+    },
+    {
+      "mirror": "20260611_221133__TheCenter_WP_0019.arkbak",
+      "size_bytes": 12402688,
+      "sha256": "FB88E7449C041BE20BBA6A065227A001423CE798462444DBBFF62DF426854053"
+    },
+    {
+      "mirror": "20260611_221152__TheCenter_WP_0016.arkbak",
+      "size_bytes": 12402688,
+      "sha256": "5024ACB11665B03C6D775A68B3CD473A9AFCE09B44341E4FFC281A0CDB8BBF90"
+    }
+  ],
+  "craft_combat_binary_evidence": [
+    "PrimalItemAmmo_GrapplingHook_C",
+    "PrimalItem_TekRifle_C",
+    "PrimalItemResource_Element (class refs in world blob)",
+    "PrimalItem_DinoSpawner_Zeppelin_C",
+    "PrimalStructure_TekGenerator / Thatch structure class refs"
+  ],
+  "tribe_log_delta_open_to_exit": {
+    "session_new_tribe_events_unique": [
+      "Day 7, 17:51:46: <RichColor Color=\"1, 0, 0, 1\">Tribemember CTheRain - Lvl 195 was killed!</>",
+      "Day 7, 18:44:56: <RichColor Color=\"1, 0, 0, 1\">Your Big Chungus - Lvl 1 (Titanosaur) was killed!</>",
+      "Day 7, 18:45:07: <RichColor Color=\"1, 0, 0, 1\">Your Dreadnoughtus - Lvl 592 (Dreadnoughtus) was killed!</>",
+      "Day 7, 18:45:21: <RichColor Color=\"1, 0, 0, 1\">Your Stegosaurus - Lvl 592 (Stegosaurus) was killed!</>",
+      "Day 8, 16:53:24: <RichColor Color=\"1, 0, 0, 1\">Your Test - Lvl 95 (Bison) was killed!</>",
+      "Day 9, 16:13:21: <RichColor Color=\"1, 0, 0, 1\">Your Aberrant Carbonemys - Lvl 1 (Aberrant Carbonemys) was killed!</>",
+      "Day 9, 17:32:51: <RichColor Color=\"0.85, 0.15, 0.25, 1\">CTheRain uploaded a Oasisaur: Oasisaur - Lvl 1</>",
+      "Day 9, 17:53:04: <RichColor Color=\"0.85, 0.15, 0.25, 1\">CTheRain uploaded a Oasisaur: Oasisaur - Lvl 1</>",
+      "Day 9, 17:53:41: <RichColor Color=\"0.45, 0.85, 0.55, 1\">CTheRain downloaded a dino: Oasisaur - Lvl 1</>",
+      "Day 9, 18:31:14: <RichColor Color=\"1, 0, 0, 1\">Your Oasisaur - Lvl 1 (Oasisaur) was killed!</>",
+      "Day 15, 08:03:29: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 08:21:01: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 08:22:44: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 08:22:45: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 08:22:59: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 08:44:32: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 10:55:32: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 10:55:41: <RichColor Color=\"1, 0, 0, 1\">Your Turret Power (BattleRig) was destroyed!</>",
+      "Day 15, 10:56:19: <RichColor Color=\"1, 0, 0, 1\">Your Was/Where (BattleRig) was destroyed!</>",
+      "Day 15, 12:14:11: <RichColor Color=\"1, 1, 0, 1\">CTheRain unclaimed 'Mammoth - Lvl 300 (Mammoth)'!</>",
+      "Day 15, 14:43:22: <RichColor Color=\"1, 0, 0, 1\">Your Quetzal - Lvl 388 (Quetzal) was killed!</>",
+      "Day 15, 16:33:43: <RichColor Color=\"0, 1, 0, 1\">CTheRain Tamed a Veilwyn - Lvl 300 (Veilwyn)!</>",
+      "Day 15, 16:39:50: <RichColor Color=\"0, 1, 0, 1\">CTheRain Tamed a Spring Drakeling - Lvl 225 (Spring Drakeling)!</>",
+      "Day 17, 20:08:40: <RichColor Color=\"0, 1, 0, 1\">CTheRain Tamed an Armadoggo - Lvl 300 (Armadoggo)!</>",
+      "Day 22, 20:14:30: <RichColor Color=\"1, 0, 0, 1\">Your Quetzal - Lvl 89 (Quetzal) was killed!</>",
+      "Day 22, 20:17:20: <RichColor Color=\"1, 0, 0, 1\">Your Diplodocus - Lvl 1 (Diplodocus) was killed!</>",
+      "Day 22, 20:18:59: <RichColor Color=\"1, 0, 0, 1\">Your Armadoggo - Lvl 388 (Armadoggo) was killed!</>",
+      "Day 23, 12:55:48: <RichColor Color=\"1, 0, 0, 1\">Your Veilwyn - Lvl 388 (Veilwyn) was killed!</>",
+      "Day 23, 13:02:23: <RichColor Color=\"0, 1, 0, 1\">CTheRain Tamed a Veilwyn - Lvl 300 (Veilwyn)!</>",
+      "Day 23, 14:33:14: <RichColor Color=\"1, 0, 0, 1\">Your Veilwyn - Lvl 300 (Veilwyn) was killed!</>",
+      "Day 23, 19:54:55: <RichColor Color=\"0, 1, 0, 1\">CTheRain Tamed a Spring Drakeling - Lvl 225 (Spring Drakeling)!</>",
+      "Day 23, 20:22:45: <RichColor Color=\"1, 0, 0, 1\">Your Troodon - Lvl 288 (Troodon) was killed by CTheRain - Lvl 195-808697521 (Wow All Horizontal)!</>",
+      "Day 23, 20:22:45: <RichColor Color=\"1, 0, 1, 1\">Your Tribe killed Troodon - Lvl 288 (Troodon) (Wow All Horizontal)!</>",
+      "Day 24, 13:41:49: <RichColor Color=\"1, 0, 0, 1\">Your Spring Drakeling - Lvl 225 (Spring Drakeling) was killed!</>",
+      "Day 24, 14:22:18: <RichColor Color=\"1, 0, 0, 1\">Your Terror Bird - Lvl 1 (Terror Bird) was killed!</>",
+      "Day 24, 14:22:30: <RichColor Color=\"1, 0, 0, 1\">Your Doedicurus - Lvl 1 (Doedicurus) was killed!</>",
+      "Day 24, 14:22:41: <RichColor Color=\"1, 0, 0, 1\">Your Spino - Lvl 1 (Spino) was killed!</>",
+      "Day 24, 14:22:57: <RichColor Color=\"1, 0, 0, 1\">Your Griffin - Lvl 1 (Griffin) was killed!</>",
+      "Day 24, 14:23:07: <RichColor Color=\"1, 0, 0, 1\">Your Ovis - Lvl 1 (Ovis) was killed!</>",
+      "Day 24, 14:23:29: <RichColor Color=\"1, 0, 0, 1\">Your Mammoth - Lvl 1 (Mammoth) was killed!</>",
+      "Day 24, 14:23:47: <RichColor Color=\"1, 0, 0, 1\">Your Otter - Lvl 1 (Otter) was killed!</>",
+      "Day 24, 14:24:44: <RichColor Color=\"1, 0, 0, 1\">Your Direwolf - Lvl 1 (Direwolf) was killed!</>",
+      "Day 24, 14:27:52: <RichColor Color=\"1, 0, 0, 1\">Your Carcharodontosaurus - Lvl 1 (Carcharodontosaurus) was killed!</>",
+      "Day 24, 15:17:15: <RichColor Color=\"1, 1, 0, 1\">CTheRain demolished a 'Fancy Armchair'!</>",
+      "Day 26, 07:24:07: <RichColor Color=\"1, 0, 0, 1\">Your Managarmr - Lvl 488 (Managarmr) was killed!</>",
+      "Day 29, 15:25:15: <RichColor Color=\"1, 1, 0, 1\">CTheRain unclaimed 'Gigantopithecus - Lvl 1 (Gigantopithecus)'!</>",
+      "Day 29, 15:41:17: <RichColor Color=\"1, 0, 0, 1\">Your Hover Skiff (Hover Skiff) was destroyed!</>",
+      "Day 29, 16:23:36: <RichColor Color=\"1, 0, 1, 1\">CTheRain claimed 'Gigantopithecus - Lvl 1 (Gigantopithecus)'!</>",
+      "Day 33, 15:15:22: <RichColor Color=\"0.85, 0.15, 0.25, 1\">CTheRain uploaded a Spring Drakeling: Spring Drakeling - Lvl 225</>",
+      "Day 33, 15:15:43: <RichColor Color=\"0.45, 0.85, 0.55, 1\">CTheRain downloaded a dino: Spring Drakeling - Lvl 225</>",
+      "Day 39, 11:30:16: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 50, 11:36:42: <RichColor Color=\"1, 0, 0, 1\">Your 'Tek Trough' was destroyed!</>",
+      "Day 50, 11:38:09: <RichColor Color=\"1, 0, 0, 1\">Your 'Meat ONLY (Tek Trough)' was destroyed!</>",
+      "Day 52, 18:26:55: <RichColor Color=\"1, 0, 0, 1\">Your Cat - Lvl 500 (Cat) was killed!</>",
+      "Day 52, 19:03:56: <RichColor Color=\"1, 0, 0, 1\">Your 'Tek Generator' was destroyed!</>",
+      "Day 52, 19:05:07: <RichColor Color=\"1, 0, 0, 1\">Your 'EarlyAlarm (Tek Generator)' was destroyed!</>",
+      "Day 53, 15:49:20: <RichColor Color=\"1, 0, 0, 1\">Your 'ITS THE LONGEST NAME IN HISTORY JESUS WHY IS IT SO LONG THIS IS  (Tek Transmitter)' was destroyed!</>",
+      "Day 53, 17:33:54: <RichColor Color=\"1, 0, 0, 1\">Your 'Thatch Ceiling' was destroyed!</>",
+      "Day 53, 17:34:32: <RichColor Color=\"1, 0, 0, 1\">Your 'Thatch Ceiling' was destroyed!</>",
+      "Day 53, 17:34:47: <RichColor Color=\"1, 0, 0, 1\">Your 'Thatch Ceiling' was destroyed!</>"
+    ],
+    "session_new_destroyed_sample": [
+      "Day 15, 08:03:29: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 08:21:01: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 08:22:44: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 08:22:45: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 08:22:59: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 08:44:32: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 10:55:32: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 15, 10:55:41: <RichColor Color=\"1, 0, 0, 1\">Your Turret Power (BattleRig) was destroyed!</>",
+      "Day 15, 10:56:19: <RichColor Color=\"1, 0, 0, 1\">Your Was/Where (BattleRig) was destroyed!</>",
+      "Day 29, 15:41:17: <RichColor Color=\"1, 0, 0, 1\">Your Hover Skiff (Hover Skiff) was destroyed!</>",
+      "Day 39, 11:30:16: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 50, 11:36:42: <RichColor Color=\"1, 0, 0, 1\">Your 'Tek Trough' was destroyed!</>",
+      "Day 50, 11:38:09: <RichColor Color=\"1, 0, 0, 1\">Your 'Meat ONLY (Tek Trough)' was destroyed!</>",
+      "Day 52, 19:03:56: <RichColor Color=\"1, 0, 0, 1\">Your 'Tek Generator' was destroyed!</>",
+      "Day 52, 19:05:07: <RichColor Color=\"1, 0, 0, 1\">Your 'EarlyAlarm (Tek Generator)' was destroyed!</>",
+      "Day 53, 15:49:20: <RichColor Color=\"1, 0, 0, 1\">Your 'ITS THE LONGEST NAME IN HISTORY JESUS WHY IS IT SO LONG THIS IS  (Tek Transmitter)' was destroyed!</>",
+      "Day 53, 17:33:54: <RichColor Color=\"1, 0, 0, 1\">Your 'Thatch Ceiling' was destroyed!</>",
+      "Day 53, 17:34:32: <RichColor Color=\"1, 0, 0, 1\">Your 'Thatch Ceiling' was destroyed!</>",
+      "Day 53, 17:34:47: <RichColor Color=\"1, 0, 0, 1\">Your 'Thatch Ceiling' was destroyed!</>",
+      "Day 55, 10:09:19: <RichColor Color=\"1, 0, 0, 1\">Your Locomotive (Locomotive) was destroyed!</>",
+      "Day 55, 10:14:09: <RichColor Color=\"1, 0, 0, 1\">Your Locomotive (Locomotive) was destroyed!</>",
+      "Day 56, 14:21:47: <RichColor Color=\"1, 0, 0, 1\">Your Motorboat (Motorboat) was destroyed!</>",
+      "Day 59, 18:12:18: <RichColor Color=\"1, 0, 0, 1\">Your 'Thatch Quarter Ceiling' was destroyed!</>",
+      "Day 63, 14:47:18: <RichColor Color=\"1, 0, 0, 1\">Your BattleRig (BattleRig) was destroyed!</>",
+      "Day 63, 14:47:18: <RichColor Color=\"1, 0, 0, 1\">Your 'Rope Ladder' was destroyed!</>"
+    ],
+    "session_new_kill_sample": [
+      "Day 7, 17:51:46: <RichColor Color=\"1, 0, 0, 1\">Tribemember CTheRain - Lvl 195 was killed!</>",
+      "Day 7, 18:44:56: <RichColor Color=\"1, 0, 0, 1\">Your Big Chungus - Lvl 1 (Titanosaur) was killed!</>",
+      "Day 7, 18:45:07: <RichColor Color=\"1, 0, 0, 1\">Your Dreadnoughtus - Lvl 592 (Dreadnoughtus) was killed!</>",
+      "Day 7, 18:45:21: <RichColor Color=\"1, 0, 0, 1\">Your Stegosaurus - Lvl 592 (Stegosaurus) was killed!</>",
+      "Day 8, 16:53:24: <RichColor Color=\"1, 0, 0, 1\">Your Test - Lvl 95 (Bison) was killed!</>",
+      "Day 9, 16:13:21: <RichColor Color=\"1, 0, 0, 1\">Your Aberrant Carbonemys - Lvl 1 (Aberrant Carbonemys) was killed!</>",
+      "Day 9, 18:31:14: <RichColor Color=\"1, 0, 0, 1\">Your Oasisaur - Lvl 1 (Oasisaur) was killed!</>",
+      "Day 15, 14:43:22: <RichColor Color=\"1, 0, 0, 1\">Your Quetzal - Lvl 388 (Quetzal) was killed!</>",
+      "Day 22, 20:14:30: <RichColor Color=\"1, 0, 0, 1\">Your Quetzal - Lvl 89 (Quetzal) was killed!</>",
+      "Day 22, 20:17:20: <RichColor Color=\"1, 0, 0, 1\">Your Diplodocus - Lvl 1 (Diplodocus) was killed!</>",
+      "Day 22, 20:18:59: <RichColor Color=\"1, 0, 0, 1\">Your Armadoggo - Lvl 388 (Armadoggo) was killed!</>",
+      "Day 23, 12:55:48: <RichColor Color=\"1, 0, 0, 1\">Your Veilwyn - Lvl 388 (Veilwyn) was killed!</>",
+      "Day 23, 14:33:14: <RichColor Color=\"1, 0, 0, 1\">Your Veilwyn - Lvl 300 (Veilwyn) was killed!</>",
+      "Day 23, 20:22:45: <RichColor Color=\"1, 0, 0, 1\">Your Troodon - Lvl 288 (Troodon) was killed by CTheRain - Lvl 195-808697521 (Wow All Horizontal)!</>",
+      "Day 23, 20:22:45: <RichColor Color=\"1, 0, 1, 1\">Your Tribe killed Troodon - Lvl 288 (Troodon) (Wow All Horizontal)!</>",
+      "Day 24, 13:41:49: <RichColor Color=\"1, 0, 0, 1\">Your Spring Drakeling - Lvl 225 (Spring Drakeling) was killed!</>",
+      "Day 24, 14:22:18: <RichColor Color=\"1, 0, 0, 1\">Your Terror Bird - Lvl 1 (Terror Bird) was killed!</>",
+      "Day 24, 14:22:30: <RichColor Color=\"1, 0, 0, 1\">Your Doedicurus - Lvl 1 (Doedicurus) was killed!</>",
+      "Day 24, 14:22:41: <RichColor Color=\"1, 0, 0, 1\">Your Spino - Lvl 1 (Spino) was killed!</>",
+      "Day 24, 14:22:57: <RichColor Color=\"1, 0, 0, 1\">Your Griffin - Lvl 1 (Griffin) was killed!</>",
+      "Day 24, 14:23:07: <RichColor Color=\"1, 0, 0, 1\">Your Ovis - Lvl 1 (Ovis) was killed!</>",
+      "Day 24, 14:23:29: <RichColor Color=\"1, 0, 0, 1\">Your Mammoth - Lvl 1 (Mammoth) was killed!</>",
+      "Day 24, 14:23:47: <RichColor Color=\"1, 0, 0, 1\">Your Otter - Lvl 1 (Otter) was killed!</>",
+      "Day 24, 14:24:44: <RichColor Color=\"1, 0, 0, 1\">Your Direwolf - Lvl 1 (Direwolf) was killed!</>",
+      "Day 24, 14:27:52: <RichColor Color=\"1, 0, 0, 1\">Your Carcharodontosaurus - Lvl 1 (Carcharodontosaurus) was killed!</>"
+    ],
+    "counts": {
+      "open": 283,
+      "exit": 1113,
+      "new_unique": 175,
+      "new_destroyed": 36,
+      "new_killed": 68
+    }
+  },
+  "monitor_assessment": {
+    "verdict": "usable_for_save_trust_analysis_with_known_gaps",
+    "coverage_good": [
+      "TheCenter_WP.ark main save mirrors on size/mtime change",
+      "rolling .arkbak mirrors for _0002-_0019",
+      "PlayerLocalData.arkprofile mirrors",
+      "SavedArksLocal configs snapshotted at exit",
+      "PrimalConsole.ini cheat history captured in monitor_state"
+    ],
+    "incidents": [
+      {
+        "time_local_est": "22:08",
+        "type": "FileNotFoundError",
+        "cause": "transient TheCenter_WP.ark-journal during atomic save",
+        "resolution": "monitor patched to skip *-journal and ignore FileNotFoundError on poll"
+      },
+      {
+        "type": "first_monitor_run_exit_code_1",
+        "duration_min": 17,
+        "note": "same journal race before patch; restarted successfully"
+      }
+    ],
+    "gaps": [
+      "ShooterGame.log stale (last write May 2024) \u2014 no live projectile/combat log lines",
+      "ItemLog not refreshed during SP session",
+      "AntiCorruptionBackup not polled on same cadence as rolling backups",
+      "high save churn produced duplicate main mirrors (by design)",
+      "disk-only observability \u2014 no in-memory GameState / replication capture"
+    ],
+    "event_counts": {
+      "live_events_total": 504,
+      "thecenter_events": 92,
+      "thecenter_main_mirrors": 33,
+      "thecenter_arkbak_mirrors": 23,
+      "events_first_utc": "2026-06-10T19:57:20.052779+00:00",
+      "events_last_utc": "2026-06-12T02:12:16.079993+00:00"
+    },
+    "threat_surface_relevance": [
+      "Three persistence layers (main, rolling arkbak, lagging anticorr) enable rollback / save-trust abuse analysis",
+      "Client-trusted combat outcomes persisted to tribe log inside .ark without live server validation in SP",
+      "20-slot backup rotation is a concrete restore surface for post-destruction state recovery"
+    ]
+  },
+  "related_artifacts": {
+    "monitor_script": "S:/ARK_LiveData/scripts/asa_game_state_monitor.py",
+    "live_events": "S:/ARK_LiveData/live_events.jsonl",
+    "monitor_state": "S:/ARK_LiveData/monitor_state.json",
+    "monitor_latest": "S:/ARK_LiveData/monitor_latest.json",
+    "threat_surface_root": "S:/ARK_ThreatSurface/",
+    "game_states_root": "S:/ARK_GameStates/"
+  }
+}

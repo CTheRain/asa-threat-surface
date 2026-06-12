@@ -1,0 +1,25 @@
+# Local-only / regenerated on S:
+live-data/saves/
+live-data/config/
+live-data/bundles/_extract/
+live-data/logs/
+live-data/mirrors/
+
+# Threat surface bulk (stay on S:)
+threat-surface/mirror/
+threat-surface/extracted/
+threat-surface/tools/
+*.ucas
+*.utoc
+*.pak
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Secrets
+.env
+*.token

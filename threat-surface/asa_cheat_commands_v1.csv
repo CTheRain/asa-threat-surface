@@ -1,0 +1,249 @@
+record_type,category,value,source,encodings,offsets
+exe_string,attack_aoe,.?AV<lambda_1>@?1??AttackAOE@UShooterCheatManager@@QEAAXHM@Z@,ArkAscended.exe,ascii,0xdddfc80
+exe_string,attack_aoe,.?AV<lambda_1>@?1??QueueAttackAOE@UShooterCheatManager@@QEAAXHMM@Z@,ArkAscended.exe,ascii,0xdddfcd0
+exe_string,attack_aoe,AttackAOE,ArkAscended.exe,ascii,0xc176608
+exe_string,attack_aoe,AttackAOERadius,ArkAscended.exe,ascii,0xc11c198
+exe_string,attack_aoe,QueueAttackAOE,ArkAscended.exe,ascii,0xc178238
+exe_string,ce_verb,CE command '%s' wasn't processed for levels from world '%s'.,ArkAscended.exe,utf16le,0xb9cda80
+exe_string,ce_verb,No level found for CE processing,ArkAscended.exe,utf16le,0xb9cda30
+exe_string,ce_verb,cheat ce stoptime 1 1,ArkAscended.exe,utf16le,0xc3a3768
+exe_string,cheat_manager,.?AV<lambda_1>@?1??AddThreatAOE@UShooterCheatManager@@QEAAXHM@Z@,ArkAscended.exe,ascii,0xdddfbc0
+exe_string,cheat_manager,.?AV<lambda_1>@?1??AttackAOE@UShooterCheatManager@@QEAAXHM@Z@,ArkAscended.exe,ascii,0xdddfc80
+exe_string,cheat_manager,.?AV<lambda_1>@?1??OneHPAOE@UShooterCheatManager@@QEAAXVFName@@MH@Z@,ArkAscended.exe,ascii,0xdddfd30
+exe_string,cheat_manager,.?AV<lambda_1>@?1??QueueAttackAOE@UShooterCheatManager@@QEAAXHMM@Z@,ArkAscended.exe,ascii,0xdddfcd0
+exe_string,cheat_manager,.?AV<lambda_1>@?1??SetThreatAOE@UShooterCheatManager@@QEAAXHM@Z@,ArkAscended.exe,ascii,0xdddfc20
+exe_string,cheat_manager,UShooterCheatManager,ArkAscended.exe,utf16le,0xc179020
+exe_string,cheat_manager,UShooterCheatManager - %s is kicking %s,ArkAscended.exe,utf16le,0xc36bfb0
+exe_string,cheat_manager,UShooterCheatManager - RCON user is kicking %s,ArkAscended.exe,utf16le,0xc36b970
+exe_string,cheat_manager,UShooterCheatManager::DisableAllTraceChannels,ArkAscended.exe,ascii,0xc3870a8
+exe_string,cheat_manager,UShooterCheatManager::DisableTraceChannels,ArkAscended.exe,ascii,0xc3871c0
+exe_string,cheat_manager,UShooterCheatManager::EnableAllTraceChannels,ArkAscended.exe,ascii,0xc387078
+exe_string,cheat_manager,UShooterCheatManager::EnableTraceChannels,ArkAscended.exe,ascii,0xc387190
+exe_string,cheat_manager,UShooterCheatManager::StartPerformanceRecordingInternal,ArkAscended.exe,ascii,0xc386e78
+exe_string,cheat_manager,UShooterCheatManager::StopPerformanceRecording,ArkAscended.exe,ascii,0xc3870d8
+exe_string,cheat_menu,ShowCheatMenu,ArkAscended.exe,ascii,0xc178bc0
+exe_string,cheat_verb,Anti-Cheat integrity check failed,ArkAscended.exe,utf16le,0xbc12b90
+exe_string,cheat_verb,Anti-Cheat registration failed,ArkAscended.exe,utf16le,0xbc12d18
+exe_string,cheat_verb,Anti-Cheat requested session %s in %s must match current session %s!,ArkAscended.exe,utf16le,0xbc04710
+exe_string,cheat_verb,CHEAT FAILURE: Invalid VolumeClassIndex Input Value %s,ArkAscended.exe,utf16le,0xc381840
+exe_string,cheat_verb,CHEAT FAILURE: Must have proper permissions and a valid player character.,ArkAscended.exe,utf16le,0xc381e20
+exe_string,cheat_verb,"CHEAT FAILURE: No Volumes Matching Those Parameters Could Be Found - Try Enabling bDebugAllVolumeClasses, or picking another VolumeClassIndex.",ArkAscended.exe,utf16le,0xc381960
+exe_string,cheat_verb,CHEAT FAILURE: Try A Valid VolumeClassIndex Input Value Such As Index %s For Class %s,ArkAscended.exe,utf16le,0xc3818b0
+exe_string,cheat_verb,CHEAT SUCCESS: added tag.,ArkAscended.exe,utf16le,0xc37eda0
+exe_string,cheat_verb,Cheat Mission: No Valid Mission Found,ArkAscended.exe,utf16le,0xc367f90
+exe_string,cheat_verb,Cheat SDF: This dino cannot be tamed. %s,ArkAscended.exe,utf16le,0xc3868b0
+exe_string,cheat_verb,Cheat SpawnTestDinos: This dino cannot be tamed. %s,ArkAscended.exe,utf16le,0xc3a2d30
+exe_string,cheat_verb,Disconnected from server due to Anti-Cheat error. Reason: '%s'. Details: '%s'.,ArkAscended.exe,utf16le,0xbc0d9c0
+exe_string,cheat_verb,"Server Initializing with BattlEye Anti-Cheat Protection. If you do not wish to use BattlEye, please launch with -NoBattlEye",ArkAscended.exe,utf16le,0xc38f370
+exe_string,cheat_verb,StartPerformanceRecording: Cheat invoked (default channels),ArkAscended.exe,utf16le,0xc386ce0
+exe_string,cheat_verb,StartPerformanceRecordingOfChannels: Cheat invoked with Channels='%s',ArkAscended.exe,utf16le,0xc386d60
+exe_string,cheat_verb,StopPerformanceRecording: Cheat invoked,ArkAscended.exe,utf16le,0xc386df0
+exe_string,cheat_verb,The DeploymentId provided to the anti-cheat client helper executable does not match what was used to initialize the EOS SDK,ArkAscended.exe,utf16le,0xbbfe100
+exe_string,cheat_verb,The ProductId provided to the anti-cheat client helper executable does not match what was used to initialize the EOS SDK,ArkAscended.exe,utf16le,0xbbfd540
+exe_string,cheat_verb,The SandboxId provided to the anti-cheat client helper executable does not match what was used to initialize the EOS SDK,ArkAscended.exe,utf16le,0xbbfd7d0
+exe_string,cheat_verb,The anti-cheat client protection is not available. Check that the game was started using the correct launcher.,ArkAscended.exe,utf16le,0xbc0e210
+exe_string,cheat_verb,The current anti-cheat mode is incorrect for using this API,ArkAscended.exe,utf16le,0xbbfd700
+exe_string,cheat_verb,The remote machine is not running a compatible Anti-Cheat implementation,ArkAscended.exe,utf16le,0xbc12d60
+exe_string,cheat_verb,You are not permitted to ask the remote machine to prove its Anti-Cheat status via a trusted client proof,ArkAscended.exe,utf16le,0xbc12e00
+exe_string,cheat_verb,cheat %s,ArkAscended.exe,utf16le,0xb9e8390
+exe_string,cheat_verb,cheat GMBuff,ArkAscended.exe,utf16le,0xc3a1a20
+exe_string,cheat_verb,cheat GiveArmorSet Tek 0,ArkAscended.exe,utf16le,0xc3a1a40
+exe_string,cheat_verb,"cheat SetMessageOfTheDay """,ArkAscended.exe,utf16le,0xc3ff640
+exe_string,cheat_verb,cheat ShowMessageOfTheDay,ArkAscended.exe,utf16le,0xc3ff608
+exe_string,cheat_verb,cheat ce stoptime 1 1,ArkAscended.exe,utf16le,0xc3a3768
+exe_string,cheat_verb,cheat fly,ArkAscended.exe,utf16le,0xc3a3750
+exe_string,cheat_verb,"cheat giveItem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_RexSaddle_Tek.PrimalItemArmor_RexSaddle_Tek'"" 1 0 0",ArkAscended.exe,utf16le,0xc3811c0
+exe_string,cheat_verb,"cheat giveItem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekGloves.PrimalItemArmor_TekGloves'"" 1 0 0",ArkAscended.exe,utf16le,0xc379920
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekBoots.PrimalItemArmor_TekBoots'"" 1 0 0",ArkAscended.exe,utf16le,0xc379810
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekHelmet.PrimalItemArmor_TekHelmet'"" 1 0 0",ArkAscended.exe,utf16le,0xc379a30
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekPants.PrimalItemArmor_TekPants'"" 1 0 0",ArkAscended.exe,utf16le,0xc379b40
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekShirt.PrimalItemArmor_TekShirt'"" 1 0 0",ArkAscended.exe,utf16le,0xc3810b0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/PrimalItemArtifactSE_01.PrimalItemArtifactSE_01'"" 1 1 0",ArkAscended.exe,utf16le,0xc377d00
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/PrimalItemArtifactSE_02.PrimalItemArtifactSE_02'"" 1 1 0",ArkAscended.exe,utf16le,0xc377e10
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/PrimalItemArtifactSE_03.PrimalItemArtifactSE_03'"" 1 1 0",ArkAscended.exe,utf16le,0xc377f20
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/PrimalItemArtifact_01.PrimalItemArtifact_01'"" 1 1 0",ArkAscended.exe,utf16le,0xc37d4f0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/PrimalItemArtifact_02.PrimalItemArtifact_02'"" 1 1 0",ArkAscended.exe,utf16le,0xc37de10
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/PrimalItemArtifact_03.PrimalItemArtifact_03'"" 1 1 0",ArkAscended.exe,utf16le,0xc37dd10
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/PrimalItemArtifact_05.PrimalItemArtifact_05'"" 1 1 0",ArkAscended.exe,utf16le,0xc37d1f0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/PrimalItemArtifact_06.PrimalItemArtifact_06'"" 1 1 0",ArkAscended.exe,utf16le,0xc37df10
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/PrimalItemArtifact_07.PrimalItemArtifact_07'"" 1 1 0",ArkAscended.exe,utf16le,0xc37d3f0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/PrimalItemArtifact_08.PrimalItemArtifact_08'"" 1 1 0",ArkAscended.exe,utf16le,0xc37dc10
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/PrimalItemArtifact_09.PrimalItemArtifact_09'"" 1 1 0",ArkAscended.exe,utf16le,0xc37d770
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/PrimalItemArtifact_11.PrimalItemArtifact_11'"" 1 1 0",ArkAscended.exe,utf16le,0xc37d2f0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Artifacts/PrimalItemArtifact_12.PrimalItemArtifact_12'"" 1 1 0",ArkAscended.exe,utf16le,0xc37d670
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TekReplicator.PrimalItemStructure_TekReplicator'"" 1 0 0",ArkAscended.exe,utf16le,0xc381400
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TekShield.PrimalItemStructure_TekShield'"" 1 0 0",ArkAscended.exe,utf16le,0xc37ae20
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TekTransmitter.PrimalItemStructure_TekTransmitter'"" 1 0 0",ArkAscended.exe,utf16le,0xc380e30
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TurretTek.PrimalItemStructure_TurretTek'"" 1 0 0",ArkAscended.exe,utf16le,0xc3793b0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekCatwalk.PrimalItemStructure_TekCatwalk'"" 1 0 0",ArkAscended.exe,utf16le,0xc3775b0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekCeiling.PrimalItemStructure_TekCeiling'"" 1 0 0",ArkAscended.exe,utf16le,0xc37a590
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekCeilingWithTrapdoor.PrimalItemStructure_TekCeilingWithTrapdoor'"" 1 0 0",ArkAscended.exe,utf16le,0xc37a6c0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekDoor.PrimalItemStructure_TekDoor'"" 1 0 0",ArkAscended.exe,utf16le,0xc37a820
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekFloor.PrimalItemStructure_TekFloor'"" 1 0 0",ArkAscended.exe,utf16le,0xc37a940
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekGate.PrimalItemStructure_TekGate'"" 1 0 0",ArkAscended.exe,utf16le,0xc37a0a0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekGate_Large.PrimalItemStructure_TekGate_Large'"" 1 0 0",ArkAscended.exe,utf16le,0xc37a1c0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekGateframe.PrimalItemStructure_TekGateframe'"" 1 0 0",ArkAscended.exe,utf16le,0xc37a300
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekGateframe_Large.PrimalItemStructure_TekGateframe_Large'"" 1 0 0",ArkAscended.exe,utf16le,0xc37a440
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekLadder.PrimalItemStructure_TekLadder'"" 1 0 0",ArkAscended.exe,utf16le,0xc37af50
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekPillar.PrimalItemStructure_TekPillar'"" 1 0 0",ArkAscended.exe,utf16le,0xc37b080
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekRamp.PrimalItemStructure_TekRamp'"" 1 0 0",ArkAscended.exe,utf16le,0xc37b1b0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekTrapdoor.PrimalItemStructure_TekTrapdoor'"" 1 0 0",ArkAscended.exe,utf16le,0xc37b2d0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekWall.PrimalItemStructure_TekWall'"" 1 0 0",ArkAscended.exe,utf16le,0xc37aa70
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekWallWithDoor.PrimalItemStructure_TekWallWithDoor'"" 1 0 0",ArkAscended.exe,utf16le,0xc37ab90
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekWallWithWindow.PrimalItemStructure_TekWallWithWindow'"" 1 0 0",ArkAscended.exe,utf16le,0xc37acd0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekWindow.PrimalItemStructure_TekWindow'"" 1 0 0",ArkAscended.exe,utf16le,0xc377480
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Trophies/PrimalItemTrophy_Broodmother_Alpha.PrimalItemTrophy_Broodmother_Alpha'"" 1 0 0",ArkAscended.exe,utf16le,0xc37bf00
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Trophies/PrimalItemTrophy_Broodmother_Beta.PrimalItemTrophy_Broodmother_Beta'"" 1 0 0",ArkAscended.exe,utf16le,0xc37c720
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Trophies/PrimalItemTrophy_Broodmother_Gamma.PrimalItemTrophy_Broodmother_Gamma'"" 1 0 0",ArkAscended.exe,utf16le,0xc37c5f0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Trophies/PrimalItemTrophy_Dragon_Alpha.PrimalItemTrophy_Dragon_Alpha'"" 1 0 0",ArkAscended.exe,utf16le,0xc37cf90
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Trophies/PrimalItemTrophy_Dragon_Beta.PrimalItemTrophy_Dragon_Beta'"" 1 0 0",ArkAscended.exe,utf16le,0xc37ce70
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Trophies/PrimalItemTrophy_Dragon_Gamma.PrimalItemTrophy_Dragon_Gamma'"" 1 0 0",ArkAscended.exe,utf16le,0xc37cd50
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Trophies/PrimalItemTrophy_Gorilla_Alpha.PrimalItemTrophy_Gorilla_Alpha'"" 1 0 0",ArkAscended.exe,utf16le,0xc37c270
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Trophies/PrimalItemTrophy_Gorilla_Beta.PrimalItemTrophy_Gorilla_Beta'"" 1 0 0",ArkAscended.exe,utf16le,0xc37c150
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Trophies/PrimalItemTrophy_Gorilla_Gamma.PrimalItemTrophy_Gorilla_Gamma'"" 1 0 0",ArkAscended.exe,utf16le,0xc37c030
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_AlphaCarno.PrimalItemResource_ApexDrop_AlphaCarno'"" 1 0 0",ArkAscended.exe,utf16le,0xc37cad0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_AlphaLeeds.PrimalItemResource_ApexDrop_AlphaLeeds'"" 1 0 0",ArkAscended.exe,utf16le,0xc37cc10
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_AlphaMegalodon.PrimalItemResource_ApexDrop_AlphaMegalodon'"" 1 0 0",ArkAscended.exe,utf16le,0xc378030
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_AlphaMosasaur.PrimalItemResource_ApexDrop_AlphaMosasaur'"" 1 0 0",ArkAscended.exe,utf16le,0xc378180
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_AlphaRaptor.PrimalItemResource_ApexDrop_AlphaRaptor'"" 1 0 0",ArkAscended.exe,utf16le,0xc3782d0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_AlphaRex.PrimalItemResource_ApexDrop_AlphaRex'"" 1 0 0",ArkAscended.exe,utf16le,0xc378410
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_AlphaTuso.PrimalItemResource_ApexDrop_AlphaTuso'"" 1 0 0",ArkAscended.exe,utf16le,0xc377bc0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_Argentavis.PrimalItemResource_ApexDrop_Argentavis'"" 100 1 0",ArkAscended.exe,utf16le,0xc37d870
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_FireWyvern.PrimalItemResource_ApexDrop_FireWyvern'"" 100 1 0",ArkAscended.exe,utf16le,0xc378a20
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_LightningWyvern.PrimalItemResource_ApexDrop_LightningWyvern'"" 100 1 0",ArkAscended.exe,utf16le,0xc378b60
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_Megalodon.PrimalItemResource_ApexDrop_Megalodon'"" 100 1 0",ArkAscended.exe,utf16le,0xc37d9b0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_PoisonWyvern.PrimalItemResource_ApexDrop_PoisonWyvern'"" 100 1 0",ArkAscended.exe,utf16le,0xc378cb0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_Rex.PrimalItemResource_ApexDrop_Rex'"" 100 1 0",ArkAscended.exe,utf16le,0xc37daf0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_Sauro.PrimalItemResource_ApexDrop_Sauro'"" 100 1 0",ArkAscended.exe,utf16le,0xc37c390
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ApexDrop_Tuso.PrimalItemResource_ApexDrop_Tuso'"" 100 1 0",ArkAscended.exe,utf16le,0xc37c4c0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Element.PrimalItemResource_Element'"" 10 0 0",ArkAscended.exe,utf16le,0xc380f70;0xc3812f0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_TekRifle.PrimalItem_TekRifle'"" 1 0 0",ArkAscended.exe,utf16le,0xc379fb0
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/ScorchedEarth/Structures/TrophyHeads/Manticore_Trophy/PrimalItemTrophy_Manticore_Alpha.PrimalItemTrophy_Manticore_Alpha'"" 1 0 0",ArkAscended.exe,utf16le,0xc37c990
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/ScorchedEarth/Structures/TrophyHeads/Manticore_Trophy/PrimalItemTrophy_Manticore_Beta.PrimalItemTrophy_Manticore_Beta'"" 1 0 0",ArkAscended.exe,utf16le,0xc37c850
+exe_string,cheat_verb,"cheat giveitem ""Blueprint'/Game/ScorchedEarth/Structures/TrophyHeads/Manticore_Trophy/PrimalItemTrophy_Manticore_Gamma.PrimalItemTrophy_Manticore_Gamma'"" 1 0 0",ArkAscended.exe,utf16le,0xc37d0b0
+exe_string,cheat_verb,cheat giveitemnum %i %i 1 false,ArkAscended.exe,utf16le,0xc3a1910
+exe_string,cheat_verb,cheat leavemealone,ArkAscended.exe,utf16le,0xc3a3850
+exe_string,cheat_verb,cheat spi %s,ArkAscended.exe,utf16le,0xc3a37b8
+exe_string,cheat_verb,cheat spi %s %f 0,ArkAscended.exe,utf16le,0xc3a39a0
+exe_string,cheat_verb,cheat tod %s,ArkAscended.exe,utf16le,0xc3a3798
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_RexSaddle_Tek.PrimalItemArmor_RexSaddle_Tek'""",ArkAscended.exe,utf16le,0xc379c50
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Shields/PrimalItemArmor_TekShield.PrimalItemArmor_TekShield'""",ArkAscended.exe,utf16le,0xc379150
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekBoots.PrimalItemArmor_TekBoots'""",ArkAscended.exe,utf16le,0xc3794e0
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekGloves.PrimalItemArmor_TekGloves'""",ArkAscended.exe,utf16le,0xc3795f0
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekHelmet.PrimalItemArmor_TekHelmet'""",ArkAscended.exe,utf16le,0xc379700
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekPants.PrimalItemArmor_TekPants'""",ArkAscended.exe,utf16le,0xc378f30
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/TEK/PrimalItemArmor_TekShirt.PrimalItemArmor_TekShirt'""",ArkAscended.exe,utf16le,0xc379040
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TekReplicator.PrimalItemStructure_TekReplicator'""",ArkAscended.exe,utf16le,0xc379270
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TekShield.PrimalItemStructure_TekShield'""",ArkAscended.exe,utf16le,0xc377220
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TekTransmitter.PrimalItemStructure_TekTransmitter'""",ArkAscended.exe,utf16le,0xc379e70
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TurretTek.PrimalItemStructure_TurretTek'""",ArkAscended.exe,utf16le,0xc377350
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekCatwalk.PrimalItemStructure_TekCatwalk'""",ArkAscended.exe,utf16le,0xc378540
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekCeiling.PrimalItemStructure_TekCeiling'""",ArkAscended.exe,utf16le,0xc378670
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekCeilingWithTrapdoor.PrimalItemStructure_TekCeilingWithTrapdoor'""",ArkAscended.exe,utf16le,0xc3787a0
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekDoor.PrimalItemStructure_TekDoor'""",ArkAscended.exe,utf16le,0xc378900
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekFloor.PrimalItemStructure_TekFloor'""",ArkAscended.exe,utf16le,0xc376d50
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekGate.PrimalItemStructure_TekGate'""",ArkAscended.exe,utf16le,0xc376e80
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekGate_Large.PrimalItemStructure_TekGate_Large'""",ArkAscended.exe,utf16le,0xc376fa0
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekGateframe.PrimalItemStructure_TekGateframe'""",ArkAscended.exe,utf16le,0xc3770e0
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekGateframe_Large.PrimalItemStructure_TekGateframe_Large'""",ArkAscended.exe,utf16le,0xc376880
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekLadder.PrimalItemStructure_TekLadder'""",ArkAscended.exe,utf16le,0xc3769d0
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekPillar.PrimalItemStructure_TekPillar'""",ArkAscended.exe,utf16le,0xc376b00
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekRamp.PrimalItemStructure_TekRamp'""",ArkAscended.exe,utf16le,0xc376c30
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekTrapdoor.PrimalItemStructure_TekTrapdoor'""",ArkAscended.exe,utf16le,0xc3776e0
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekWall.PrimalItemStructure_TekWall'""",ArkAscended.exe,utf16le,0xc377810
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekWallWithDoor.PrimalItemStructure_TekWallWithDoor'""",ArkAscended.exe,utf16le,0xc377930
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekWallWithWindow.PrimalItemStructure_TekWallWithWindow'""",ArkAscended.exe,utf16le,0xc377a70
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Tek/PrimalItemStructure_TekWindow.PrimalItemStructure_TekWindow'""",ArkAscended.exe,utf16le,0xc378e00
+exe_string,cheat_verb,"cheat unlockengram ""Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_TekRifle.PrimalItem_TekRifle'""",ArkAscended.exe,utf16le,0xc379d80
+exe_string,debug_hud_target,AddTargetToDebugHUD,ArkAscended.exe,ascii,0xc1767a8
+exe_string,enable_cheats,CheckCanEnableCheats,ArkAscended.exe,ascii;utf16le,0xc1d71f0;0xc1d71c0
+exe_string,enable_cheats,ClientSetCanEnableCheats,ArkAscended.exe,ascii;utf16le,0xc1d9310;0xc1d92c8
+exe_string,enable_cheats,DaySequence.EnableCheats,ArkAscended.exe,utf16le,0xca7d590
+exe_string,enable_cheats,EnableCheats,ArkAscended.exe,ascii,0xb920650
+exe_string,movement_validation,Enable / Disable ServerExceedsAllowablePositionError checking.,ArkAscended.exe,utf16le,0xc3b51d0
+exe_string,netlimit_exploit,NetlimitExploitFixTriggerTime=,ArkAscended.exe,utf16le,0xb71b2a0
+exe_string,netlimit_exploit,p.NetlimitExploitFixTriggerTime,ArkAscended.exe,utf16le,0xb718850
+exe_string,player_heatmap,EPlayerHeatMapHeatLevel,ArkAscended.exe,ascii;utf16le,0xc23c048;0xc23b3c0
+exe_string,player_heatmap,EPlayerHeatMapHeatLevel::ErrorHeat,ArkAscended.exe,ascii,0xc23b3f0
+exe_string,player_heatmap,EPlayerHeatMapHeatLevel::HighHeat,ArkAscended.exe,ascii,0xc23bff8
+exe_string,player_heatmap,EPlayerHeatMapHeatLevel::Level,ArkAscended.exe,ascii,0xc23c060
+exe_string,player_heatmap,EPlayerHeatMapHeatLevel::LowHeat,ArkAscended.exe,ascii,0xc23b438
+exe_string,player_heatmap,EPlayerHeatMapHeatLevel::LowMediumHeat,ArkAscended.exe,ascii,0xc23b460
+exe_string,player_heatmap,EPlayerHeatMapHeatLevel::MaxHeat,ArkAscended.exe,ascii,0xc23c020
+exe_string,player_heatmap,EPlayerHeatMapHeatLevel::MediumHeat,ArkAscended.exe,ascii,0xc23bfa8
+exe_string,player_heatmap,EPlayerHeatMapHeatLevel::MediumHighHeat,ArkAscended.exe,ascii,0xc23bfd0
+exe_string,player_heatmap,EPlayerHeatMapHeatLevel::NoHeat,ArkAscended.exe,ascii,0xc23b418
+exe_string,player_heatmap,ark.PlayerHeatMapDebugDraw,ArkAscended.exe,utf16le,0xc3994d0
+exe_string,server_cheat_manager,ServerCheatManager,ArkAscended.exe,ascii,0xc190938
+exe_string,tracker_toggle,ToggleTracker,ArkAscended.exe,ascii,0xc1788b8
+console_history,console_history,geometry.DynamicMesh.AllowDistanceFieldGeneration,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,ForceCheckInMesh,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,fx.EnableNiagaraMeshRendering 1,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show VectorFields,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show Bounds,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show ActorColoration,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show CollisionVisibility,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show PhysicsField,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show StaticMeshes,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show InstancedStaticMeshes,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show MeshEdges,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show NaniteMeshes,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show DebugAI,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show Splines,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show ToonOutline,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show SkeletalMeshes,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,tracking_debug_history,ark.PlayerHeatMapDebugDraw true,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,Obj Classes,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,IsInUndermeshExclusionZone,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,ce IsReallyUnderwater,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,ToggleForceDefaultMaterial,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,tracking_debug_history,ToggleTracker,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,TestCollisionDistance,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,ce Debug,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,AddTokens 100,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,tracking_debug_history,AddTargetToDebugHUD,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show VisualizeSubstrate,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,ShowDebug AbilitySystem true,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,AbilityListGranted,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,ce WorldActorVisibility true,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,ShowDebugToggleSubCategory 3DBONES,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,EditorReconnect,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show Editor,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show CollisionPawn,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,VisualizeWorldGeo,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show Grid,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show Grid 1,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,r.AOListMeshDistanceFields,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show hitboxes,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,Stat COLLISION,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,cheat_history,EnableCheats,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,cheat_history,ShowCheatMenu,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,previewmode,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,cheat_history,EnableCheats 1,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,toggledebughitboxes,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,ce ToggleHLODVisibility true,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,ToggleGameplayDebuggerHUD,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,OnToggleDoFMenu,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show Wireframe 1,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+console_history,console_history,show Wireframe,C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved\Config\Windows\PrimalConsole.ini,,
+cvar,high_value_cvar,ark.AutonomousCorrectionThreshold,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,ark.EnableServerMovementCorrections,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,ark.HugeSweepDetailsThreshold,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,ark.HugeSweepLogThreshold,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,ark.PlayerHeatMapDebugDraw,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,errors.com.redpoint.eos.anticheat.client_deployment_id_mismatch,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,errors.com.redpoint.eos.anticheat.client_product_id_mismatch,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,errors.com.redpoint.eos.anticheat.client_protection_not_available,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,errors.com.redpoint.eos.anticheat.client_sandbox_id_mismatch,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,errors.com.redpoint.eos.anticheat.device_id_auth_is_not_supported,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,errors.com.redpoint.eos.anticheat.invalid_mode,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,errors.com.redpoint.eos.anticheat.peer_already_registered,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,errors.com.redpoint.eos.anticheat.peer_not_found,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,errors.com.redpoint.eos.anticheat.peer_not_protected,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,errors.com.redpoint.eos.anticheat.protect_message_initialization_failed,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,errors.com.redpoint.eos.anticheat.protect_message_session_key_required,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,errors.com.redpoint.eos.anticheat.protect_message_validation_failed,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,np2.CMC.EnableClientAuthScheduledPushForces,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Unknown/Other,
+cvar,high_value_cvar,p.ClientAuthorityThresholdOnBaseChange,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Physics,
+cvar,high_value_cvar,p.ClientMoveCombineDelta,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Physics,
+cvar,high_value_cvar,p.NetlimitExploitFixTriggerTime,C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0.csv,Physics,
