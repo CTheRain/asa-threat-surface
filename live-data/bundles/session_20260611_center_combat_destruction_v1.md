@@ -19,7 +19,7 @@ Rep craft (grapples, element, Tek Rifle) followed by sustained Tek Rifle destruc
 | **AntiCorruption** `.bak` | **12,869,632 B** @ 21:56:10 | Did **not** track late destruction |
 | **Profile** `PlayerLocalData.arkprofile` | **2,404,339 B** @ 22:12:06 | Brief mid-session spike to ~2,417,661 B |
 
-## Key mirrored anchors (`S:\ARK_LiveData\saves\`)
+## Key mirrored anchors (`<local-data>/ARK_LiveData\saves\`)
 
 | Role | Mirror | Size |
 |------|--------|------|
@@ -74,7 +74,7 @@ Three persistence layers (main, 20-slot rolling arkbak, lagging anticorr) are di
 
 ## Artifacts
 
-- **Manifest:** `S:\ARK_LiveData\bundles\session_20260611_center_combat_destruction_v1.json`
-- **Monitor script:** `S:\ARK_LiveData\scripts\asa_game_state_monitor.py`
-- **Live feed:** `S:\ARK_LiveData\live_events.jsonl`
-- **Related:** `S:\ARK_ThreatSurface\`, `S:\ARK_GameStates\`
+- **Manifest:** `<local-data>/ARK_LiveData\bundles\session_20260611_center_combat_destruction_v1.json`
+- **Monitor script:** `<local-data>/ARK_LiveData\scripts\asa_game_state_monitor.py`
+- **Live feed:** `<local-data>/ARK_LiveData\live_events.jsonl`
+- **Related:** `<local-data>/ARK_ThreatSurface\`, `<local-data>/ARK_GameStates\`

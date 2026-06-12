@@ -29,7 +29,7 @@ python live-data/scripts/build_item_creature_crosswalk.py
 python live-data/scripts/build_asa_game_lookup_pack.py
 ```
 
-MxCheatUI table inputs: `live-data/sources/mxcheatui/` or full unpack under `S:\ARK_LiveData\bundles\_extract\`.
+MxCheatUI table inputs: `live-data/sources/mxcheatui/` or full unpack under `<local-data>/ARK_LiveData\bundles\_extract\`.
 
 ## Live SP monitor
 
@@ -39,7 +39,7 @@ python live-data/scripts/asa_game_state_monitor.py
 ./live-data/scripts/START_MONITOR.ps1
 ```
 
-Mirrors saves/config to `S:\ARK_LiveData\` (not committed — see `.gitignore`).
+Mirrors saves/config to `<local-data>/ARK_LiveData\` (not committed — see `.gitignore`).
 
 ## Bridge mods (on-disk references)
 
@@ -62,9 +62,17 @@ Validated in `live-data/bundles/session_20260611_center_combat_destruction_v1.js
 
 Keep on `S:` and regenerate indexes as needed:
 
-- `S:\ARK_ThreatSurface\` — full IoStore mirror, meat string scan, retoc extracts
-- `S:\ARK_LiveData\saves\` — mirrored `.ark` / `.arkbak`
-- `S:\ARK_GameStates\` — working copy (this repo carries published snapshots)
+- `<local-data>/ARK_ThreatSurface\` — full IoStore mirror, meat string scan, retoc extracts
+- `<local-data>/ARK_LiveData\saves\` — mirrored `.ark` / `.arkbak`
+- `<local-data>/ARK_GameStates\` — working copy (this repo carries published snapshots)
+
+## Browse online
+
+After enabling GitHub Pages (Settings → Pages → Deploy from branch `main` / root), open:
+
+**https://ctherain.github.io/asa-threat-surface/**
+
+The `index.html` viewer searches items/creatures, blueprint paths, and cheat command templates.
 
 ## License
 

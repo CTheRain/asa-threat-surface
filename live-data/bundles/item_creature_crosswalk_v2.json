@@ -3,12 +3,12 @@
   "purpose": "machine_assessment_review",
   "generated_at_utc": "2026-06-12T02:26:50.607387+00:00",
   "sources": {
-    "mxcheatui_item_table": "S:\\ARK_LiveData\\bundles\\_extract\\MxCheatUI\\unpack\\Data\\SpawnItemDataTable_MxCheatUI.uasset",
-    "mxcheatui_creature_table": "S:\\ARK_LiveData\\bundles\\_extract\\MxCheatUI\\unpack\\Data\\SpawnCreatureDataTable_MxCheatUI.uasset",
+    "mxcheatui_item_table": "<local-data>/ARK_LiveData\\bundles\\_extract\\MxCheatUI\\unpack\\Data\\SpawnItemDataTable_MxCheatUI.uasset",
+    "mxcheatui_creature_table": "<local-data>/ARK_LiveData\\bundles\\_extract\\MxCheatUI\\unpack\\Data\\SpawnCreatureDataTable_MxCheatUI.uasset",
     "mxcheatui_creature_name_vocabulary_count": 245,
-    "game_states_catalog": "S:\\ARK_GameStates\\asa_creature_item_player.json",
-    "session_save": "S:\\ARK_LiveData\\saves\\20260611_221210__TheCenter_WP.ark",
-    "session_bundle": "S:\\ARK_LiveData\\bundles\\session_20260611_center_combat_destruction_v1.json"
+    "game_states_catalog": "<local-data>/ARK_GameStates\\asa_creature_item_player.json",
+    "session_save": "<local-data>/ARK_LiveData\\saves\\20260611_221210__TheCenter_WP.ark",
+    "session_bundle": "<local-data>/ARK_LiveData\\bundles\\session_20260611_center_combat_destruction_v1.json"
   },
   "mods": {
     "mxcheatui": {
@@ -25160,8 +25160,8 @@
     ]
   },
   "outputs": {
-    "csv_v2": "S:\\ARK_LiveData\\bundles\\item_creature_crosswalk_v2.csv",
-    "jsonl_v2": "S:\\ARK_LiveData\\bundles\\item_creature_crosswalk_v2.jsonl",
-    "csv_v1_compat": "S:\\ARK_LiveData\\bundles\\item_creature_crosswalk_v1.csv"
+    "csv_v2": "<local-data>/ARK_LiveData\\bundles\\item_creature_crosswalk_v2.csv",
+    "jsonl_v2": "<local-data>/ARK_LiveData\\bundles\\item_creature_crosswalk_v2.jsonl",
+    "csv_v1_compat": "<local-data>/ARK_LiveData\\bundles\\item_creature_crosswalk_v1.csv"
   }
 }

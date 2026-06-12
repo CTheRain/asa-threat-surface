@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-06-10T19:38:30.098669+00:00",
-  "source": "S:\\ARK_GameStates\\asa_game_states.json",
+  "source": "<local-data>/ARK_GameStates\\asa_game_states.json",
   "filter": "creature / item / player keyword match",
   "summary": {
     "enum_types": 265,

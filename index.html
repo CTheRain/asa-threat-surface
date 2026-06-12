@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASA Threat Surface — Game Lookup</title>
+  <meta name="description" content="Browse ARK Survival Ascended items, creatures, blueprints, and cheat commands from the asa-threat-surface research catalog." />
+  <style>
+    :root {
+      --bg: #0c1218;
+      --panel: #141d27;
+      --panel-2: #1a2633;
+      --text: #e8eef4;
+      --muted: #8fa3b8;
+      --accent: #3ecf8e;
+      --accent-2: #f0a500;
+      --border: #243444;
+      --danger: #ff6b6b;
+      --mono: "Cascadia Mono", "Consolas", monospace;
+      --sans: "Segoe UI", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2e3d 0%, var(--bg) 55%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    header {
+      padding: 2rem 1.25rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 { margin: 0 0 0.35rem; font-size: 1.75rem; letter-spacing: -0.02em; }
+    .subtitle { color: var(--muted); max-width: 70ch; line-height: 1.5; margin: 0; }
+    .stats {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem;
+    }
+    .stat {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.6rem 0.9rem;
+      font-size: 0.85rem;
+    }
+    .stat strong { color: var(--accent); }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.25rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 1rem;
+    }
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+      aside { order: -1; }
+    }
+    .toolbar {
+      grid-column: 1 / -1;
+      display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.85rem;
+    }
+    input[type="search"] {
+      flex: 1 1 220px;
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 0.65rem 0.85rem;
+      font-size: 1rem;
+    }
+    .chip {
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 0.35rem 0.75rem;
+      cursor: pointer;
+      font-size: 0.82rem;
+    }
+    .chip.active { border-color: var(--accent); color: var(--accent); background: #143228; }
+    .btn {
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 0.45rem 0.75rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    .btn.primary { background: #1c4a35; border-color: var(--accent); color: var(--accent); }
+    .results {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      min-height: 420px;
+      overflow: auto;
+      max-height: 70vh;
+    }
+    .row {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .row:hover, .row.selected { background: var(--panel-2); }
+    .row h3 { margin: 0 0 0.25rem; font-size: 1rem; }
+    .meta { color: var(--muted); font-size: 0.8rem; }
+    .badges { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.45rem; }
+    .badge {
+      font-size: 0.72rem;
+      border-radius: 6px;
+      padding: 0.15rem 0.45rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .badge.item { color: #7ec8ff; border-color: #2a4f6d; }
+    .badge.creature { color: #c9a0ff; border-color: #4a3568; }
+    .badge.flag { color: var(--accent-2); border-color: #6a4f12; }
+    aside {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      position: sticky;
+      top: 1rem;
+      max-height: 80vh;
+      overflow: auto;
+    }
+    aside h2 { margin: 0 0 0.75rem; font-size: 1.1rem; }
+    .detail-empty { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+    .kv { margin: 0.55rem 0; font-size: 0.85rem; }
+    .kv label { display: block; color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.15rem; }
+    .kv code, .kv pre {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.45rem 0.5rem;
+      display: block;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.25rem 2rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    footer a { color: var(--accent); }
+    .status { color: var(--muted); font-size: 0.82rem; margin-left: auto; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ASA Threat Surface — Game Lookup</h1>
+    <p class="subtitle">
+      Search items and creatures from the MxCheatUI crosswalk: blueprint paths, class refs,
+      giveitem/spawn commands, and session-verified flags. Research catalog — no raw game paks.
+    </p>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <main>
+    <div class="toolbar">
+      <input type="search" id="q" placeholder="Search: Tek Rifle, Oasisaur, Grappling Hook…" autocomplete="off" />
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="item">Items</button>
+      <button class="chip" data-filter="creature">Creatures</button>
+      <button class="chip" data-filter="session">Session verified</button>
+      <button class="chip" data-filter="combat">Combat session</button>
+      <button class="chip" data-filter="tek">Tek</button>
+      <button class="btn primary" id="loadFull">Load full catalog (2.5k)</button>
+      <span class="status" id="status">Loading featured set…</span>
+    </div>
+
+    <section class="results" id="results" aria-label="Search results"></section>
+
+    <aside id="detail">
+      <h2>Details</h2>
+      <p class="detail-empty">Select an entry to view blueprint paths, cheat commands, and game-state hooks.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>
+      Data from <a href="https://github.com/CTheRain/asa-threat-surface">asa-threat-surface</a>.
+      Client-trust research for ARK Survival Ascended — not affiliated with Studio Wildcard.
+    </p>
+  </footer>
+
+  <script>
+    const QUICK_URL = "live-data/bundles/asa_game_lookup_quick_v1.json";
+    const FULL_URL = "live-data/bundles/asa_game_lookup_v1.min.json";
+
+    let entities = [];
+    let filter = "all";
+    let selectedId = null;
+
+    const $ = (sel) => document.querySelector(sel);
+    const resultsEl = $("#results");
+    const detailEl = $("#detail");
+    const statusEl = $("#status");
+
+    function normalize(s) {
+      return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    }
+
+    function entityListFromPack(pack) {
+      return Object.values(pack.entities || {});
+    }
+
+    async function loadPack(url, label) {
+      statusEl.textContent = `Loading ${label}…`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`${url} -> ${res.status}`);
+      const pack = await res.json();
+      entities = entityListFromPack(pack);
+      statusEl.textContent = `${entities.length} entries (${label})`;
+      renderStats(pack.counts || { entities: entities.length });
+      render();
+    }
+
+    function renderStats(counts) {
+      const items = entities.filter((e) => e.kind === "item").length;
+      const creatures = entities.filter((e) => e.kind === "creature").length;
+      const session = entities.filter((e) => e.in_session_save).length;
+      $("#stats").innerHTML = `
+        <div class="stat"><strong>${entities.length}</strong> catalog entries</div>
+        <div class="stat"><strong>${items}</strong> items</div>
+        <div class="stat"><strong>${creatures}</strong> creatures</div>
+        <div class="stat"><strong>${session}</strong> session-verified</div>
+      `;
+    }
+
+    function matchesFilter(e) {
+      if (filter === "item") return e.kind === "item";
+      if (filter === "creature") return e.kind === "creature";
+      if (filter === "session") return e.in_session_save;
+      if (filter === "combat") return e.session_combat;
+      if (filter === "tek") return (e.tags || []).some((t) => t.includes("tek"));
+      return true;
+    }
+
+    function matchesQuery(e, q) {
+      if (!q) return true;
+      const hay = normalize([
+        e.display_name, e.class_ref, e.blueprint_stem, e.asset_path,
+        e.pack, e.category, e.item_type, e.actor_type, (e.tags || []).join(" ")
+      ].join(" "));
+      const terms = q.split(/\s+/).filter(Boolean);
+      return terms.every((t) => hay.includes(normalize(t)));
+    }
+
+    function render() {
+      const q = $("#q").value.trim();
+      const filtered = entities.filter((e) => matchesFilter(e) && matchesQuery(e, q));
+      if (!filtered.length) {
+        resultsEl.innerHTML = `<div class="row"><p class="meta">No matches. Try another term or load the full catalog.</p></div>`;
+        return;
+      }
+      const max = 200;
+      const slice = filtered.slice(0, max);
+      resultsEl.innerHTML = slice.map((e) => {
+        const flags = [];
+        if (e.in_session_save) flags.push("session save");
+        if (e.session_combat) flags.push("combat");
+        if (e.tribe_log_hit) flags.push("tribe log");
+        const sel = e.class_ref === selectedId ? " selected" : "";
+        return `
+          <article class="row${sel}" data-id="${e.class_ref}">
+            <h3>${esc(e.display_name)}</h3>
+            <div class="meta">${esc(e.class_ref)} · ${esc(e.pack || "unknown pack")}</div>
+            <div class="badges">
+              <span class="badge ${e.kind}">${e.kind}</span>
+              ${e.item_type ? `<span class="badge">${esc(e.item_type)}</span>` : ""}
+              ${e.actor_type ? `<span class="badge">${esc(e.actor_type)}</span>` : ""}
+              ${flags.map((f) => `<span class="badge flag">${f}</span>`).join("")}
+            </div>
+          </article>`;
+      }).join("") + (filtered.length > max ? `<div class="row meta">Showing ${max} of ${filtered.length} matches — refine search.</div>` : "");
+
+      resultsEl.querySelectorAll(".row[data-id]").forEach((row) => {
+        row.addEventListener("click", () => showDetail(row.dataset.id));
+      });
+    }
+
+    function showDetail(classRef) {
+      selectedId = classRef;
+      const e = entities.find((x) => x.class_ref === classRef);
+      if (!e) return;
+      render();
+      detailEl.innerHTML = `
+        <h2>${esc(e.display_name)}</h2>
+        <div class="kv"><label>Class ref</label><code>${esc(e.class_ref)}</code></div>
+        <div class="kv"><label>Asset path</label><code>${esc(e.asset_path)}</code></div>
+        <div class="kv"><label>Blueprint (UE)</label><code>${esc(e.blueprint_ue)}</code></div>
+        ${e.giveitem ? `<div class="kv"><label>Give item</label><pre>${esc(e.giveitem)}</pre></div>` : ""}
+        ${e.spawn_dino ? `<div class="kv"><label>Spawn dino</label><pre>${esc(e.spawn_dino)}</pre></div>` : ""}
+        ${e.enum_hooks ? `<div class="kv"><label>Game-state hooks</label><code>${esc(e.enum_hooks)}</code></div>` : ""}
+        <div class="kv"><label>Tags</label><code>${esc((e.tags || []).join("; "))}</code></div>
+      `;
+    }
+
+    function esc(s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    document.querySelectorAll(".chip[data-filter]").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        document.querySelectorAll(".chip[data-filter]").forEach((c) => c.classList.remove("active"));
+        chip.classList.add("active");
+        filter = chip.dataset.filter;
+        render();
+      });
+    });
+
+    $("#q").addEventListener("input", render);
+    $("#loadFull").addEventListener("click", async () => {
+      try {
+        await loadPack(FULL_URL, "full catalog");
+      } catch (err) {
+        statusEl.textContent = `Failed to load full catalog: ${err.message}`;
+      }
+    });
+
+    loadPack(QUICK_URL, "featured").catch((err) => {
+      statusEl.textContent = `Load error: ${err.message}`;
+      resultsEl.innerHTML = `<div class="row"><p class="meta">Could not load data. Open from GitHub Pages or a local web server.</p></div>`;
+    });
+  </script>
+</body>
+</html>

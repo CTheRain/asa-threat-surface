@@ -2,13 +2,14 @@
 """Singleplayer ASA game-state monitor — read-only disk-side observability.
 
 Watches saves, profiles, ItemLog, ShooterGame.log, and PrimalConsole history.
-Mirrors changes to S:\\ARK_LiveData and writes a live summary for testing sessions.
+Mirrors changes to a configurable output directory and writes a live summary for testing sessions.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import time
@@ -18,11 +19,20 @@ from pathlib import Path
 ASA_SAVED = Path(
     r"C:\Program Files (x86)\Steam\steamapps\common\ARK Survival Ascended\ShooterGame\Saved"
 )
-OUT_DIR = Path(r"S:\ARK_LiveData")
+DEFAULT_OUT_DIR = Path(__file__).resolve().parent.parent
+OUT_DIR = Path(os.environ.get("ARK_LIVE_DATA", DEFAULT_OUT_DIR))
 STATE_FILE = OUT_DIR / "monitor_state.json"
 LATEST_FILE = OUT_DIR / "monitor_latest.json"
 EVENTS_FILE = OUT_DIR / "live_events.jsonl"
 POLL_SECONDS = 3
+
+
+def configure_output_dir(path: Path) -> None:
+    global OUT_DIR, STATE_FILE, LATEST_FILE, EVENTS_FILE
+    OUT_DIR = path
+    STATE_FILE = OUT_DIR / "monitor_state.json"
+    LATEST_FILE = OUT_DIR / "monitor_latest.json"
+    EVENTS_FILE = OUT_DIR / "live_events.jsonl"
 
 WATCH_ROOTS = [
     ASA_SAVED / "SavedArksLocal",
@@ -276,8 +286,15 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="ASA singleplayer game-state monitor")
     parser.add_argument("--once", action="store_true", help="Single poll then exit")
     parser.add_argument("--poll", type=int, default=POLL_SECONDS, help="Poll interval seconds")
+    parser.add_argument(
+        "--out-dir",
+        type=Path,
+        default=Path(os.environ.get("ARK_LIVE_DATA", DEFAULT_OUT_DIR)),
+        help="Mirror output directory (default: live-data/ or ARK_LIVE_DATA env)",
+    )
     args = parser.parse_args()
 
+    configure_output_dir(args.out_dir.expanduser())
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     state = load_state()
     latest = {
@@ -289,7 +306,7 @@ def main() -> int:
         "recent_console_commands": [],
         "notes": [
             "Disk-side monitor only — does not inject or read in-memory GameState.",
-            "Use for correlating tests with save/profile/log changes on S:.",
+            "Use for correlating tests with save/profile/log changes on disk.",
         ],
     }
     write_latest(latest)

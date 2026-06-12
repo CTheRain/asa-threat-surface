@@ -1840,7 +1840,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "ark.AutonomousCorrectionThreshold",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1848,7 +1848,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "ark.EnableServerMovementCorrections",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1856,7 +1856,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "ark.HugeSweepDetailsThreshold",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1864,7 +1864,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "ark.HugeSweepLogThreshold",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1872,7 +1872,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "ark.PlayerHeatMapDebugDraw",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1880,7 +1880,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "errors.com.redpoint.eos.anticheat.client_deployment_id_mismatch",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1888,7 +1888,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "errors.com.redpoint.eos.anticheat.client_product_id_mismatch",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1896,7 +1896,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "errors.com.redpoint.eos.anticheat.client_protection_not_available",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1904,7 +1904,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "errors.com.redpoint.eos.anticheat.client_sandbox_id_mismatch",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1912,7 +1912,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "errors.com.redpoint.eos.anticheat.device_id_auth_is_not_supported",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1920,7 +1920,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "errors.com.redpoint.eos.anticheat.invalid_mode",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1928,7 +1928,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "errors.com.redpoint.eos.anticheat.peer_already_registered",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1936,7 +1936,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "errors.com.redpoint.eos.anticheat.peer_not_found",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1944,7 +1944,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "errors.com.redpoint.eos.anticheat.peer_not_protected",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1952,7 +1952,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "errors.com.redpoint.eos.anticheat.protect_message_initialization_failed",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1960,7 +1960,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "errors.com.redpoint.eos.anticheat.protect_message_session_key_required",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1968,7 +1968,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "errors.com.redpoint.eos.anticheat.protect_message_validation_failed",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1976,7 +1976,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "np2.CMC.EnableClientAuthScheduledPushForces",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Unknown/Other",
       "offsets": ""
     },
@@ -1984,7 +1984,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "p.ClientAuthorityThresholdOnBaseChange",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Physics",
       "offsets": ""
     },
@@ -1992,7 +1992,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "p.ClientMoveCombineDelta",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Physics",
       "offsets": ""
     },
@@ -2000,7 +2000,7 @@
       "record_type": "cvar",
       "category": "high_value_cvar",
       "value": "p.NetlimitExploitFixTriggerTime",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv",
       "encodings": "Physics",
       "offsets": ""
     }
@@ -4930,7 +4930,7 @@
       "record_type": "pegasus_command",
       "category": "pegasus_discord_command",
       "value": "/server",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
       "encodings": "",
       "offsets": "Scans an ARK server for online players. Displays player list with tribe info, platform, and status."
     },
@@ -4938,7 +4938,7 @@
       "record_type": "pegasus_command",
       "category": "pegasus_discord_command",
       "value": "/scanserver",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
       "encodings": "",
       "offsets": "Starts automatic server scanning and live updates. Creates an auto-updating message with live player data."
     },
@@ -4946,7 +4946,7 @@
       "record_type": "pegasus_command",
       "category": "pegasus_discord_command",
       "value": "/showoutdateserverinfo",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
       "encodings": "",
       "offsets": "Retrieves historical server information for a selected time."
     },
@@ -4954,7 +4954,7 @@
       "record_type": "pegasus_command",
       "category": "pegasus_discord_command",
       "value": "/trackplayer",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
       "encodings": "",
       "offsets": "Tracks a player by ID. Input can include EOS ID, Steam ID, or implant ID. Sort options include play time, join count, and last join server."
     },
@@ -4962,7 +4962,7 @@
       "record_type": "pegasus_command",
       "category": "pegasus_discord_command",
       "value": "/serverplayerhistory",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
       "encodings": "",
       "offsets": "Gets player history for a specific server. Sort options include play time and join count."
     },
@@ -4970,7 +4970,7 @@
       "record_type": "pegasus_command",
       "category": "pegasus_discord_command",
       "value": "/addplayer",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
       "encodings": "",
       "offsets": "Adds a player to a private list such as Enemy, Friend, Bob, or Ally. Supports optional comments."
     },
@@ -4978,7 +4978,7 @@
       "record_type": "pegasus_command",
       "category": "pegasus_discord_command",
       "value": "/removeplayer",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
       "encodings": "",
       "offsets": "Removes players from lists."
     },
@@ -4986,7 +4986,7 @@
       "record_type": "pegasus_command",
       "category": "pegasus_discord_command",
       "value": "/mylist",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
       "encodings": "",
       "offsets": "Sends a selected private list for the Discord server. Lists include Friends, Enemies, Allies, and Bobs."
     },
@@ -4994,7 +4994,7 @@
       "record_type": "pegasus_command",
       "category": "pegasus_discord_command",
       "value": "/markplayersonserver",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
       "encodings": "",
       "offsets": "Marks all online players on a server to a selected private list."
     },
@@ -5002,7 +5002,7 @@
       "record_type": "pegasus_command",
       "category": "pegasus_discord_command",
       "value": "/addplayercomment",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
       "encodings": "",
       "offsets": "Adds or updates comments for player IDs."
     },
@@ -5010,7 +5010,7 @@
       "record_type": "pegasus_command",
       "category": "pegasus_discord_command",
       "value": "/removeplayercomment",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
       "encodings": "",
       "offsets": "Removes comments for player IDs."
     },
@@ -5018,7 +5018,7 @@
       "record_type": "pegasus_command",
       "category": "pegasus_discord_command",
       "value": "/viewplayercomments",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt",
       "encodings": "",
       "offsets": "Views all player comments for the server. Automatic scanning of main server every 30 seconds. Scan all official ARK servers with minimal delay. Logging of who connects or disconnects in real time. View server backups by time. See player lists from any server by play time or number of connections. View server transfer logs. Use filters to see servers with low or high populations."
     },
@@ -5026,7 +5026,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "Controller.PlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5034,7 +5034,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "GameMode.PlayerStateClass",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5042,7 +5042,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "Pawn.PlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5050,7 +5050,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "EActorListsBP::AL_PLAYERSTATES",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5058,7 +5058,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "EPingAverageType::PlayerStateAvg",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5066,7 +5066,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5074,7 +5074,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PauserPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5082,7 +5082,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "mPauserPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5090,7 +5090,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "OnRep_PlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5098,7 +5098,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "NO PlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5106,7 +5106,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "UPlayerStateCountLimiterConfig",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5114,7 +5114,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "InactivePlayerStateLifeSpan",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5122,7 +5122,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerState is null",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5130,7 +5130,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerStateClass",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5138,7 +5138,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "GetNumPlayerStates",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5146,7 +5146,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "GetPlayerStateFromUniqueNetId",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5154,7 +5154,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "GetPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5162,7 +5162,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerStateIndex",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5170,7 +5170,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "RelatedPlayerState_1",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5178,7 +5178,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "RelatedPlayerState_2",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5186,7 +5186,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "A comma-delimited list of EPingType pings to enable, and (optionally) the EPingAverageType averaging to apply to the ping (e.g: \"RoundTrip=None,RoundTripExclFrame=PlayerStateAvg,ICMP=MovingAverage\").",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5194,7 +5194,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "SenderPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5202,7 +5202,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "OnPlayerStatePawnSet__DelegateSignature",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5210,7 +5210,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "&APlayerState::OnPawnPrivateDestroyed",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5218,7 +5218,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "APlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5226,7 +5226,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "NewPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5234,7 +5234,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "OldPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5242,7 +5242,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "RegisterWithPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5250,7 +5250,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "bWantsPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5258,7 +5258,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "ForPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5266,7 +5266,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerStates",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5274,7 +5274,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerStates_Key",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5282,7 +5282,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "BPAppliedToPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5290,7 +5290,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerState_EngramBlueprints",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5298,7 +5298,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerState_PurchasedEngramPoints",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5306,7 +5306,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerState_TotalEngramPoints",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5314,7 +5314,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerState_FreeSkillPoints",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5322,7 +5322,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerState_TotalSkillPoints",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5330,7 +5330,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerState_DefaultItemSlotSkills",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5338,7 +5338,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerState_DefaultItemSlotEngrams",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5346,7 +5346,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerState_DefaultItemSlotClasses",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5354,7 +5354,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "ignorePlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5362,7 +5362,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "AShooterGameSession",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5370,7 +5370,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "FindPlayerStateFromHashedUniqueID",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5378,7 +5378,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "ServerFixScoutPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5386,7 +5386,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "KillerPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5394,7 +5394,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "KilledPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5402,7 +5402,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "AShooterPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5410,7 +5410,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerStateOwnsShoulderDragon",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5418,7 +5418,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerStateOwnsSpiritBear",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5426,7 +5426,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "playerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5434,7 +5434,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerStateOwnsBobsTallTales",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5442,7 +5442,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerStateOwnsDarkPegasus",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5450,7 +5450,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerStateOwnsASASeasonPass1",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5458,7 +5458,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerStateOwnsAstraeos",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5466,7 +5466,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerStateOwnsFireLion",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5474,7 +5474,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerStateOwnsLostColony",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5482,7 +5482,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "PlayerStateOwnsDLC",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5490,7 +5490,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "UsedPlayerState",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "ascii",
       "offsets": ""
     },
@@ -5498,7 +5498,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "AShooterGameSession - KickPlayer: %s reason %s ",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5506,7 +5506,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "AShooterGameSession - KickedPlayer: UnknownPlayer reason %s ",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5514,7 +5514,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "&AShooterPlayerController::AnalyticsSendGamePlaySessionResultSuccess",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5522,7 +5522,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "&AShooterPlayerController::AnalyticsSendGamePlaySessionResultFailure",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     },
@@ -5530,7 +5530,7 @@
       "record_type": "focused_string",
       "category": "intel_context",
       "value": "&UUI_ListSessions::OnGameModeComboBoxSelectionChanged",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_exe_game_state_focused_strings.csv",
+      "source": "C:\\Users\\<user>\\Downloads\\asa_exe_game_state_focused_strings.csv",
       "encodings": "utf16le",
       "offsets": ""
     }
@@ -5540,73 +5540,73 @@
       "category": "pegasus_discord_command",
       "command": "/server",
       "description": "Scans an ARK server for online players. Displays player list with tribe info, platform, and status.",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
     },
     {
       "category": "pegasus_discord_command",
       "command": "/scanserver",
       "description": "Starts automatic server scanning and live updates. Creates an auto-updating message with live player data.",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
     },
     {
       "category": "pegasus_discord_command",
       "command": "/showoutdateserverinfo",
       "description": "Retrieves historical server information for a selected time.",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
     },
     {
       "category": "pegasus_discord_command",
       "command": "/trackplayer",
       "description": "Tracks a player by ID. Input can include EOS ID, Steam ID, or implant ID. Sort options include play time, join count, and last join server.",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
     },
     {
       "category": "pegasus_discord_command",
       "command": "/serverplayerhistory",
       "description": "Gets player history for a specific server. Sort options include play time and join count.",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
     },
     {
       "category": "pegasus_discord_command",
       "command": "/addplayer",
       "description": "Adds a player to a private list such as Enemy, Friend, Bob, or Ally. Supports optional comments.",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
     },
     {
       "category": "pegasus_discord_command",
       "command": "/removeplayer",
       "description": "Removes players from lists.",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
     },
     {
       "category": "pegasus_discord_command",
       "command": "/mylist",
       "description": "Sends a selected private list for the Discord server. Lists include Friends, Enemies, Allies, and Bobs.",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
     },
     {
       "category": "pegasus_discord_command",
       "command": "/markplayersonserver",
       "description": "Marks all online players on a server to a selected private list.",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
     },
     {
       "category": "pegasus_discord_command",
       "command": "/addplayercomment",
       "description": "Adds or updates comments for player IDs.",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
     },
     {
       "category": "pegasus_discord_command",
       "command": "/removeplayercomment",
       "description": "Removes comments for player IDs.",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
     },
     {
       "category": "pegasus_discord_command",
       "command": "/viewplayercomments",
       "description": "Views all player comments for the server. Automatic scanning of main server every 30 seconds. Scan all official ARK servers with minimal delay. Logging of who connects or disconnects in real time. View server backups by time. See player lists from any server by play time or number of connections. View server transfer logs. Use filters to see servers with low or high populations.",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
+      "source": "C:\\Users\\<user>\\Downloads\\Pegasus_Steam_Report_Evidence\\07_Pegasus_Command_List_Trackplayer_ServerHistory_Scanserver.txt"
     }
   ],
   "console_history": [
@@ -5868,7 +5868,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "high",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5876,7 +5876,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "low",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5884,7 +5884,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "high",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5892,7 +5892,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "high",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5900,7 +5900,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "high",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5908,7 +5908,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "high",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5916,7 +5916,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "high",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5924,7 +5924,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "high",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5932,7 +5932,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "low",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5940,7 +5940,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "low",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5948,7 +5948,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "high",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5956,7 +5956,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "low",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5964,7 +5964,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "high",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5972,7 +5972,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "high",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5980,7 +5980,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "high",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5988,7 +5988,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "low",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -5996,7 +5996,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "low",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -6004,7 +6004,7 @@
       "family": "Unknown/Other",
       "description_guess": "",
       "confidence": "high",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -6012,7 +6012,7 @@
       "family": "Physics",
       "description_guess": "",
       "confidence": "high",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -6020,7 +6020,7 @@
       "family": "Physics",
       "description_guess": "",
       "confidence": "low",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     },
     {
       "category": "high_value_cvar",
@@ -6028,7 +6028,7 @@
       "family": "Physics",
       "description_guess": "",
       "confidence": "low",
-      "source": "C:\\Users\\SLAANESH\\Downloads\\asa_console_command_descriptions_v0.csv"
+      "source": "C:\\Users\\<user>\\Downloads\\asa_console_command_descriptions_v0.csv"
     }
   ],
   "saved_entrypoints": [
@@ -20820,8 +20820,8 @@
   ],
   "phase2b": {
     "mirror": {
-      "dest": "S:\\ARK_ThreatSurface\\paks_mirror",
-      "manifest": "S:\\ARK_ThreatSurface\\manifests\\paks_mirror_manifest_v1.json",
+      "dest": "<local-data>/ARK_ThreatSurface\\paks_mirror",
+      "manifest": "<local-data>/ARK_ThreatSurface\\manifests\\paks_mirror_manifest_v1.json",
       "summary": {
         "total_files": 26,
         "copied": 26,
@@ -20832,8 +20832,8 @@
       }
     },
     "meat_scan": {
-      "csv": "S:\\ARK_ThreatSurface\\pak_meat_strings_v1.csv",
-      "progress": "S:\\ARK_ThreatSurface\\manifests\\ucas_meat_scan_progress_v1.json",
+      "csv": "<local-data>/ARK_ThreatSurface\\pak_meat_strings_v1.csv",
+      "progress": "<local-data>/ARK_ThreatSurface\\manifests\\ucas_meat_scan_progress_v1.json",
       "summary": {
         "ucas_files": 13,
         "unique_strings": 113382,
@@ -23868,7 +23868,7 @@
       }
     },
     "retoc_list_cache": {
-      "path": "S:\\ARK_ThreatSurface\\indexes\\retoc_list_cache_v1.json",
+      "path": "<local-data>/ARK_ThreatSurface\\indexes\\retoc_list_cache_v1.json",
       "chunks": {
         "global": 0,
         "pakchunk0-Windows": 191594,
@@ -23887,8 +23887,8 @@
       "total_assets": 254737
     },
     "extract_broad": {
-      "manifest": "S:\\ARK_ThreatSurface\\manifests\\extracted_manifest_v1.json",
-      "out_dir": "S:\\ARK_ThreatSurface\\extracted",
+      "manifest": "<local-data>/ARK_ThreatSurface\\manifests\\extracted_manifest_v1.json",
+      "out_dir": "<local-data>/ARK_ThreatSurface\\extracted",
       "targets_found": {
         "P0": 1813,
         "P1": 34,
@@ -23898,83 +23898,83 @@
       "note": "Capped at 200 assets per priority; P0 dominated by bow/projectile names."
     },
     "extract_cheatmenu_focus": {
-      "manifest": "S:\\ARK_ThreatSurface\\manifests\\cheatmenu_extract_manifest_v1.json",
-      "out_dir": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus",
+      "manifest": "<local-data>/ARK_ThreatSurface\\manifests\\cheatmenu_extract_manifest_v1.json",
+      "out_dir": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus",
       "assets": [
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/UI/CheatMenu/CheatMenuOptionTypes.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuOptionTypes.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuOptionTypes.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/UI/CheatMenu/CheatMenuMapOpenButton.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuMapOpenButton.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuMapOpenButton.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/UI/CheatMenu/CheatMenuItemButton.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuItemButton.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuItemButton.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/UI/CheatMenu/CheatMenuCharacterLevelPreset.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuCharacterLevelPreset.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuCharacterLevelPreset.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/Packs/Wasteland/Vehicles/VFX/ClientExplodingProjectile_Car.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\ClientExplodingProjectile_Car.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\ClientExplodingProjectile_Car.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/UI/CheatMenu/CheatMenuItemAllButton.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuItemAllButton.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuItemAllButton.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/UI/CheatMenu/CheatMenuCheatButton.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuCheatButton.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuCheatButton.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/UI/CheatMenu/CheatMapJumpButton.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMapJumpButton.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMapJumpButton.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/UI/CheatMenu/CheatMenuFolderButton.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuFolderButton.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuFolderButton.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/UI/CheatMenu/CheatMenu.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenu.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenu.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/CoreBlueprints/Projectiles/ClientExplodingProjectile.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\ClientExplodingProjectile.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\ClientExplodingProjectile.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/UI/CheatMenu/CheatMenuCharacterPresetsButton.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuCharacterPresetsButton.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuCharacterPresetsButton.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/UI/CheatMenu/CheatMapJumpInfo.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMapJumpInfo.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMapJumpInfo.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/UI/CheatMenu/CheatMenuEggButton.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuEggButton.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuEggButton.uasset"
         },
         {
           "asset_path": "../../../ShooterGame/Content/PrimalEarth/UI/CheatMenu/CheatMenuButton.uasset",
           "chunk": "pakchunk0-Windows",
-          "out_file": "S:\\ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuButton.uasset"
+          "out_file": "<local-data>/ARK_ThreatSurface\\extracted\\cheatmenu_focus\\pakchunk0-Windows\\CheatMenuButton.uasset"
         }
       ]
     }

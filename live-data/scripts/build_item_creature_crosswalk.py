@@ -11,11 +11,11 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path(r"S:\ARK_LiveData")
+ROOT = Path(r"<local-data>/ARK_LiveData")
 BUNDLES = ROOT / "bundles"
 EXTRACT = BUNDLES / "_extract" / "MxCheatUI"
 UNPACK = EXTRACT / "unpack" / "Data"
-GAME_STATES = Path(r"S:\ARK_GameStates")
+GAME_STATES = Path(r"<local-data>/ARK_GameStates")
 SESSION_SAVE = ROOT / "saves" / "20260611_221210__TheCenter_WP.ark"
 SESSION_BUNDLE = BUNDLES / "session_20260611_center_combat_destruction_v1.json"
 CREATURE_ITEM_JSON = GAME_STATES / "asa_creature_item_player.json"

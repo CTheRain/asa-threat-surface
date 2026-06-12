@@ -1,14 +1,14 @@
 # ASA Threat Surface v1
 
 Generated: 2026-06-11  
-Output root: `S:\ARK_ThreatSurface\`  
+Output root: `<local-data>/ARK_ThreatSurface\`  
 Method: read-only local scans of `ArkAscended.exe`, IoStore `.utoc` files, `ShooterGame\Saved\`, and your existing CSV/evidence imports.
 
 ---
 
 ## 1. Not in the CVAR dump
 
-Your file [`asa_console_command_descriptions_v0_full.md`](C:\Users\SLAANESH\Downloads\asa_console_command_descriptions_v0_full.md) lists **6,272 dot-style engine CVARs** (`r.*`, `p.*`, `net.*`, `ark.*`, etc.). That scan method **cannot** surface:
+Your file [`asa_console_command_descriptions_v0_full.md`](C:\Users\<user>\Downloads\asa_console_command_descriptions_v0_full.md) lists **6,272 dot-style engine CVARs** (`r.*`, `p.*`, `net.*`, `ark.*`, etc.). That scan method **cannot** surface:
 
 ### Third-party cheat client brands
 **GPT, Aurora, King** — no embedded brand strings found in vanilla ASA exe/pak scans. These are external paid injection/overlay products; they hook client trust at runtime rather than shipping inside Wildcard's files.
@@ -25,7 +25,7 @@ Pegasus is a **Discord bot**, not a console command. Your evidence file defines 
 | `/markplayersonserver` | Bulk-mark online players to enemy/friend lists |
 | `/addplayer`, `/mylist`, comments | Persistent player profiling |
 
-Source: `S:\ARK_ThreatSurface\asa_intel_surfaces_v1.csv` (12 `pegasus_command` rows imported from your evidence pack).
+Source: `<local-data>/ARK_ThreatSurface\asa_intel_surfaces_v1.csv` (12 `pegasus_command` rows imported from your evidence pack).
 
 ### Real cheat verbs your CVAR dump missed
 These live as plain strings in `ArkAscended.exe`, not as `something.something` CVARs:
@@ -38,7 +38,7 @@ These live as plain strings in `ArkAscended.exe`, not as `something.something` C
 | `EnableCheats`, `ShowCheatMenu` | your `PrimalConsole.ini` history |
 | `ToggleTracker`, `ark.PlayerHeatMapDebugDraw` | your `PrimalConsole.ini` history |
 
-Full list: `S:\ARK_ThreatSurface\asa_cheat_commands_v1.csv` (248 rows).
+Full list: `<local-data>/ARK_ThreatSurface\asa_cheat_commands_v1.csv` (248 rows).
 
 ### Why the 6,272-command MD misleads for this task
 It is excellent for engine tuning research. It is **the wrong index** for "what do cheat clients and watcher bots abuse" because:
@@ -93,7 +93,7 @@ Phase 1 utoc index + Phase 2b retoc extract confirmed vanilla assets:
 - `CheatMapJumpButton.uasset`, `CheatMenuOptionTypes.uasset`
 - `ClientExplodingProjectile.uasset` (combat validation surface)
 
-**Extracted to disk:** `S:\ARK_ThreatSurface\extracted\cheatmenu_focus\` (15 files, manifest in `manifests\cheatmenu_extract_manifest_v1.json`).
+**Extracted to disk:** `<local-data>/ARK_ThreatSurface\extracted\cheatmenu_focus\` (15 files, manifest in `manifests\cheatmenu_extract_manifest_v1.json`).
 
 These are shipped debug/admin UI — not King/Aurora/GPT products.
 
@@ -156,7 +156,7 @@ Not pak-exe, but relevant to "weird JSON/template entry points":
 | `.template` | 55 | Structure templates (binary) |
 | `.arkprofile` | 3 | Player profile blobs |
 
-Manifest: `S:\ARK_ThreatSurface\saved_entrypoints_manifest_v1.json`  
+Manifest: `<local-data>/ARK_ThreatSurface\saved_entrypoints_manifest_v1.json`  
 Each entry has `sha1`, `magic_hex`, and `printable_preview` for manual inspection.
 
 ---
@@ -216,6 +216,6 @@ Concrete policy asks:
 | Targeted assets extracted | 434 broad + 15 CheatMenu focus |
 | High-value CVARs tagged | 21 |
 
-**Machine index:** `S:\ARK_ThreatSurface\asa_threat_surface_index_v1.json` (Phase 1 + 2b merged)  
-**Sanity guide:** `S:\ARK_ThreatSurface\HOW_IT_WORKS.md`  
-**Re-run scripts:** `S:\ARK_ThreatSurface\scripts\`
+**Machine index:** `<local-data>/ARK_ThreatSurface\asa_threat_surface_index_v1.json` (Phase 1 + 2b merged)  
+**Sanity guide:** `<local-data>/ARK_ThreatSurface\HOW_IT_WORKS.md`  
+**Re-run scripts:** `<local-data>/ARK_ThreatSurface\scripts\`

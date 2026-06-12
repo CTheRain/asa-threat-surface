@@ -1,6 +1,6 @@
 # How This Threat Surface Scan Works (Sanity Check Guide)
 
-All outputs live on `S:\ARK_ThreatSurface\`. Game install files are **read only** — nothing in `ARK Survival Ascended` is modified.
+All outputs live on `<local-data>/ARK_ThreatSurface\`. Game install files are **read only** — nothing in `ARK Survival Ascended` is modified.
 
 ## What we are NOT doing
 
@@ -39,16 +39,16 @@ All outputs live on `S:\ARK_ThreatSurface\`. Game install files are **read only*
 ### How to sanity-check Phase 1 yourself
 ```powershell
 # Re-run (takes ~1 minute)
-python S:\ARK_ThreatSurface\scripts\scan_asa_cheat_intel_surfaces.py
+python <local-data>/ARK_ThreatSurface\scripts\scan_asa_cheat_intel_surfaces.py
 
 # Find real admin cheat verbs embedded in exe
-Select-String -Path S:\ARK_ThreatSurface\asa_cheat_commands_v1.csv -Pattern '^exe_string,cheat_verb,cheat '
+Select-String -Path <local-data>/ARK_ThreatSurface\asa_cheat_commands_v1.csv -Pattern '^exe_string,cheat_verb,cheat '
 
 # Confirm Pegasus commands imported
-Select-String -Path S:\ARK_ThreatSurface\asa_intel_surfaces_v1.csv -Pattern 'pegasus_command'
+Select-String -Path <local-data>/ARK_ThreatSurface\asa_intel_surfaces_v1.csv -Pattern 'pegasus_command'
 
 # Confirm cheat client BRAND names are absent from exe scan
-Select-String -Path S:\ARK_ThreatSurface\asa_*.csv -Pattern 'Aurora|King cheat|GPT cheat' 
+Select-String -Path <local-data>/ARK_ThreatSurface\asa_*.csv -Pattern 'Aurora|King cheat|GPT cheat' 
 # (should be empty — only DarkPegasus DLC string and Pegasus evidence file paths may appear)
 ```
 
@@ -116,31 +116,31 @@ CheatMenu focus pulled the full `PrimalEarth/UI/CheatMenu/*` set plus `ClientExp
 ### How to sanity-check Phase 2b yourself
 ```powershell
 # Mirror manifest — should show 26 copied, 0 failed
-python -c "import json; print(json.load(open(r'S:\ARK_ThreatSurface\manifests\paks_mirror_manifest_v1.json'))['summary'])"
+python -c "import json; print(json.load(open(r'<local-data>/ARK_ThreatSurface\manifests\paks_mirror_manifest_v1.json'))['summary'])"
 
 # Meat scan row count
-python -c "print(sum(1 for _ in open(r'S:\ARK_ThreatSurface\pak_meat_strings_v1.csv',encoding='utf-8'))-1)"
+python -c "print(sum(1 for _ in open(r'<local-data>/ARK_ThreatSurface\pak_meat_strings_v1.csv',encoding='utf-8'))-1)"
 
 # CheatMenu assets on disk
-Get-ChildItem S:\ARK_ThreatSurface\extracted\cheatmenu_focus -Recurse -File | Select-Object Name
+Get-ChildItem <local-data>/ARK_ThreatSurface\extracted\cheatmenu_focus -Recurse -File | Select-Object Name
 
 # Re-merge index after future scans
-python S:\ARK_ThreatSurface\scripts\merge_phase2b_index.py
+python <local-data>/ARK_ThreatSurface\scripts\merge_phase2b_index.py
 ```
 
 ### How to sanity-check Phase 2 yourself
 ```powershell
-python S:\ARK_ThreatSurface\scripts\index_asa_paks.py
+python <local-data>/ARK_ThreatSurface\scripts\index_asa_paks.py
 
 # Should finish in seconds, not hours
 # Check summary in pak_asset_index_v1.json
-python -c "import json; print(json.load(open(r'S:\ARK_ThreatSurface\pak_asset_index_v1.json'))['summary'])"
+python -c "import json; print(json.load(open(r'<local-data>/ARK_ThreatSurface\pak_asset_index_v1.json'))['summary'])"
 ```
 
 ## File map on S:
 
 ```text
-S:\ARK_ThreatSurface\
+<local-data>/ARK_ThreatSurface\
   scripts\
     scan_asa_cheat_intel_surfaces.py
     index_asa_paks.py

@@ -9,7 +9,7 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path(r"S:\ARK_LiveData")
+ROOT = Path(r"<local-data>/ARK_LiveData")
 BUNDLES = ROOT / "bundles"
 CROSSWALK_JSONL = BUNDLES / "item_creature_crosswalk_v2.jsonl"
 CROSSWALK_JSON = BUNDLES / "item_creature_crosswalk_v2.json"

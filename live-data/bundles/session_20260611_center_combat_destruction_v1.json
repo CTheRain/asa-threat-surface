@@ -520,11 +520,11 @@
     ]
   },
   "related_artifacts": {
-    "monitor_script": "S:/ARK_LiveData/scripts/asa_game_state_monitor.py",
-    "live_events": "S:/ARK_LiveData/live_events.jsonl",
-    "monitor_state": "S:/ARK_LiveData/monitor_state.json",
-    "monitor_latest": "S:/ARK_LiveData/monitor_latest.json",
-    "threat_surface_root": "S:/ARK_ThreatSurface/",
-    "game_states_root": "S:/ARK_GameStates/"
+    "monitor_script": "<local-data>/ARK_LiveData/scripts/asa_game_state_monitor.py",
+    "live_events": "<local-data>/ARK_LiveData/live_events.jsonl",
+    "monitor_state": "<local-data>/ARK_LiveData/monitor_state.json",
+    "monitor_latest": "<local-data>/ARK_LiveData/monitor_latest.json",
+    "threat_surface_root": "<local-data>/ARK_ThreatSurface/",
+    "game_states_root": "<local-data>/ARK_GameStates/"
   }
 }
