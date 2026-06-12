@@ -104,6 +104,7 @@ observed behavior → evidence packet → ARK Maker capsule → Lua logger → p
 | [`docs/CAPSULE_SCHEMA.md`](docs/CAPSULE_SCHEMA.md) | `capsule_manifest.json` and state tray slots |
 | [`docs/PATCH_DAY_WORKFLOW.md`](docs/PATCH_DAY_WORKFLOW.md) | Re-run matrix after game updates |
 | [`docs/SAFETY_BOUNDARY.md`](docs/SAFETY_BOUNDARY.md) | Red lines (no raw saves/paks, no intel automation) |
+| [`docs/STEAM_PATCH_DIFF.md`](docs/STEAM_PATCH_DIFF.md) | Steam buildid/manifest diff → exe surfaces → crosswalk |
 
 First capsule: [`capsules/capsule_000_survival_test/`](capsules/capsule_000_survival_test/) — one Tek Rifle, save/reload survival check.
 

@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-06-12T03:18:04.327014+00:00",
+  "app_id": 2399830,
+  "build_id": "23687127",
+  "last_updated_unix": "1781220545",
+  "bytes_downloaded_last_patch": "14651648",
+  "installed_depots": {
+    "2399831": {
+      "manifest": "2778173512205025784",
+      "size": "190688220427"
+    },
+    "2827030": {
+      "manifest": "5356664152001387726",
+      "size": "9666862729"
+    },
+    "2849450": {
+      "manifest": "8661221119522482850",
+      "size": "6920180816"
+    },
+    "3059650": {
+      "manifest": "3056656779736906629",
+      "size": "7052997886"
+    },
+    "3349320": {
+      "manifest": "4454700043193984844",
+      "size": "5581165191"
+    },
+    "3483400": {
+      "manifest": "2887557198481728900",
+      "size": "21965911273"
+    },
+    "3675020": {
+      "manifest": "3037654323655677982",
+      "size": "12695632715"
+    },
+    "3583650": {
+      "manifest": "2466150682219872770",
+      "size": "43421723726"
+    },
+    "3982310": {
+      "manifest": "2359091951051751539",
+      "size": "20717172098"
+    }
+  },
+  "depot_manifest_cache": [
+    {
+      "depot_id": 2399831,
+      "manifest_gid": "2778173512205025784",
+      "path": "C:\\Program Files (x86)\\Steam\\depotcache\\2399831_2778173512205025784.manifest",
+      "size_bytes": 8121331,
+      "mtime_utc": "2026-06-11T23:29:03.721337+00:00"
+    },
+    {
+      "depot_id": 2399831,
+      "manifest_gid": "4801118673125721466",
+      "path": "C:\\Program Files (x86)\\Steam\\depotcache\\2399831_4801118673125721466.manifest",
+      "size_bytes": 8121331,
+      "mtime_utc": "2026-06-08T18:28:37.262399+00:00"
+    }
+  ],
+  "key_file_fingerprints": [
+    {
+      "relative_path": "ShooterGame/Binaries/Win64/ArkAscended.exe",
+      "size_bytes": 247025768,
+      "sha256": "42956F27CDC677D688EDAAE1E9140064F01DF16CD1FE8DAC52EC86031EF54E4A"
+    },
+    {
+      "relative_path": "ShooterGame/Content/Paks/global.ucas",
+      "size_bytes": 3752784,
+      "sha256": "6980C584B4597A19E8F7170D05DE6BDC7F3F4D58A5F3A7C8F945690FE8832C56"
+    },
+    {
+      "relative_path": "ShooterGame/Content/Paks/global.utoc",
+      "size_bytes": 890,
+      "sha256": "6B7E695F22C8B9674C9D2B4A72CB6B994026D9DB243AE3B4AE8F3B153797EAA2"
+    },
+    {
+      "relative_path": "ShooterGame/Content/Paks/pakchunk0-Windows.pak",
+      "size_bytes": 1561257860,
+      "sha256": "979B6079A85B0104EF2D6503442C993C951DCC2992BEBA3FB822D1EB42C96BC9"
+    },
+    {
+      "relative_path": "ShooterGame/Content/Paks/pakchunk0-Windows.ucas",
+      "size_bytes": 165744092160,
+      "sha256": "EC31F02550C834A4BFF47F4E19585528C2E95ACCFC63A3BB67CFEA6DB6ACCAE0"
+    },
+    {
+      "relative_path": "ShooterGame/Content/Paks/pakchunk0-Windows.utoc",
+      "size_bytes": 76852843,
+      "sha256": "5A4A243D2F0D42FEC6657B9444C65A467BD0C8006AA5F751354264D1303E1B27"
+    }
+  ],
+  "notes": [
+    "SteamDB has no public API; use local appmanifest + depotcache for diffing.",
+    "Compare two snapshots or two depot manifest GIDs after each patch."
+  ]
+}

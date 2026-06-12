@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "scanned_at_utc": "2026-06-12T03:20:01.664582+00:00",
+  "exe_path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\ARK Survival Ascended\\ShooterGame\\Binaries\\Win64\\ArkAscended.exe",
+  "exe_size_bytes": 247025768,
+  "exe_sha256": "42956F27CDC677D688EDAAE1E9140064F01DF16CD1FE8DAC52EC86031EF54E4A",
+  "patch_keywords": [
+    "DinoStacking",
+    "EnableDinoStackingDetection",
+    "DinoStackingCheckRadius",
+    "DinoStackingMaxOverlap",
+    "DinoStackingChecksPerFrame",
+    "PreventPlannedStructureDecayReset",
+    "PlanningStructure",
+    "PlannedStructure",
+    "CryoFridge",
+    "NearbyStructure",
+    "StructureLimit",
+    "QueenBee",
+    "Hive",
+    "Vault"
+  ],
+  "findings": [
+    {
+      "keyword": "DinoStacking",
+      "exe_hits": [
+        {
+          "encoding": "utf16le",
+          "offset": "0xC391084"
+        },
+        {
+          "encoding": "utf16le",
+          "offset": "0xC3910B0"
+        },
+        {
+          "encoding": "utf16le",
+          "offset": "0xC3910E0"
+        },
+        {
+          "encoding": "utf16le",
+          "offset": "0xC391110"
+        },
+        {
+          "encoding": "utf16le",
+          "offset": "0xC396A76"
+        },
+        {
+          "encoding": "utf16le",
+          "offset": "0xC397D00"
+        }
+      ],
+      "in_published_game_states_csv": false,
+      "crosswalk_class_refs": []
+    },
+    {
+      "keyword": "EnableDinoStackingDetection",
+      "exe_hits": [
+        {
+          "encoding": "utf16le",
+          "offset": "0xC391078"
+        },
+        {
+          "encoding": "utf16le",
+          "offset": "0xC396A6A"
+        }
+      ],
+      "in_published_game_states_csv": false,
+      "crosswalk_class_refs": []
+    },
+    {
+      "keyword": "DinoStackingCheckRadius",
+      "exe_hits": [
+        {
+          "encoding": "utf16le",
+          "offset": "0xC3910B0"
+        }
+      ],
+      "in_published_game_states_csv": false,
+      "crosswalk_class_refs": []
+    },
+    {
+      "keyword": "DinoStackingMaxOverlap",
+      "exe_hits": [
+        {
+          "encoding": "utf16le",
+          "offset": "0xC3910E0"
+        }
+      ],
+      "in_published_game_states_csv": false,
+      "crosswalk_class_refs": []
+    },
+    {
+      "keyword": "DinoStackingChecksPerFrame",
+      "exe_hits": [
+        {
+          "encoding": "utf16le",
+          "offset": "0xC391110"
+        }
+      ],
+      "in_published_game_states_csv": false,
+      "crosswalk_class_refs": []
+    },
+    {
+      "keyword": "PreventPlannedStructureDecayReset",
+      "exe_hits": [
+        {
+          "encoding": "utf16le",
+          "offset": "0xC392C60"
+        }
+      ],
+      "in_published_game_states_csv": false,
+      "crosswalk_class_refs": []
+    },
+    {
+      "keyword": "PlanningStructure",
+      "exe_hits": [
+        {
+          "encoding": "ascii",
+          "offset": "0xC0B31F6"
+        }
+      ],
+      "in_published_game_states_csv": false,
+      "crosswalk_class_refs": []
+    },
+    {
+      "keyword": "PlannedStructure",
+      "exe_hits": [
+        {
+          "encoding": "ascii",
+          "offset": "0xC0DD4F0"
+        },
+        {
+          "encoding": "ascii",
+          "offset": "0xC0FCADE"
+        },
+        {
+          "encoding": "ascii",
+          "offset": "0xC1E50EC"
+        },
+        {
+          "encoding": "ascii",
+          "offset": "0xC39F20E"
+        },
+        {
+          "encoding": "utf16le",
+          "offset": "0xC392C6E"
+        },
+        {
+          "encoding": "utf16le",
+          "offset": "0xC3F3218"
+        }
+      ],
+      "in_published_game_states_csv": false,
+      "crosswalk_class_refs": []
+    },
+    {
+      "keyword": "CryoFridge",
+      "exe_hits": [
+        {
+          "encoding": "ascii",
+          "offset": "0xC1932DE"
+        },
+        {
+          "encoding": "utf16le",
+          "offset": "0xC1AD03C"
+        },
+        {
+          "encoding": "utf16le",
+          "offset": "0xC391A32"
+        },
+        {
+          "encoding": "utf16le",
+          "offset": "0xC3C16B4"
+        }
+      ],
+      "in_published_game_states_csv": false,
+      "crosswalk_class_refs": [
+        "PrimalItemStructure_CryoFridge_C"
+      ]
+    },
+    {
+      "keyword": "NearbyStructure",
+      "exe_hits": [
+        {
+          "encoding": "ascii",
+          "offset": "0xBEC75FB"
+        },
+        {
+          "encoding": "ascii",
+          "offset": "0xC0B49C3"
+        },
+        {
+          "encoding": "ascii",
+          "offset": "0xC0E6F97"
+        },
+        {
+          "encoding": "ascii",
+          "offset": "0xC0E6FB7"
+        },
+        {
+          "encoding": "ascii",
+          "offset": "0xC0E90C5"
+        },
+        {
+          "encoding": "ascii",
+          "offset": "0xC0E9115"
+        }
+      ],
+      "in_published_game_states_csv": false,
+      "crosswalk_class_refs": []
+    },
+    {
+      "keyword": "StructureLimit",
+      "exe_hits": [
+        {
+          "encoding": "ascii",
+          "offset": "0xBFB6CC9"
+        },
+        {
+          "encoding": "ascii",
+          "offset": "0xC192729"
+        },
+        {
+          "encoding": "ascii",
+          "offset": "0xC192749"
+        },
+        {
+          "encoding": "ascii",
+          "offset": "0xC1A93B0"
+        },
+        {
+          "encoding": "utf16le",
+          "offset": "0xC1AC020"
+        }
+      ],
+      "in_published_game_states_csv": false,
+      "crosswalk_class_refs": []
+    },
+    {
+      "keyword": "Hive",
+      "exe_hits": [
+        {
+          "encoding": "utf16le",
+          "offset": "0xC37637C"
+        }
+      ],
+      "in_published_game_states_csv": true,
+      "crosswalk_class_refs": [
+        "PrimalItemConsumable_UnlockEmote_Shiver_C",
+        "PrimalItemStructure_BeeHive_C"
+      ]
+    }
+  ],
+  "new_surface_candidates": [
+    "DinoStacking",
+    "EnableDinoStackingDetection",
+    "DinoStackingCheckRadius",
+    "DinoStackingMaxOverlap",
+    "DinoStackingChecksPerFrame",
+    "PreventPlannedStructureDecayReset",
+    "PlanningStructure",
+    "PlannedStructure",
+    "CryoFridge",
+    "NearbyStructure",
+    "StructureLimit"
+  ]
+}

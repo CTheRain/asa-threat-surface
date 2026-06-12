@@ -31,7 +31,15 @@ T5  Publish verdict packets (not raw saves)
 
 ## T0 — Patch lands
 
-1. Note new build ID from `ShooterGame.log` or Steam news.
+1. Note new build ID from `ShooterGame.log`, `appmanifest_2399830.acf`, or Steam news.
+2. Capture fingerprints and scan patch strings:
+
+```powershell
+python scripts/capture_steam_build_snapshot.py
+python scripts/scan_patch_surface_strings.py
+```
+
+See [`STEAM_PATCH_DIFF.md`](STEAM_PATCH_DIFF.md) for depot manifest GIDs, exe surface diff, and crosswalk joins.
 2. Do **not** overwrite baseline mirrors in `<local-data>/ARK_LiveData/saves/` — copy to a dated folder first:
 
 ```text
