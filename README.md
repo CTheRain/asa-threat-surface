@@ -1,6 +1,12 @@
 # asa-threat-surface
 
-ARK Survival Ascended (ASA) **client-trust / threat-surface** research for Maker Lab–style assessment: static game-state catalogs, live single-player disk evidence, and machine-queryable item/creature lookup packs.
+ARK Survival Ascended (ASA) **client-trust / threat-surface** research for **ARK Maker State Lab** assessment: static game-state catalogs, live single-player disk evidence, machine-queryable lookup packs, and **state capsules** for future patch regression.
+
+```text
+asa-threat-surface repo  =  current evidence map (pre-lab)
+ARK Maker State Lab      =  future DLC-only SP reproduction chamber
+toolkit swarm            =  refinery — chat sees verdict packets only
+```
 
 Abuse framing focuses on **client-trusted paths** (movement, projectiles, saves, persistence) — not cheat-brand strings in vanilla paks.
 
@@ -8,6 +14,8 @@ Abuse framing focuses on **client-trusted paths** (movement, projectiles, saves,
 
 | Path | Contents |
 |------|----------|
+| `docs/` | **ARK Maker State Lab** plan spine (capsules, patch workflow, safety boundary) |
+| `capsules/` | State tray manifests + verdict scaffolds (`capsule_000_survival_test` first) |
 | `game-states/` | Enum catalogs from `ArkAscended.exe` + pak reconstruction (`EPrimalItemType`, `ECheatActorType`, …) |
 | `live-data/scripts/` | Crosswalk builders, LLM lookup pack builder, SP save monitor |
 | `live-data/bundles/` | Session bundles, item/creature crosswalk v1/v2, drag-and-drop LLM lookup packs |
@@ -81,6 +89,23 @@ The `index.html` viewer has three tabs:
 | **Enum Explorer** | Pick `EPrimalItemType`, `ECheatActorType`, `EActorListsBP`, etc. → linked catalog rows |
 
 Simulation data: `game-states/asa_game_states_sim.json` (rebuild with `python scripts/build_game_states_sim.py`).
+
+## ARK Maker State Lab (capsules)
+
+Evidence bridge — threat-surface proof becomes reproducible trays:
+
+```text
+observed behavior → evidence packet → ARK Maker capsule → Lua logger → patch verdict
+```
+
+| Doc | Purpose |
+|-----|---------|
+| [`docs/ARK_MAKER_STATE_LAB.md`](docs/ARK_MAKER_STATE_LAB.md) | Operating concept and two-layer model |
+| [`docs/CAPSULE_SCHEMA.md`](docs/CAPSULE_SCHEMA.md) | `capsule_manifest.json` and state tray slots |
+| [`docs/PATCH_DAY_WORKFLOW.md`](docs/PATCH_DAY_WORKFLOW.md) | Re-run matrix after game updates |
+| [`docs/SAFETY_BOUNDARY.md`](docs/SAFETY_BOUNDARY.md) | Red lines (no raw saves/paks, no intel automation) |
+
+First capsule: [`capsules/capsule_000_survival_test/`](capsules/capsule_000_survival_test/) — one Tek Rifle, save/reload survival check.
 
 ## License
 

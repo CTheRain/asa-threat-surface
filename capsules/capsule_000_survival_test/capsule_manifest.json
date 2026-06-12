@@ -1,0 +1,184 @@
+{
+  "capsule_id": "capsule_000_survival_test",
+  "schema_version": 1,
+  "status": "scaffold",
+  "title": "Survival test — one item, save/reload",
+  "summary": "Minimal ARK Maker Lab tray: spawn one Tek Rifle into inventory, log class ref, save, reload, verify persistence. Proves capsule machinery before bug-specific trays.",
+  "ark_maker_lab": {
+    "program": "ARK Maker State Lab",
+    "phase": "pre-lab",
+    "dlc_only": true,
+    "net_mode": "Standalone",
+    "map": "TheCenter_WP",
+    "game_sku": "ASA"
+  },
+  "evidence_bridge": {
+    "threat_surface_refs": [
+      "threat-surface/docs/asa_threat_surface_v1.md#client-trust",
+      "game-states/asa_creature_item_player.json#EPrimalItemType",
+      "docs/ARK_MAKER_STATE_LAB.md"
+    ],
+    "session_bundle": "live-data/bundles/session_20260611_center_combat_destruction_v1.json",
+    "lookup_entity": "PrimalItem_TekRifle_C",
+    "sim_scenario": "craft_tek_rifle_sp",
+    "crosswalk_row": "live-data/bundles/item_creature_crosswalk_v2.json"
+  },
+  "actor": {
+    "kind": "item",
+    "class_ref": "PrimalItem_TekRifle_C",
+    "display_name": "Tek Rifle",
+    "blueprint_ue": "/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_TekRifle.PrimalItem_TekRifle",
+    "enum_hooks": [
+      "EPrimalItemType:Weapon"
+    ]
+  },
+  "template": {
+    "type": "session_anchor",
+    "map": "TheCenter_WP",
+    "description": "SP character on The Center; admin cheats enabled; inventory cleared except test item after suspect_setup",
+    "local_save_anchor": "<local-data>/ARK_LiveData/saves/20260611_215612__TheCenter_WP.ark",
+    "committed_to_git": false
+  },
+  "lua_logger": {
+    "script": "logger/survival_v1.lua",
+    "triggers": [
+      "OnCapsuleLoad",
+      "OnItemGranted",
+      "OnSaveBefore",
+      "OnSaveAfter",
+      "OnReloadComplete"
+    ],
+    "emits": [
+      "class_ref",
+      "enum_hook",
+      "save_size_bytes",
+      "timestamp_utc"
+    ],
+    "pass_condition": "PrimalItem_TekRifle_C present in save strings after reload; EPrimalItemType:Weapon hook matches lookup pack"
+  },
+  "state_tray": {
+    "clean_control": {
+      "label": "Clean control",
+      "description": "Session anchor loaded; inventory has no Tek Rifle; baseline save size recorded.",
+      "persistence_layer": "save_ark",
+      "expected_hooks": [
+        "ENetModeBP:Standalone"
+      ],
+      "disk_proof": {
+        "local_mirror": "<local-data>/ARK_LiveData/saves/20260611_215612__TheCenter_WP.ark",
+        "size_bytes": 12869632,
+        "committed_to_git": false
+      },
+      "screenshot": "runs/run_*/screenshots/01_clean_control.png",
+      "logger_checkpoint": "OnCapsuleLoad"
+    },
+    "suspect_setup": {
+      "label": "Suspect setup",
+      "description": "EnableCheats active; giveitem Tek Rifle blueprint path (same cheat surface as session bundle).",
+      "persistence_layer": "primal_console",
+      "expected_hooks": [
+        "surface:UShooterCheatManager",
+        "EPrimalItemType:Weapon"
+      ],
+      "disk_proof": {
+        "local_mirror": null,
+        "note": "PrimalConsole history mirror optional"
+      },
+      "screenshot": "runs/run_*/screenshots/02_suspect_setup.png",
+      "logger_checkpoint": "OnItemGranted"
+    },
+    "trigger_ready": {
+      "label": "Trigger-ready state",
+      "description": "Tek Rifle in player inventory; logger armed for save boundary.",
+      "persistence_layer": "memory",
+      "expected_hooks": [
+        "class_ref:PrimalItem_TekRifle_C",
+        "EPrimalItemType:Weapon"
+      ],
+      "disk_proof": {
+        "local_mirror": null
+      },
+      "screenshot": "runs/run_*/screenshots/03_trigger_ready.png",
+      "logger_checkpoint": "OnSaveBefore"
+    },
+    "bug_activation": {
+      "label": "Activation (expected correct)",
+      "description": "Manual save triggered; class ref written to in-flight save buffer.",
+      "persistence_layer": "save_ark",
+      "expected_hooks": [
+        "persistence:save_ark",
+        "class_ref:PrimalItem_TekRifle_C"
+      ],
+      "disk_proof": {
+        "local_mirror": null,
+        "note": "Capture post-save mirror via monitor"
+      },
+      "screenshot": "runs/run_*/screenshots/04_after_save.png",
+      "logger_checkpoint": "OnSaveAfter"
+    },
+    "first_corrupted": {
+      "label": "First state after boundary",
+      "description": "For survival test: expect NO corruption — item still present immediately after save completes.",
+      "persistence_layer": "save_ark",
+      "expected_hooks": [
+        "evidence:in_session_save"
+      ],
+      "disk_proof": {
+        "local_mirror": null
+      },
+      "screenshot": null,
+      "logger_checkpoint": "OnSaveAfter"
+    },
+    "persisted_corrupted": {
+      "label": "Persisted state after reload",
+      "description": "Exit to title and reload; Tek Rifle class ref must survive. Failure here = capsule machinery or game regression.",
+      "persistence_layer": "save_ark",
+      "expected_hooks": [
+        "class_ref:PrimalItem_TekRifle_C",
+        "EPrimalItemType:Weapon",
+        "persistence:save_ark"
+      ],
+      "disk_proof": {
+        "local_mirror": "<local-data>/ARK_LiveData/saves/20260611_221210__TheCenter_WP.ark",
+        "sha256": "331EDFAE51E1473B1CA1C850278094C33DB81F386510BAA99941FADF256705AB",
+        "size_bytes": 14204928,
+        "committed_to_git": false,
+        "note": "Session exit anchor proves craft+combat persistence; survival run uses smaller delta"
+      },
+      "screenshot": "runs/run_*/screenshots/05_after_reload.png",
+      "logger_checkpoint": "OnReloadComplete"
+    },
+    "post_patch_verification": {
+      "label": "Post-patch verification",
+      "description": "Re-run full tray on new ASA build; compare logger pass_condition and save size tolerance.",
+      "persistence_layer": "save_ark",
+      "expected_hooks": [
+        "class_ref:PrimalItem_TekRifle_C"
+      ],
+      "disk_proof": {
+        "local_mirror": null
+      },
+      "screenshot": "runs/run_*/screenshots/06_post_patch.png",
+      "logger_checkpoint": "OnReloadComplete"
+    }
+  },
+  "patch_survival": {
+    "baseline_game_build": "ASA-TBD",
+    "checklist": [
+      "class_ref still in save after reload",
+      "enum_hooks unchanged in lookup pack",
+      "sim_scenario craft_tek_rifle_sp steps still valid",
+      "lua_logger pass_condition met"
+    ],
+    "regression_severity": "none",
+    "last_verified_build": null,
+    "last_verified_utc": null
+  },
+  "tags": [
+    "survival",
+    "save-reload",
+    "item",
+    "tek",
+    "scaffold"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "capsule_id": "capsule_000_survival_test",
+  "verdict": "pending",
+  "summary": "Scaffold only — no ARK Maker DLC run yet. Tray defines save/reload survival criteria for PrimalItem_TekRifle_C.",
+  "mechanic_registry_update": null,
+  "evidence_citations": [
+    "session_20260611_center_combat_destruction_v1",
+    "craft_tek_rifle_sp",
+    "EPrimalItemType:Weapon",
+    "PrimalItem_TekRifle_C"
+  ],
+  "wildcard_framing": "Client-trusted inventory persistence: PrimalItem class refs observable on disk after SP save/reload (Maker Lab survival tray).",
+  "video_packet": null,
+  "generated_at_utc": null,
+  "ark_maker_dlc_version": null
+}
