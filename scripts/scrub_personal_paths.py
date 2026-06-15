@@ -1,30 +1,28 @@
 #!/usr/bin/env python3
-"""Redact local username and S: drive paths for public release."""
+"""Redact local username, drive paths, and common PII markers before public release."""
 
 from __future__ import annotations
 
-import json
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
 REPLACEMENTS = [
-    (re.compile(r"C:\\Users\\SLAANESH", re.IGNORECASE), r"C:\\Users\\<user>"),
-    (re.compile(r"C:/Users/SLAANESH", re.IGNORECASE), r"C:/Users/<user>"),
+    (re.compile(r"C:\\Users\\[^\\/\s\"']+", re.IGNORECASE), r"C:\\Users\\<user>"),
+    (re.compile(r"C:/Users/[^/\\s\"']+", re.IGNORECASE), r"C:/Users/<user>"),
     (re.compile(r"S:(?:\\|/)+ARK_LiveData", re.IGNORECASE), r"<local-data>/ARK_LiveData"),
     (re.compile(r"S:(?:\\|/)+ARK_ThreatSurface", re.IGNORECASE), r"<local-data>/ARK_ThreatSurface"),
     (re.compile(r"S:(?:\\|/)+ARK_GameStates", re.IGNORECASE), r"<local-data>/ARK_GameStates"),
+    # IPv4 literals (session logs, server joins)
+    (re.compile(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b"), r"<ip-redacted>"),
 ]
 
 
 def scrub_text(text: str) -> str:
     for pattern, repl in REPLACEMENTS:
         text = pattern.sub(repl, text)
-    # JSON manifests often double-escape Windows paths.
     json_path_replacements = {
-        "C:\\\\Users\\\\SLAANESH": "C:\\\\Users\\\\<user>",
-        "C:\\Users\\SLAANESH": "C:\\Users\\<user>",
         "S:\\\\ARK_LiveData": "<local-data>\\\\ARK_LiveData",
         "S:\\\\ARK_ThreatSurface": "<local-data>\\\\ARK_ThreatSurface",
         "S:\\\\ARK_GameStates": "<local-data>\\\\ARK_GameStates",

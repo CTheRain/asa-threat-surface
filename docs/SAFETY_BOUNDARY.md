@@ -11,7 +11,8 @@ Red lines for **ARK Maker State Lab** and the `asa-threat-surface` evidence map.
 | DLC-only singleplayer reproduction | Official PvP raid planning |
 | Client-trust / persistence forensics | Live session tracking automation |
 | Method-proof dev reports | Cheat distribution or brand promotion |
-| Disk-observable evidence | Live memory scraping of `AShooterGameState` |
+| Disk-observable evidence | Live memory on MP / dedicated / BattlEye-on sessions |
+| Read-only SP memory digest (`live-data/scripts/asa_memory_reader.py`) | Any memory write, MP attach, or BattlEye-enabled play |
 
 ---
 
@@ -25,7 +26,8 @@ Enforced by `.gitignore` and review habit:
 | `*.ark`, `*.arkbak`, `*.arkprofile` | Saves contain world state; may embed names |
 | Full IoStore mirror | ~258 GB; stays on `<local-data>/ARK_ThreatSurface/` |
 | Raw mod unpack trees | Rebuild from small extracts in `live-data/sources/` |
-| API tokens, `.env` | Secrets |
+| API tokens, `.env`, `*api_key*` | Secrets |
+| `memory_digest.json`, `memory_stream.jsonl`, `memory_offsets.json` | Live coords/vitals; patch-specific offsets |
 
 **Allowed in git:** JSON indexes, CSVs, small MxCheatUI table extracts, capsule manifests, verdict packets, scrubbed docs.
 
@@ -36,6 +38,22 @@ python scripts/scrub_personal_paths.py
 ```
 
 Replaces `C:\Users\<username>` and `S:\ARK_*` with neutral placeholders.
+
+---
+
+## SP memory reader — local only
+
+Scripts: `live-data/scripts/asa_memory_reader.py`, `asa_sp_gate.py`, `asa_memory_process.py`.
+
+| Rule | Detail |
+|------|--------|
+| Singleplayer only | `SavedArksLocal`, no dedicated/server process, no remote-join log signals |
+| BattlEye off | Launch `-NoBattlEye`; gate blocks `BEService.exe` and active BattlEye log lines |
+| Read-only | No game memory writes |
+| No PII in output | Numeric vitals/position only — no character or tribe strings |
+| No API in tooling | Reader has zero network calls; LLM hooks stay outside this repo |
+
+Full setup: [`MEMORY_READER_SP.md`](MEMORY_READER_SP.md).
 
 ---
 

@@ -17,7 +17,7 @@ Abuse framing focuses on **client-trusted paths** (movement, projectiles, saves,
 | `docs/` | **ARK Maker State Lab** plan spine (capsules, patch workflow, safety boundary) |
 | `capsules/` | State tray manifests + verdict scaffolds (`capsule_000_survival_test` first) |
 | `game-states/` | Enum catalogs from `ArkAscended.exe` + pak reconstruction (`EPrimalItemType`, `ECheatActorType`, …) |
-| `live-data/scripts/` | Crosswalk builders, LLM lookup pack builder, SP save monitor |
+| `live-data/scripts/` | Crosswalk builders, LLM lookup pack builder, SP save monitor, **SP memory reader** (BattlEye off) |
 | `live-data/bundles/` | Session bundles, item/creature crosswalk v1/v2, drag-and-drop LLM lookup packs |
 | `live-data/sources/mxcheatui/` | Key MxCheatUI spawn table extracts (for rebuild) |
 | `threat-surface/` | Phase 1–2 indexes, cheat/intel CSVs, docs (not the ~258 GB pak mirror) |
@@ -49,6 +49,17 @@ python live-data/scripts/asa_game_state_monitor.py
 
 Mirrors saves/config to `<local-data>/ARK_LiveData\` (not committed — see `.gitignore`).
 
+## Live SP memory reader (optional)
+
+**Singleplayer only. BattlEye must be disabled** (`-NoBattlEye`). Read-only numeric vitals — no API calls, no tokens, no player names in output.
+
+```powershell
+$env:ARK_LIVE_DATA = "<local-data>\ARK_LiveData"   # optional
+./live-data/scripts/START_MEMORY_READER.ps1
+```
+
+See [`docs/MEMORY_READER_SP.md`](docs/MEMORY_READER_SP.md) and [`docs/SAFETY_BOUNDARY.md`](docs/SAFETY_BOUNDARY.md).
+
 ## Bridge mods (on-disk references)
 
 | Mod | CurseForge | Role |
@@ -60,9 +71,9 @@ Mirrors saves/config to `<local-data>/ARK_LiveData\` (not committed — see `.gi
 
 Validated in `live-data/bundles/session_20260611_center_combat_destruction_v1.json`:
 
-- Character: CTheRain
 - Activity: grapples, element, Tek Rifle structure/dino destruction
 - Exit save SHA256 in bundle manifest (full `.ark` stays local on `S:`)
+- Player/tribe names in bundle logs are **local research notes** — scrub before any public fork
 
 ## Local bulk data (not in git)
 
@@ -104,6 +115,7 @@ observed behavior → evidence packet → ARK Maker capsule → Lua logger → p
 | [`docs/CAPSULE_SCHEMA.md`](docs/CAPSULE_SCHEMA.md) | `capsule_manifest.json` and state tray slots |
 | [`docs/PATCH_DAY_WORKFLOW.md`](docs/PATCH_DAY_WORKFLOW.md) | Re-run matrix after game updates |
 | [`docs/SAFETY_BOUNDARY.md`](docs/SAFETY_BOUNDARY.md) | Red lines (no raw saves/paks, no intel automation) |
+| [`docs/MEMORY_READER_SP.md`](docs/MEMORY_READER_SP.md) | SP-only memory digest — BattlEye off, read-only |
 | [`docs/STEAM_PATCH_DIFF.md`](docs/STEAM_PATCH_DIFF.md) | Steam buildid/manifest diff → exe surfaces → crosswalk |
 
 First capsule: [`capsules/capsule_000_survival_test/`](capsules/capsule_000_survival_test/) — one Tek Rifle, save/reload survival check.

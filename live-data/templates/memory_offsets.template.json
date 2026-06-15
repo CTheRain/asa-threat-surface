@@ -1,0 +1,28 @@
+{
+  "schema": "ark_sp_memory_offsets.v0.1",
+  "game": "ARK: Survival Ascended",
+  "platform": "Windows",
+  "process": "ArkAscended.exe",
+  "notes": [
+    "Fill offsets per game patch using Cheat Engine / Dumper-7 on YOUR singleplayer session only.",
+    "Launch with -NoBattlEye. Do not use on official or dedicated servers.",
+    "GWorld can be static module offset (relative to ArkAscended.exe base) or absolute pointer.",
+    "Chains are arrays of hex offsets; all but the last are pointer hops.",
+    "Copy to <local-data>/ARK_LiveData/config/memory_offsets.json (gitignored)."
+  ],
+  "build_label": "UNKNOWN_BUILD",
+  "GWorld": null,
+  "chains": {
+    "local_player_pawn": [],
+    "player_status_component": []
+  },
+  "fields": {
+    "root_component": null,
+    "relative_location": null,
+    "health": null,
+    "max_health": null,
+    "stamina": null,
+    "torpidity": null,
+    "character_level": null
+  }
+}

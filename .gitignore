@@ -24,6 +24,10 @@ threat-surface/tools/
 **/*ShooterGame-Windows*
 **/*pakchunk*
 
+# Python
+__pycache__/
+*.pyc
+
 # OS / editor
 .DS_Store
 Thumbs.db
@@ -40,4 +44,15 @@ capsules/**/runs/**/screenshots/*.jpg
 
 # Secrets
 .env
+*.env
 *.token
+*api_key*
+*xai*
+
+# Live memory reader output (local SP sessions — may contain coords)
+memory_digest.json
+memory_stream.jsonl
+**/memory_digest.json
+**/memory_stream.jsonl
+**/memory_offsets.json
+live-data/config/
