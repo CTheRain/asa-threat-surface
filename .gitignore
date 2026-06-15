@@ -55,4 +55,8 @@ memory_stream.jsonl
 **/memory_digest.json
 **/memory_stream.jsonl
 **/memory_offsets.json
+network_audit_latest.json
+network_audit.jsonl
+**/network_audit_latest.json
+**/network_audit.jsonl
 live-data/config/

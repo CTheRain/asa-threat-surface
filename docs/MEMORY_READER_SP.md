@@ -40,6 +40,16 @@ Fill `memory_offsets.json` per patch (Cheat Engine / Dumper-7 on **your** SP tra
 
 Pair with `asa_game_state_monitor.py` for disk-side evidence; memory layer adds live vitals when offsets are known.
 
+## Network audit (optional)
+
+Verify research tooling is not opening sockets:
+
+```powershell
+./live-data/scripts/START_NETWORK_AUDIT.ps1
+```
+
+Writes `network_audit_latest.json` locally. **`research_tool_has_network` should stay `false`** for `asa_memory_reader.py` / `asa_game_state_monitor.py`. The game itself may still talk to Steam/EOS in SP — that is separate from our scripts.
+
 ## Safety boundary
 
 See [`SAFETY_BOUNDARY.md`](SAFETY_BOUNDARY.md). Memory reads are allowed **only** under the SP + no-BattlEye rules above. Multiplayer tracking, raid intel, and anti-cheat evasion are out of scope.
