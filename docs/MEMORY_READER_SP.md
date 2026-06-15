@@ -14,6 +14,46 @@ Optional **local-only** tooling under `live-data/scripts/` for numeric vitals an
 
 **Do not** use on official servers, player-hosted sessions, or any BattlEye-protected context.
 
+Community rules and liability: [`COMMUNITY_USE_POLICY.md`](COMMUNITY_USE_POLICY.md) (includes **no usage tracking**).
+
+## Community safety (public repo)
+
+This repo is public. **Test on your own SP session first** before sharing with others.
+
+| Step | Command |
+|------|---------|
+| 1. Offline checks (no game) | `./live-data/scripts/START_PREFLIGHT.ps1` |
+| 2. Launch ASA | Singleplayer tray, **`-NoBattlEye`**, close other BattlEye games |
+| 3. Memory reader | `./live-data/scripts/START_MEMORY_READER.ps1` — type `SP-ONLY` to confirm |
+| 4. Network audit (first run) | `./live-data/scripts/START_NETWORK_AUDIT.ps1` — `research_tool_has_network` must stay `false` |
+
+**Hard blocks built in:**
+
+- Gate refuses dedicated server process, remote-join log lines, active BattlEye, and `BEService.exe` (even if ASA has `-NoBattlEye`)
+- `--relaxed-gate` is **dev-only** — requires `ASA_UNSAFE_RELAXED_GATE=1`
+- Scripts are AST-scanned for network imports and memory writes in preflight
+
+**If someone ignores the rules and runs on official MP with BattlEye on, they can get banned — that is on them.** The tooling is designed to refuse that context.
+
+### Tamper resistance (honest limits)
+
+Public Python **cannot be DRM**. Anyone determined can edit local files. We still:
+
+| Control | What it does |
+|---------|----------------|
+| `script_integrity_manifest.json` | SHA256 of each research script; preflight fails if modified |
+| `START_*.ps1` launchers | Run preflight + `SP-ONLY` ack before live attach |
+| No `--relaxed-gate` | Gate bypass flag removed from community scripts |
+| AST preflight | Blocks network imports and pymem write calls |
+
+**For Discord:** point users at **GitHub Releases** (pinned tag), not random forks. Maintainers regenerate manifest after changes:
+
+```powershell
+python live-data/scripts/asa_script_integrity.py --write
+```
+
+Tell the community: if integrity fails, re-clone — do not hand-edit memory scripts.
+
 ## Setup
 
 ```powershell
@@ -29,7 +69,26 @@ pip install -r live-data/requirements-memory.txt
 ./live-data/scripts/START_MEMORY_READER.ps1
 ```
 
-Fill `memory_offsets.json` per patch (Cheat Engine / Dumper-7 on **your** SP tray). Template: `live-data/templates/memory_offsets.template.json`.
+Fill `memory_offsets.json` per patch using the **offset mapper** (recommended) or Cheat Engine / Dumper-7 on **your** SP tray. Template: `live-data/templates/memory_offsets.template.json`.
+
+### Offset mapper (recommended)
+
+Interactive read-only scans — no Cheat Engine GUI:
+
+```powershell
+$env:ARK_LIVE_DATA = "<local-data>\ARK_LiveData"
+./live-data/scripts/START_OFFSET_MAPPER.ps1 guide
+
+# With game running in SP (-NoBattlEye):
+./live-data/scripts/START_OFFSET_MAPPER.ps1 scan health --value 100
+# change health in-game
+./live-data/scripts/START_OFFSET_MAPPER.ps1 rescan health --value 73
+./live-data/scripts/START_OFFSET_MAPPER.ps1 pointers health
+./live-data/scripts/START_OFFSET_MAPPER.ps1 pick health
+./live-data/scripts/START_OFFSET_MAPPER.ps1 export --build ASA_YYYYMMDD
+```
+
+State: `config/offset_scan_state.json` (gitignored). Export: `config/memory_offsets.json`.
 
 ## Outputs (local only)
 

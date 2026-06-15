@@ -159,20 +159,14 @@ def main() -> int:
     parser.add_argument("--out-dir", type=Path, default=OUT_DIR)
     parser.add_argument("--once", action="store_true")
     parser.add_argument("--interval", type=float, default=1.0)
-    parser.add_argument(
-        "--relaxed-gate",
-        action="store_true",
-        help="warn on MP/BattlEye signals, do not exit (not for production use)",
-    )
     args = parser.parse_args()
 
     configure_output_dir(args.out_dir)
     offsets = load_offsets(args.offsets)
-    strict = not args.relaxed_gate
 
     while True:
         try:
-            gate = verify_singleplayer(strict=strict)
+            gate = verify_singleplayer(strict=True)
             mem = ASAMemoryProcess()
             player = read_player_slice(mem, offsets)
             digest = build_digest(gate, player, offsets)

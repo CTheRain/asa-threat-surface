@@ -58,7 +58,7 @@ $env:ARK_LIVE_DATA = "<local-data>\ARK_LiveData"   # optional
 ./live-data/scripts/START_MEMORY_READER.ps1
 ```
 
-See [`docs/MEMORY_READER_SP.md`](docs/MEMORY_READER_SP.md) and [`docs/SAFETY_BOUNDARY.md`](docs/SAFETY_BOUNDARY.md).
+See [`docs/MEMORY_READER_SP.md`](docs/MEMORY_READER_SP.md), [`docs/COMMUNITY_USE_POLICY.md`](docs/COMMUNITY_USE_POLICY.md), and [`docs/SAFETY_BOUNDARY.md`](docs/SAFETY_BOUNDARY.md).
 
 ## Bridge mods (on-disk references)
 
@@ -114,6 +114,7 @@ observed behavior → evidence packet → ARK Maker capsule → Lua logger → p
 | [`docs/ARK_MAKER_STATE_LAB.md`](docs/ARK_MAKER_STATE_LAB.md) | Operating concept and two-layer model |
 | [`docs/CAPSULE_SCHEMA.md`](docs/CAPSULE_SCHEMA.md) | `capsule_manifest.json` and state tray slots |
 | [`docs/PATCH_DAY_WORKFLOW.md`](docs/PATCH_DAY_WORKFLOW.md) | Re-run matrix after game updates |
+| [`docs/COMMUNITY_USE_POLICY.md`](docs/COMMUNITY_USE_POLICY.md) | Discord/public repo rules — SP-only, no tracking, your responsibility |
 | [`docs/SAFETY_BOUNDARY.md`](docs/SAFETY_BOUNDARY.md) | Red lines (no raw saves/paks, no intel automation) |
 | [`docs/MEMORY_READER_SP.md`](docs/MEMORY_READER_SP.md) | SP-only memory digest — BattlEye off, read-only |
 | [`docs/STEAM_PATCH_DIFF.md`](docs/STEAM_PATCH_DIFF.md) | Steam buildid/manifest diff → exe surfaces → crosswalk |

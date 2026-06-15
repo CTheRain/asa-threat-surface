@@ -1,0 +1,14 @@
+{
+  "schema": "ark_script_integrity.v0.1",
+  "files": {
+    "asa_memory_reader.py": "4bd3863780e97b7f47008fce13c0ec8c0f8f6263a5af14b2e53c180d3bfff5a4",
+    "asa_memory_process.py": "b8b01c839516c48e6fbc656f12c110ca891517739286762e9c0171a30c32d4e7",
+    "asa_memory_scanner.py": "da71d07be3fd98ff51563dcb0434598e06e331494ffd1f3d357fa3b16f72591e",
+    "asa_offset_mapper.py": "fd74b57f5e325a49340cbbee4a1bca744dd5e478f36779b92ba4ce8c40be4808",
+    "asa_sp_gate.py": "47d3f0af7b22788ba6655e29bae7c4cdcc06b8433fb3549debb249ec9fe80be1",
+    "asa_game_state_monitor.py": "e2ab663a5d2a8d869f604768027683bcf477d2720ceec3f3b7a7895c8bd06e4f",
+    "asa_network_audit.py": "d8125e7eb94de9c757849eb2b088705e0444114d6dc5b0928ee29b575997b2ed",
+    "asa_safety_preflight.py": "79fb67401909b7023bc360f2f42669b92c66100838d6db3d9b3d9d9d783b2df2",
+    "asa_script_integrity.py": "ec00580429eda8ebd915e9ba5cdf99e1dc2a95e513ee30755bb51c4b9052bb40"
+  }
+}

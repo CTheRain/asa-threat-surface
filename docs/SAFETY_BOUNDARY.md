@@ -2,6 +2,8 @@
 
 Red lines for **ARK Maker State Lab** and the `asa-threat-surface` evidence map. These apply to repo contents, capsule runs, toolkit swarm output, and Wildcard-facing reports.
 
+Public/community expectations (SP-only, no telemetry, liability): [`COMMUNITY_USE_POLICY.md`](COMMUNITY_USE_POLICY.md).
+
 ---
 
 ## Scope

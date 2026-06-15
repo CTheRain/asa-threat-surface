@@ -126,8 +126,13 @@ def _check_battleye_disabled(
         warnings.append("could not read process command line for BattlEye check")
 
     cmd_has_no_be = any(part.lower() == "-nobattleye" for part in cmd_parts)
-    if cmd_has_no_be:
+    if cmd_has_no_be and not reasons:
         return True, reasons, warnings
+    if cmd_has_no_be and reasons:
+        reasons.append(
+            "BattlEye service still running despite -NoBattlEye; close other BE-protected games first"
+        )
+        return False, reasons, warnings
 
     log_text = _read_log_tail(saved_root)
     if not log_text:
