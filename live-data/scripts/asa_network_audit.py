@@ -50,7 +50,7 @@ def configure_output_dir(path: Path) -> None:
     OUT_DIR = path
 
 
-def _classify_remote(addr: str) -> str:
+def _classify_addr(addr: str) -> str:
     if addr in {"127.0.0.1", "::1", "0.0.0.0", "*"}:
         return "loopback"
     if addr.startswith("10.") or addr.startswith("192.168.") or addr.startswith("169.254."):
@@ -66,6 +66,14 @@ def _classify_remote(addr: str) -> str:
         except ValueError:
             pass
     return "public"
+
+
+def _redact_endpoint(ip: str, port: int) -> tuple[str, str]:
+    """Never persist host LAN/WAN identity — port alone is enough for audit."""
+    addr_class = _classify_addr(ip)
+    if addr_class == "public":
+        return f"{ip}:{port}", addr_class
+    return f"<{addr_class}-redacted>:{port}", addr_class
 
 
 def _tool_label(cmdline: list[str] | None) -> str | None:
@@ -110,14 +118,20 @@ def snapshot_connections() -> dict:
             if key in seen:
                 continue
             seen.add(key)
+            local_ep = None
+            local_class = None
+            if c.laddr:
+                local_ep, local_class = _redact_endpoint(c.laddr.ip, c.laddr.port)
+            remote_ep, remote_class = _redact_endpoint(remote_ip, remote_port)
             rows.append(
                 {
                     "pid": proc.pid,
                     "process": proc.info.get("name"),
                     "tool": tool,
-                    "local": f"{c.laddr.ip}:{c.laddr.port}" if c.laddr else None,
-                    "remote": f"{remote_ip}:{remote_port}",
-                    "remote_class": _classify_remote(remote_ip),
+                    "local": local_ep,
+                    "local_class": local_class,
+                    "remote": remote_ep,
+                    "remote_class": remote_class,
                     "type": c.type.name,
                     "status": c.status,
                 }
@@ -127,7 +141,7 @@ def snapshot_connections() -> dict:
     tool_public = [r for r in public if r.get("tool")]
 
     return {
-        "schema": "ark_network_audit.v0.1",
+        "schema": "ark_network_audit.v0.2",
         "captured_at": utc_now(),
         "processes_watched": processes,
         "connections": rows,
@@ -140,6 +154,7 @@ def snapshot_connections() -> dict:
         "notes": [
             "Game may still reach Steam/EOS in SP; this audit flags our Python tooling separately.",
             "Empty public_from_research_tools means asa_memory_reader/monitor sent no sockets.",
+            "Local/private/loopback IPs are redacted at capture (<private-redacted>:port).",
         ],
     }
 

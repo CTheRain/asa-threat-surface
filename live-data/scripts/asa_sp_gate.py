@@ -39,7 +39,8 @@ BATTLEYE_ACTIVE_RE = re.compile(
 BATTLEYE_DISABLED_RE = re.compile(
     r"BattlEye.*(?:disabled|not\s+used)|"
     r"launch(?:ed)?\s+with\s+-NoBattlEye|"
-    r"-NoBattlEye",
+    r"-NoBattlEye|"
+    r"Anti-?cheat\s+client\s+not\s+available",
     re.I,
 )
 DEDICATED_CMD_RE = re.compile(r"-server\b|dedicated", re.I)
@@ -94,6 +95,18 @@ def _read_log_tail(saved_root: Path = ASA_SAVED, max_bytes: int = 256_000) -> st
         return fh.read().decode("utf-8", errors="replace")
 
 
+def _read_log_lines(saved_root: Path = ASA_SAVED, max_bytes: int = 4_000_000) -> list[str]:
+    """Read ShooterGame.log lines (full file up to max_bytes) for session-wide signals."""
+    log_path = saved_root / "Logs" / "ShooterGame.log"
+    if not log_path.exists():
+        return []
+    size = log_path.stat().st_size
+    with log_path.open("rb") as fh:
+        if size > max_bytes:
+            fh.seek(size - max_bytes)
+        return fh.read().decode("utf-8", errors="replace").splitlines()
+
+
 def _check_log_tail(saved_root: Path = ASA_SAVED) -> list[str]:
     text = _read_log_tail(saved_root)
     if not text:
@@ -134,30 +147,40 @@ def _check_battleye_disabled(
         )
         return False, reasons, warnings
 
-    log_text = _read_log_tail(saved_root)
-    if not log_text:
+    log_lines = _read_log_lines(saved_root)
+    if not log_lines:
         reasons.append(
             "BattlEye status unknown (missing ShooterGame.log); launch SP with -NoBattlEye"
         )
         return False, reasons, warnings
 
-    recent = log_text.splitlines()[-400:]
-    disabled_hits = [ln.strip()[:240] for ln in recent if BATTLEYE_DISABLED_RE.search(ln)]
-    active_hits = [ln.strip()[:240] for ln in recent if BATTLEYE_ACTIVE_RE.search(ln)]
+    last_disabled_idx = -1
+    last_active_idx = -1
+    last_disabled_line = ""
+    for i, line in enumerate(log_lines):
+        if BATTLEYE_DISABLED_RE.search(line):
+            last_disabled_idx = i
+            last_disabled_line = line.strip()[:240]
+        if BATTLEYE_ACTIVE_RE.search(line):
+            last_active_idx = i
 
-    if active_hits and not disabled_hits:
+    recent_active = [
+        ln.strip()[:240] for ln in log_lines[-400:] if BATTLEYE_ACTIVE_RE.search(ln)
+    ]
+
+    if last_active_idx > last_disabled_idx:
         reasons.append("BattlEye appears active in ShooterGame.log")
-        reasons.extend([f"log signal: {h}" for h in active_hits[:3]])
+        reasons.extend([f"log signal: {h}" for h in recent_active[:3]])
         return False, reasons, warnings
 
-    if not disabled_hits and not cmd_has_no_be:
+    if last_disabled_idx < 0 and not cmd_has_no_be:
         reasons.append(
             "BattlEye not confirmed disabled; relaunch singleplayer with -NoBattlEye"
         )
         return False, reasons, warnings
 
-    if disabled_hits:
-        warnings.append("BattlEye disabled per log")
+    if last_disabled_line:
+        warnings.append(f"BattlEye disabled per log: {last_disabled_line}")
     return len(reasons) == 0, reasons, warnings
 
 

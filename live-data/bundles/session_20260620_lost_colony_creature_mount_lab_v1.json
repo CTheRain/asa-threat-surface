@@ -1,0 +1,135 @@
+{
+  "bundle_id": "session_20260620_lost_colony_creature_mount_lab_v1",
+  "schema_version": 1,
+  "generated_at_utc": "2026-06-20T10:00:00+00:00",
+  "program": "ASA Threat Surface / Maker Lab live SP observability",
+  "session": {
+    "date_local": "2026-06-20",
+    "map": "LostColony_WP",
+    "mode": "singleplayer",
+    "build_label": "ASA_5.5.4_817761+++ARK1+Rel-1.88-ShooterGame",
+    "activity_summary": "Creature mount taxonomy lab: Gloon shoulder lantern pet, Snow Owl saddle mount, dive-bomb and self-freeze encapsulate",
+    "wall_clock_window_utc": "2026-06-20T07:42:56 - 2026-06-20T09:52:00",
+    "monitors_stopped": true,
+    "stopped_pids": [18044, 8584, 19936, 18656, 20232]
+  },
+  "taxonomy": {
+    "chibi": {
+      "kind": "cosmetic_item_skin",
+      "equipment_type": "Costume",
+      "not_a_creature": true
+    },
+    "gloon": {
+      "display_name": "Gloon",
+      "class_ref": "LostCharge_LanternPet_Char_BP_C",
+      "mount_mechanism": "shoulder_spawned_actor",
+      "registry": "live-data/config/shoulder_creature_registry.json"
+    },
+    "snow_owl": {
+      "display_name": "Snow Owl",
+      "class_ref": "Owl_Character_BP_C",
+      "mount_mechanism": "saddle_dino_pawn_swap",
+      "registry": "live-data/config/dino_mount_registry.json"
+    }
+  },
+  "memory_stack": {
+    "offsets_schema": "ark_sp_memory_offsets.v0.10",
+    "decoder_schema": "ark_sp_state_decoded.v0.8",
+    "offsets_path": "live-data/config/memory_offsets.json",
+    "key_offsets": {
+      "mounted_dino_weak": "human_pawn+0x1160",
+      "rider_weak": "dino_pawn+0x2248",
+      "owl_encapsulate_is_active": "Owl_Character_BP_C+0x2CE0",
+      "owl_ice_crash_is_active": "Owl_Character_BP_C+0x2D78"
+    },
+    "decoder_blocks": ["shoulder", "dino_mount", "owl_abilities"]
+  },
+  "experiments": [
+    {
+      "id": "gloon_shoulder_throw_pickup",
+      "script": "live-data/scripts/asa_shoulder_poll.py",
+      "log": "live-data/shoulder_poll.jsonl",
+      "lines": 113,
+      "finding": "Lantern pet mount_state from attach_child_count baseline 5 + mounted_dino_weak_index==0 grounded; weak index 476799 is stale GObject not real Gloon"
+    },
+    {
+      "id": "snow_owl_saddle_flying",
+      "script": "live-data/scripts/asa_owl_dive_poll.py",
+      "log": "live-data/snow_owl_dive_poll.jsonl",
+      "lines": 53,
+      "baseline_probe": "live-data/snow_owl_probe_mounted.json",
+      "finding": "AcknowledgedPawn swaps to owl; Rider weak index 214388 stable; dive climb mode 5 z~19k impact mode 5->1 z~8k"
+    },
+    {
+      "id": "snow_owl_self_freeze",
+      "script": "live-data/scripts/asa_owl_freeze_poll.py",
+      "log": "live-data/snow_owl_freeze_poll.jsonl",
+      "lines": 53,
+      "finding": "EncapsulateIsActive true ~47s on owl pawn; position locked mode 1; ice_crash false during self-freeze; freeze_status_values never set"
+    }
+  ],
+  "detection_matrix": {
+    "gloon_shoulder_mounted": ["attach_child_count<=5", "mounted_dino_weak_index>0 unresolved"],
+    "gloon_shoulder_grounded": ["mounted_dino_weak_index==0", "attach_child_count==5"],
+    "gloon_transition": ["attach_child_count>5"],
+    "owl_saddle_mounted": ["AcknowledgedPawn==dino", "rider_weak_index!=0", "equipment DinoSaddle"],
+    "owl_self_freeze": ["owl_abilities.encapsulate_is_active on dino pawn", "has_rider"],
+    "owl_dive_impact": ["ice_crash_is_active", "movement z crater", "mode Flying->Walking"]
+  },
+  "artifacts": {
+    "poll_logs": [
+      "live-data/shoulder_poll.jsonl",
+      "live-data/snow_owl_dive_poll.jsonl",
+      "live-data/snow_owl_freeze_poll.jsonl"
+    ],
+    "probe_snapshots": [
+      "live-data/shoulder_probe.json",
+      "live-data/shoulder_probe_before.json",
+      "live-data/shoulder_probe_before_throw.json",
+      "live-data/shoulder_probe_after.json",
+      "live-data/snow_owl_probe_mounted.json"
+    ],
+    "streaming_logs": [
+      "live-data/memory_stream.jsonl",
+      "live-data/correlated_events.jsonl",
+      "live-data/network_audit.jsonl",
+      "live-data/live_events.jsonl"
+    ],
+    "latest_state": [
+      "live-data/memory_digest.json",
+      "live-data/correlated_latest.json",
+      "live-data/network_audit_latest.json"
+    ]
+  },
+  "scripts": {
+    "daemons": [
+      "live-data/scripts/asa_memory_reader.py",
+      "live-data/scripts/asa_state_correlator.py",
+      "live-data/scripts/asa_network_audit.py",
+      "live-data/scripts/asa_game_state_monitor.py"
+    ],
+    "probes": [
+      "live-data/scripts/asa_shoulder_probe.py",
+      "live-data/scripts/asa_shoulder_poll.py",
+      "live-data/scripts/asa_owl_dive_poll.py",
+      "live-data/scripts/asa_owl_freeze_poll.py"
+    ],
+    "core": [
+      "live-data/scripts/asa_memory_reader.py",
+      "live-data/scripts/asa_state_decoder.py",
+      "live-data/scripts/asa_memory_process.py"
+    ]
+  },
+  "pending_next_session": [
+    "GObject weak-ptr resolver for MountedDino and Rider class identity",
+    "Fix health offset in owl poll scripts (use status_fields from offsets)",
+    "Restart memory reader after code changes to emit owl_abilities in correlator",
+    "CppSDK regen crashes game; Gloon_Character_BP absent — class is LostCharge_LanternPet_Char_BP_C"
+  ],
+  "known_false_signals": [
+    "mounted_dino_weak_index 476799 on human = stale LevelActorContainer not Gloon",
+    "owl offsets read on human pawn during AcknowledgedPawn swap = bogus encapsulate/ice_crash",
+    "bFreezeStatusValues @ status+0xBB4 not set during owl encapsulate",
+    "has_shoulder_creature from inventory on dino pawn (fixed: n/a_dino_pawn)"
+  ]
+}

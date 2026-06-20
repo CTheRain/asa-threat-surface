@@ -62,3 +62,23 @@ network_audit.jsonl
 **/network_audit_latest.json
 **/network_audit.jsonl
 live-data/config/
+
+# Live session streams (paths, coords, profile mirrors, cheat history)
+live-data/profiles/
+live-data/correlated_events.jsonl
+live-data/correlated_latest.json
+live-data/correlator_state.json
+live-data/live_events.jsonl
+live-data/monitor_latest.json
+live-data/monitor_state.json
+live-data/itemlog/
+live-data/gamelog/
+live-data/dumps/
+**/*_poll.jsonl
+**/shoulder_probe*.json
+**/snow_owl_probe*.json
+
+# SDK dump tooling (local SP lab only — not for public tree)
+tools/Dumper-7/
+**/*.dll
+live-data/scripts/inject_dll.py

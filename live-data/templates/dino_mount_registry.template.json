@@ -1,0 +1,37 @@
+{
+  "schema": "ark_sp_dino_mount_registry.v0.1",
+  "notes": [
+    "Copy to <local-data>/ARK_LiveData/config/dino_mount_registry.json (gitignored).",
+    "Saddle mounts swap AcknowledgedPawn to the dino; use Rider @ dino+0x2248, not MountedDino on dino pawn."
+  ],
+  "mount_mechanism": {
+    "type": "saddle_dino_pawn_swap",
+    "detection": [
+      "dino_mount.rider_weak_index != 0",
+      "equipment DinoSaddle on dino inventory",
+      "movement MOVE_Flying / MOVE_Walking on dino pawn"
+    ]
+  },
+  "creatures": [
+    {
+      "display_name": "Snow Owl",
+      "class_ref": "Owl_Character_BP_C",
+      "blueprint_stem": "Owl_Character_BP",
+      "pack": "Extinction",
+      "cheat_spawn": "cheat SpawnExactDino \"Blueprint'/Game/Extinction/Dinos/Owl/Owl_Character_BP.Owl_Character_BP'\" 225 0 0 0",
+      "abilities": {
+        "encapsulate_self_freeze": {
+          "field": "EncapsulateIsActive",
+          "offset": "0x2CE0",
+          "bit": 0,
+          "buff_class": "Buff_Encapsulated_C"
+        },
+        "ice_crash_dive": {
+          "field": "IceCrashIsActive",
+          "offset": "0x2D78",
+          "bit": 0
+        }
+      }
+    }
+  ]
+}

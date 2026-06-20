@@ -75,6 +75,14 @@ Validated in `live-data/bundles/session_20260611_center_combat_destruction_v1.js
 - Exit save SHA256 in bundle manifest (full `.ark` stays local on `S:`)
 - Player/tribe names in bundle logs are **local research notes** — scrub before any public fork
 
+## Session reference (Lost Colony SP, 2026-06-20)
+
+Creature mount observability lab — `live-data/bundles/session_20260620_lost_colony_creature_mount_lab_v1.json`:
+
+- Taxonomy: Chibi (cosmetic item) vs Gloon shoulder lantern pet vs Snow Owl saddle mount
+- Memory decoder v0.8: `shoulder`, `dino_mount`, `owl_abilities` blocks
+- Poll evidence stays local (coords in `*_poll.jsonl` — gitignored); bundle has findings only
+
 ## Local bulk data (not in git)
 
 **Raw paks are never committed** — no `.pak`, `.ucas`, or `.utoc` files belong in this repository. Only derived indexes, CSVs, JSON catalogs, and small MxCheatUI table extracts.

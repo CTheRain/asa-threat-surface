@@ -103,6 +103,7 @@
       <button class="tab active" data-view="catalog">Catalog</button>
       <button class="tab" data-view="simulator">State Simulator</button>
       <button class="tab" data-view="enums">Enum Explorer</button>
+      <button class="tab" data-view="livelab">Live Lab</button>
     </div>
     <div class="stats" id="stats"></div>
   </header>
@@ -157,6 +158,36 @@
       </div>
     </section>
 
+    <!-- LIVE LAB -->
+    <section id="view-livelab" class="view">
+      <div class="panel">
+        <h2 id="labTitle">Live SP observability lab</h2>
+        <p class="meta" id="labSubtitle" style="margin-bottom:0.75rem"></p>
+        <div class="stats" id="labStats" style="margin-bottom:1rem"></div>
+        <div class="grid-2">
+          <div>
+            <h2 style="font-size:1.05rem">Creature taxonomy</h2>
+            <p class="meta" style="margin-bottom:0.6rem">Three interaction types — do not conflate cosmetic, shoulder pet, and saddle mount.</p>
+            <div id="labTaxonomy"></div>
+            <h2 style="font-size:1.05rem;margin-top:1.25rem">Snow Owl freeze signals</h2>
+            <div id="labOwl" style="margin-top:0.5rem"></div>
+          </div>
+          <aside>
+            <h2 style="font-size:1.05rem">Session experiments</h2>
+            <div id="labExperiments" class="pipeline"></div>
+            <h2 style="font-size:1.05rem;margin-top:1rem">False signals (killed)</h2>
+            <div id="labFalse" class="meta" style="line-height:1.55"></div>
+            <h2 style="font-size:1.05rem;margin-top:1rem">Privacy / local-only</h2>
+            <div id="labPrivacy" class="meta" style="line-height:1.55"></div>
+            <p class="meta" style="margin-top:1rem">
+              Full bundle:
+              <a href="live-data/bundles/session_20260620_lost_colony_creature_mount_lab_v1.json">session JSON</a>
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <!-- ENUM EXPLORER -->
     <section id="view-enums" class="view">
       <div class="grid-2">
@@ -183,6 +214,7 @@
     const QUICK_URL = "live-data/bundles/asa_game_lookup_quick_v1.json";
     const FULL_URL = "live-data/bundles/asa_game_lookup_v1.min.json";
     const SIM_URL = "game-states/asa_game_states_sim.json";
+    const LAB_URL = "live-data/bundles/lost_colony_mount_lab_viewer_v1.json";
 
     let entities = [];
     let filter = "all";
@@ -458,6 +490,44 @@
       });
     }
 
+    // --- Live Lab ---
+    async function loadLiveLab() {
+      const res = await fetch(LAB_URL);
+      if (!res.ok) throw new Error(LAB_URL);
+      const lab = await res.json();
+      $("#labTitle").textContent = lab.title || "Live Lab";
+      $("#labSubtitle").textContent = `${lab.subtitle || ""} · ${lab.session?.map || ""} · ${lab.session?.date || ""}`;
+      $("#labStats").innerHTML = `
+        <div class="stat"><strong>${esc(lab.session?.build_label || "?")}</strong> build</div>
+        <div class="stat"><strong>${esc(lab.stack?.decoder || "?")}</strong> decoder</div>
+        <div class="stat"><strong>${(lab.stack?.blocks || []).length}</strong> memory blocks</div>
+        <div class="stat"><strong>${(lab.experiments || []).length}</strong> experiments</div>
+      `;
+      $("#labTaxonomy").innerHTML = (lab.taxonomy || []).map((t) => `
+        <div class="step done" style="margin-bottom:0.5rem">
+          <div class="layer">${esc(t.kind)}</div>
+          <h4>${esc(t.label)}${t.class_ref ? ` · <code style="font-size:0.78rem">${esc(t.class_ref)}</code>` : ""}</h4>
+          <p><strong>Mechanism:</strong> ${esc(t.mount_mechanism)}</p>
+          <p><strong>Signal:</strong> ${esc(t.reliable_signal)}</p>
+        </div>
+      `).join("");
+      $("#labOwl").innerHTML = (lab.owl_abilities || []).map((a) => `
+        <div class="kv">
+          <label>${esc(a.label)} · ${esc(a.field)} @ ${esc(a.offset)}</label>
+          <code>${esc(a.signature || a.notes || (a.held_seconds ? `held ~${a.held_seconds}s` : ""))}</code>
+        </div>
+      `).join("");
+      $("#labExperiments").innerHTML = (lab.experiments || []).map((ex) => `
+        <div class="step done">
+          <div class="layer">${ex.poll_lines} poll lines</div>
+          <h4>${esc(ex.title)}</h4>
+          <p>${esc(ex.finding)}</p>
+        </div>
+      `).join("");
+      $("#labFalse").innerHTML = (lab.false_signals || []).map((s) => `• ${esc(s)}`).join("<br>");
+      $("#labPrivacy").innerHTML = (lab.privacy || []).map((s) => `• ${esc(s)}`).join("<br>");
+    }
+
     // --- Wire catalog ---
     $$(".chip[data-filter]").forEach((chip) => {
       chip.addEventListener("click", () => {
@@ -475,6 +545,7 @@
     Promise.all([
       loadPack(QUICK_URL, "featured"),
       loadSim(),
+      loadLiveLab(),
     ]).catch((e) => {
       $("#status").textContent = `Load error: ${e.message}`;
     });

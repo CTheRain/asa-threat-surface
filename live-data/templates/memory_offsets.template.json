@@ -19,10 +19,19 @@
   "fields": {
     "root_component": null,
     "relative_location": null,
-    "health": null,
-    "max_health": null,
-    "stamina": null,
-    "torpidity": null,
+    "mounted_dino": null,
+    "rider": null,
+    "character_movement": null,
+    "movement_mode": null,
+    "custom_movement_mode": null,
     "character_level": null
-  }
+  },
+  "owl_class_fields": {
+    "class_ref": "Owl_Character_BP_C",
+    "encapsulate_is_active": { "offset": null, "bit": 0 },
+    "ice_crash_is_active": { "offset": null, "bit": 0 }
+  },
+  "status_fields": {},
+  "inventory_fields": {},
+  "pawn_flags": {}
 }

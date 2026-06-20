@@ -15,6 +15,7 @@ Public/community expectations (SP-only, no telemetry, liability): [`COMMUNITY_US
 | Method-proof dev reports | Cheat distribution or brand promotion |
 | Disk-observable evidence | Live memory on MP / dedicated / BattlEye-on sessions |
 | Read-only SP memory digest (`live-data/scripts/asa_memory_reader.py`) | Any memory write, MP attach, or BattlEye-enabled play |
+| Network audit with LAN IP redaction (`asa_network_audit.py` v0.2+) | Publishing raw `local` socket endpoints from audit logs |
 
 ---
 
@@ -30,8 +31,12 @@ Enforced by `.gitignore` and review habit:
 | Raw mod unpack trees | Rebuild from small extracts in `live-data/sources/` |
 | API tokens, `.env`, `*api_key*` | Secrets |
 | `memory_digest.json`, `memory_stream.jsonl`, `memory_offsets.json` | Live coords/vitals; patch-specific offsets |
+| `*_poll.jsonl`, `shoulder_probe*.json`, `snow_owl_probe*.json` | World coordinates + session pointers |
+| `live_events.jsonl`, `correlated_events.jsonl` | Absolute Steam paths, cheat console history, profile mirrors |
+| `live-data/profiles/`, `live-data/dumps/` | Player profiles; patch-specific SDK dumps |
+| `tools/Dumper-7/`, `inject_dll.py`, `*.dll` | Injection tooling — local SP lab only |
 
-**Allowed in git:** JSON indexes, CSVs, small MxCheatUI table extracts, capsule manifests, verdict packets, scrubbed docs.
+**Allowed in git:** JSON indexes, CSVs, small MxCheatUI table extracts, capsule manifests, verdict packets, scrubbed docs, **session bundles** (findings without coords), **templates** under `live-data/templates/`.
 
 Scrub before publish:
 

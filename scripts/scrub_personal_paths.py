@@ -14,7 +14,10 @@ REPLACEMENTS = [
     (re.compile(r"S:(?:\\|/)+ARK_LiveData", re.IGNORECASE), r"<local-data>/ARK_LiveData"),
     (re.compile(r"S:(?:\\|/)+ARK_ThreatSurface", re.IGNORECASE), r"<local-data>/ARK_ThreatSurface"),
     (re.compile(r"S:(?:\\|/)+ARK_GameStates", re.IGNORECASE), r"<local-data>/ARK_GameStates"),
-    # IPv4 literals (session logs, server joins)
+    # Private/LAN IPv4 — never publish (home network fingerprint)
+    (re.compile(r"\b(?:10|192\.168|169\.254)\.\d{1,3}\.\d{1,3}\.\d{1,3}\b"), r"<lan-redacted>"),
+    (re.compile(r"\b172\.(?:1[6-9]|2\d|3[01])\.\d{1,3}\.\d{1,3}\b"), r"<lan-redacted>"),
+    # Other IPv4 (public remotes in old audit rows, server joins)
     (re.compile(r"\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b"), r"<ip-redacted>"),
 ]
 

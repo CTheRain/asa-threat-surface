@@ -45,6 +45,9 @@ class ASAMemoryProcess:
         except Exception as exc:  # pymem raises various on bad ptr
             raise MemoryReadError(f"read_bytes failed @ 0x{address:X}") from exc
 
+    def read_u8(self, address: int) -> int:
+        return self.read_bytes(address, 1)[0]
+
     def read_u32(self, address: int) -> int:
         return struct.unpack("<I", self.read_bytes(address, 4))[0]
 
@@ -57,9 +60,14 @@ class ASAMemoryProcess:
     def read_ptr(self, address: int) -> int:
         return self.read_u64(address)
 
-    def read_vector3(self, address: int) -> Vector3:
-        raw = self.read_bytes(address, 12)
-        x, y, z = struct.unpack("<fff", raw)
+    def read_vector3(self, address: int, *, precision: str = "double") -> Vector3:
+        """UE5 ASA FVector is 24-byte (double); legacy float path kept for probes."""
+        if precision == "float":
+            raw = self.read_bytes(address, 12)
+            x, y, z = struct.unpack("<fff", raw)
+        else:
+            raw = self.read_bytes(address, 24)
+            x, y, z = struct.unpack("<ddd", raw)
         return Vector3(x, y, z)
 
     def resolve_gworld(self, offsets: dict[str, Any]) -> int | None:
@@ -76,13 +84,43 @@ class ASAMemoryProcess:
             return self.read_ptr(addr)
         return None
 
-    def follow_chain(self, base: int, chain: list[int]) -> int:
+    def read_tarray_count(self, tarray_addr: int) -> int:
+        """UE TArray: Num at +0x8."""
+        try:
+            return self.read_u32(tarray_addr + 8)
+        except MemoryReadError:
+            return 0
+
+    def read_tarray_ptr(self, tarray_addr: int, index: int = 0) -> int:
+        """UE TArray layout: Data* (0x0), Num (0x8), Max (0xC)."""
+        data = self.read_ptr(tarray_addr)
+        count = self.read_u32(tarray_addr + 8)
+        if data == 0 or count == 0:
+            raise MemoryReadError(f"tarray empty @ 0x{tarray_addr:X}")
+        if index < 0 or index >= count:
+            raise MemoryReadError(
+                f"tarray index {index} out of range (count={count}) @ 0x{tarray_addr:X}"
+            )
+        elem = self.read_ptr(data + index * 8)
+        if elem == 0:
+            raise MemoryReadError(f"tarray[{index}] null @ 0x{tarray_addr:X}")
+        return elem
+
+    def follow_chain(
+        self,
+        base: int,
+        chain: list[int],
+        *,
+        tarray_hops: dict[int, int] | None = None,
+    ) -> int:
+        """Follow pointer offsets; optional tarray_hops maps hop index -> element index."""
         addr = base
+        hops = tarray_hops or {}
         for i, off in enumerate(chain):
-            if i < len(chain) - 1:
+            if i in hops:
+                addr = self.read_tarray_ptr(addr + off, hops[i])
+            else:
                 addr = self.read_ptr(addr + off)
                 if addr == 0:
-                    raise MemoryReadError(f"null pointer in chain at offset 0x{off:X}")
-            else:
-                addr = addr + off
+                    raise MemoryReadError(f"null pointer in chain at hop {i} offset 0x{off:X}")
         return addr

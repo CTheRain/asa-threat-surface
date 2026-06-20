@@ -1,0 +1,101 @@
+{
+  "schema": "ark_sp_live_lab_viewer.v1",
+  "bundle_ref": "session_20260620_lost_colony_creature_mount_lab_v1",
+  "title": "Lost Colony — Creature Mount Observability",
+  "subtitle": "SP memory lab: shoulder lantern pet vs saddle dino vs cosmetic chibi",
+  "session": {
+    "date": "2026-06-20",
+    "map": "LostColony_WP",
+    "build_label": "ASA_5.5.4_817761+++ARK1+Rel-1.88-ShooterGame",
+    "mode": "singleplayer",
+    "duration_utc": "~2h 10m"
+  },
+  "stack": {
+    "decoder": "ark_sp_state_decoded.v0.8",
+    "offsets_template": "ark_sp_memory_offsets.v0.10",
+    "blocks": ["shoulder", "dino_mount", "owl_abilities"]
+  },
+  "taxonomy": [
+    {
+      "id": "chibi",
+      "label": "Chibi",
+      "kind": "cosmetic_item_skin",
+      "class_ref": null,
+      "equipment_type": "Costume",
+      "mount_mechanism": "inventory item — not a creature",
+      "reliable_signal": "EPrimalEquipmentType:Costume + chibi_level on item slot"
+    },
+    {
+      "id": "gloon",
+      "label": "Gloon",
+      "kind": "shoulder_creature",
+      "class_ref": "LostCharge_LanternPet_Char_BP_C",
+      "equipment_type": "Pet (spawned actor, not TArray)",
+      "mount_mechanism": "shoulder_mount_spawned_actor",
+      "reliable_signal": "mounted_dino_weak_index==0 grounded; attach_child_count baseline 5; >5 during throw anim"
+    },
+    {
+      "id": "snow_owl",
+      "label": "Snow Owl",
+      "kind": "saddle_mount",
+      "class_ref": "Owl_Character_BP_C",
+      "equipment_type": "DinoSaddle",
+      "mount_mechanism": "saddle_dino_pawn_swap",
+      "reliable_signal": "AcknowledgedPawn→dino; Rider @ dino+0x2248; rider_weak_index!=0"
+    }
+  ],
+  "owl_abilities": [
+    {
+      "id": "self_freeze",
+      "label": "Encapsulate (self-freeze)",
+      "field": "EncapsulateIsActive",
+      "offset": "0x2CE0",
+      "held_seconds": 47,
+      "notes": "Position locked, MOVE_Walking; ice_crash false during hold"
+    },
+    {
+      "id": "dive_bomb",
+      "label": "Ice crash (dive bomb)",
+      "field": "IceCrashIsActive",
+      "offset": "0x2D78",
+      "signature": "z ~19k→8k crater; Flying→Walking on impact",
+      "notes": "Distinct from self-encapsulate"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "gloon_shoulder",
+      "title": "Gloon throw / pickup",
+      "poll_lines": 113,
+      "finding": "Weak index 476799 is stale GObject — not real Gloon. Attach graph + index 0 = grounded."
+    },
+    {
+      "id": "owl_dive",
+      "title": "Snow Owl dive bomb",
+      "poll_lines": 53,
+      "finding": "Rider index 214388 stable; climb MOVE_Flying z~19k; impact z~8k mode 5→1."
+    },
+    {
+      "id": "owl_freeze",
+      "title": "Snow Owl self-freeze",
+      "poll_lines": 53,
+      "finding": "encapsulate_is_active true ~47s on owl pawn while mounted."
+    }
+  ],
+  "false_signals": [
+    "mounted_dino_weak_index 476799 on human = stale LevelActorContainer",
+    "owl class offsets read on human pawn during AcknowledgedPawn swap",
+    "bFreezeStatusValues @ status+0xBB4 never set during owl encapsulate",
+    "has_shoulder_creature on dino pawn (fixed: n/a_dino_pawn)"
+  ],
+  "privacy": [
+    "Poll logs with world coords stay local (gitignored)",
+    "Network audit redacts LAN IPs at capture (v0.2+)",
+    "No Steam64 IDs in session artifacts"
+  ],
+  "pending": [
+    "GObject weak-ptr resolver for MountedDino and Rider",
+    "Health offset fix in owl poll scripts",
+    "Restart memory reader for live owl_abilities in correlator"
+  ]
+}

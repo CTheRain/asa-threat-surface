@@ -1,0 +1,19 @@
+{
+  "schema": "ark_sp_shoulder_creature_registry.v0.1",
+  "notes": [
+    "Copy to <local-data>/ARK_LiveData/config/shoulder_creature_registry.json (gitignored).",
+    "Shoulder creatures are spawned actors (lantern pets), not inventory TArray pets."
+  ],
+  "creatures": [
+    {
+      "display_name": "Gloon",
+      "class_ref": "LostCharge_LanternPet_Char_BP_C",
+      "blueprint_stem": "LostCharge_LanternPet_Char_BP",
+      "pack": "LostColony",
+      "mount_mechanism": "shoulder_mount_spawned_actor",
+      "inventory_tarray_path": false,
+      "cheat_spawn": "cheat gmsummon \"LostCharge_LanternPet_Char_BP_C\" 1",
+      "notes": "Display name Gloon in tribe log; BP is Lost Colony lantern pet, not Gloon_Character_BP."
+    }
+  ]
+}
